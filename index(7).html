@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Pre-discovery CX comercial preparado por Genesys para Plastiglas de México: investigación pública, safari exploratorio, journey de cotización, benchmark visible y preguntas de discovery. No es una auditoría independiente." name="description"/>
+<title>Plastiglas de México | Pre-discovery CX comercial 2.2</title>
+<style>
+    :root {
+      --plastiglas: #f0522d;
+      --plastiglas-2: #ff6a38;
+      --genesys-purple: #2d174d;
+      --navy: #11192c;
+      --navy-2: #17213a;
+      --ink: #172033;
+      --muted: #647084;
+      --panel: #ffffff;
+      --soft: #f6f7fa;
+      --soft-orange: #fff4ef;
+      --line: #e5e9f0;
+      --good: #087f5b;
+      --warn: #b86a00;
+      --risk: #b42318;
+      --cyan: #00a7c4;
+      --magenta: #d72f7a;
+      --lime: #8bbf25;
+      --shadow: 0 22px 60px rgba(15, 23, 42, 0.09);
+      --shadow-soft: 0 12px 32px rgba(15, 23, 42, 0.07);
+      --radius-lg: 30px;
+      --radius-md: 22px;
+      --radius-sm: 15px;
+      --max: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: #f8f9fb;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    img, svg { display: block; max-width: 100%; }
+    .container { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .section { padding: 86px 0; }
+    .section.compact { padding: 66px 0; }
+    .section-white { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-dark { background: #0e1525; color: #fff; }
+    .section-gradient {
+      color: #fff;
+      background:
+        radial-gradient(circle at 12% 16%, rgba(240,82,45,.27), transparent 28%),
+        radial-gradient(circle at 88% 4%, rgba(0,167,196,.20), transparent 25%),
+        linear-gradient(135deg, #11192c 0%, #20294a 48%, #2d174d 100%);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--plastiglas);
+      font-size: 12px;
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 32px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--plastiglas), var(--plastiglas-2));
+    }
+    .section-dark .eyebrow,
+    .section-gradient .eyebrow { color: #ffb39a; }
+    .section-dark .eyebrow::before,
+    .section-gradient .eyebrow::before { background: linear-gradient(90deg, #ff8e67, #ffd1c2); }
+    h1, h2, h3, h4, p { margin-top: 0; }
+    h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -.035em; }
+    h1 { font-size: clamp(42px, 6.3vw, 76px); margin-bottom: 24px; }
+    h2 { font-size: clamp(32px, 4.2vw, 52px); margin-bottom: 18px; }
+    h3 { font-size: 23px; margin-bottom: 12px; }
+    .lead { font-size: clamp(18px, 2vw, 22px); line-height: 1.65; color: var(--muted); }
+    .section-dark .lead,
+    .section-gradient .lead { color: rgba(255,255,255,.72); }
+    .max-copy { max-width: 860px; }
+    .muted { color: var(--muted); }
+    .small { font-size: 13px; }
+    .micro { font-size: 11px; }
+    .caps { text-transform: uppercase; letter-spacing: .13em; font-weight: 800; }
+    .surface {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      border-radius: var(--radius-md);
+    }
+    .surface.dark {
+      background: rgba(255,255,255,.07);
+      border-color: rgba(255,255,255,.13);
+      box-shadow: none;
+    }
+    .accent-line {
+      height: 5px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--plastiglas), var(--cyan), var(--magenta), var(--lime));
+    }
+
+    /* Navigation */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14, 21, 37, .88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255,255,255,.11);
+    }
+    .nav-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      color: #fff;
+      text-decoration: none;
+      flex: 0 0 auto;
+    }
+    .brand-mark {
+      width: 38px;
+      height: 29px;
+      border: 6px solid var(--plastiglas);
+      border-bottom-width: 0;
+      position: relative;
+      border-radius: 2px 2px 0 0;
+    }
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      left: 8px;
+      bottom: -2px;
+      width: 23px;
+      height: 13px;
+      background: #11192c;
+      border-top: 6px solid var(--plastiglas);
+    }
+    .brand-name { font-size: 15px; font-weight: 900; letter-spacing: .02em; }
+    .brand-sub { display: block; color: rgba(255,255,255,.58); font-size: 10px; font-weight: 650; letter-spacing: .10em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 20px; }
+    .nav-links a {
+      color: rgba(255,255,255,.68);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      transition: color .18s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a.active { color: #fff; }
+    .nav-actions { display: flex; gap: 10px; }
+    .nav-btn {
+      border: 1px solid rgba(255,255,255,.18);
+      color: #fff;
+      background: rgba(255,255,255,.08);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font: inherit;
+      font-size: 12px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+    .menu-btn { display: none; }
+
+    /* Hero */
+    .hero {
+      color: #fff;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 15% 9%, rgba(240,82,45,.27), transparent 27%),
+        radial-gradient(circle at 80% 17%, rgba(0,167,196,.19), transparent 25%),
+        radial-gradient(circle at 97% 82%, rgba(215,47,122,.14), transparent 22%),
+        linear-gradient(135deg, #0c1323 0%, #192342 48%, #2d174d 91%, #f0522d 150%);
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,.72), transparent 88%);
+    }
+    .hero-inner {
+      min-height: 720px;
+      padding: 100px 0 88px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(360px, .82fr);
+      gap: 62px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.19);
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.84);
+      font-size: 13px;
+      font-weight: 650;
+      margin-bottom: 24px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff9b78;
+      box-shadow: 0 0 0 6px rgba(255,155,120,.12);
+    }
+    .hero h1 span { color: #ff9b78; }
+    .hero-copy { max-width: 760px; }
+    .hero-copy > p {
+      font-size: 20px;
+      max-width: 720px;
+      color: rgba(255,255,255,.72);
+      line-height: 1.65;
+      margin-bottom: 30px;
+    }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+    .hero-tag {
+      padding: 9px 13px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.07);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 750;
+      color: rgba(255,255,255,.82);
+    }
+    .hero-tag.primary { background: #fff; color: var(--genesys-purple); border-color: #fff; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 800;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--plastiglas); color: #fff; box-shadow: 0 14px 30px rgba(240,82,45,.25); }
+    .btn-light { color: #fff; border-color: rgba(255,255,255,.23); background: rgba(255,255,255,.08); }
+    .btn-outline { color: var(--ink); border-color: var(--line); background: #fff; }
+    .btn svg { width: 17px; height: 17px; }
+
+    .hero-panel {
+      position: relative;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .acrylic-stage {
+      position: absolute;
+      inset: 0;
+      perspective: 1200px;
+      filter: drop-shadow(0 35px 60px rgba(0,0,0,.28));
+    }
+    .sheet {
+      position: absolute;
+      width: 48%;
+      aspect-ratio: 1.05 / 1;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.28);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.42), 0 30px 70px rgba(0,0,0,.26);
+      backdrop-filter: blur(5px);
+    }
+    .sheet::after {
+      content: "";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      top: 18px;
+      right: 18px;
+      background: rgba(255,255,255,.72);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.18);
+    }
+    .sheet.one { left: 7%; top: 10%; background: linear-gradient(135deg, rgba(0,167,196,.64), rgba(0,167,196,.19)); transform: rotateY(18deg) rotateZ(-8deg); }
+    .sheet.two { right: 5%; top: 2%; background: linear-gradient(135deg, rgba(215,47,122,.62), rgba(215,47,122,.15)); transform: rotateY(-12deg) rotateZ(7deg); }
+    .sheet.three { left: 23%; bottom: 3%; background: linear-gradient(135deg, rgba(139,191,37,.64), rgba(139,191,37,.13)); transform: rotateY(5deg) rotateZ(2deg); }
+    .sheet.four { right: 18%; bottom: 8%; width: 39%; background: linear-gradient(135deg, rgba(255,106,56,.68), rgba(255,106,56,.15)); transform: rotateY(-18deg) rotateZ(-3deg); }
+    .hypothesis-card {
+      position: relative;
+      z-index: 3;
+      width: min(430px, 92%);
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(11,18,34,.72);
+      border: 1px solid rgba(255,255,255,.16);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 25px 70px rgba(0,0,0,.28);
+    }
+    .hypothesis-card .label { color: rgba(255,255,255,.5); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 850; }
+    .hypothesis-card h2 { font-size: 27px; margin: 13px 0 18px; }
+    .hypothesis-card p { color: rgba(255,255,255,.7); margin-bottom: 0; font-size: 15px; }
+    .hypothesis-card strong { color: #fff; }
+    .confidence {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .confidence span { font-size: 11px; color: rgba(255,255,255,.55); }
+    .confidence-track { height: 6px; background: rgba(255,255,255,.11); border-radius: 999px; overflow: hidden; }
+    .confidence-fill { width: 72%; height: 100%; background: linear-gradient(90deg, #ff9b78, #fff0eb); border-radius: inherit; }
+
+
+
+    /* Authorship, purpose and evidence discipline */
+    .authorship-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin: -6px 0 24px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.66);
+      font-size: 12px;
+    }
+    .authorship-note strong { display: block; color: #fff; font-size: 13px; margin-bottom: 2px; }
+    .purpose-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 0 11px;
+      border-radius: 999px;
+      background: rgba(255,155,120,.14);
+      border: 1px solid rgba(255,155,120,.30);
+      color: #ffd5c7;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+    .scope-box {
+      margin-top: 20px;
+      padding: 16px 17px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      display: grid;
+      gap: 7px;
+      color: rgba(255,255,255,.66);
+      font-size: 12px;
+    }
+    .scope-box strong { color: #fff; }
+    .methodology-banner {
+      margin: 24px 0;
+      padding: 22px 24px;
+      border-radius: 22px;
+      border: 1px solid #f0d9cf;
+      background: #fff8f5;
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 17px;
+      align-items: start;
+    }
+    .methodology-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: var(--soft-orange);
+      color: var(--plastiglas);
+      font-weight: 950;
+      font-size: 13px;
+    }
+    .methodology-banner h3 { margin: 0 0 8px; font-size: 19px; }
+    .methodology-banner p { margin: 0; color: var(--muted); font-size: 13px; }
+    .basis-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+    .evidence-basis {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 10px;
+      line-height: 1.2;
+      font-weight: 900;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .basis-tested { background: #e9f8f2; color: #086c4d; }
+    .basis-public { background: #eef1ff; color: #4a41a0; }
+    .basis-limited { background: #fff4dc; color: #8a5600; }
+    .commercial-map {
+      margin-top: 22px;
+      padding: 20px 22px;
+      border-radius: 20px;
+      background: #f5f1f8;
+      border: 1px solid #e5dceb;
+    }
+    .commercial-map strong { color: var(--genesys-purple); }
+    .commercial-map p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
+
+    /* Cards and layouts */
+    .grid-12 { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); gap: 24px; }
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+    .metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 18px; }
+    .metric-card { padding: 24px; min-height: 178px; position: relative; overflow: hidden; }
+    .metric-card::after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      right: -34px;
+      top: -34px;
+      background: rgba(240,82,45,.08);
+    }
+    .metric-value { font-size: 42px; font-weight: 900; letter-spacing: -.06em; color: var(--plastiglas); }
+    .metric-title { font-weight: 850; margin-top: 4px; }
+    .metric-note { color: var(--muted); font-size: 13px; margin-top: 10px; }
+    .promise-card {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+    }
+    .promise-side { padding: 34px; }
+    .promise-side:first-child { background: linear-gradient(135deg, #fff8f5, #fff); border-right: 1px solid var(--line); }
+    .quote-mark { font-size: 68px; line-height: .7; color: rgba(240,82,45,.22); font-family: Georgia, serif; }
+    .quote-text { font-size: 25px; font-weight: 850; letter-spacing: -.03em; max-width: 500px; }
+    .readout { display: flex; gap: 15px; margin-top: 18px; }
+    .readout-icon {
+      width: 38px; height: 38px; border-radius: 12px; flex: 0 0 auto;
+      display: grid; place-items: center; background: var(--soft-orange); color: var(--plastiglas);
+    }
+    .readout-icon svg { width: 19px; height: 19px; }
+
+    /* Channel matrix */
+    .channel-summary {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+    .status-summary { padding: 22px; }
+    .status-number { font-size: 38px; font-weight: 900; letter-spacing: -.05em; }
+    .status-visible .status-number { color: var(--good); }
+    .status-unconfirmed .status-number { color: var(--warn); }
+    .status-absent .status-number { color: var(--risk); }
+    .matrix-wrap { margin-top: 24px; overflow: hidden; }
+    .matrix-row {
+      display: grid;
+      grid-template-columns: 1.05fr .72fr 1.35fr 1.45fr;
+      border-top: 1px solid var(--line);
+      min-width: 920px;
+    }
+    .matrix-row:first-child { border-top: 0; background: #f2f4f7; font-weight: 850; color: #4d596b; }
+    .matrix-cell { padding: 17px 18px; font-size: 13px; }
+    .matrix-cell + .matrix-cell { border-left: 1px solid var(--line); }
+    .matrix-title { font-weight: 850; }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+    .status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; }
+    .status.visible { background: #e9f8f2; color: #086c4d; }
+    .status.visible::before { background: #12a476; }
+    .status.partial { background: #fff4dc; color: #8a5600; }
+    .status.partial::before { background: #e29a17; }
+    .status.none { background: #fff0ef; color: #9f251e; }
+    .status.none::before { background: #d94b42; }
+    .diagnostic-callout {
+      margin-top: 24px;
+      padding: 28px;
+      border-radius: 24px;
+      background: var(--genesys-purple);
+      color: #fff;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+    .diagnostic-callout .callout-number {
+      width: 56px; height: 56px; border-radius: 18px;
+      display: grid; place-items: center; font-size: 22px; font-weight: 900;
+      background: rgba(255,255,255,.11); color: #ffb39a;
+    }
+    .diagnostic-callout p { margin-bottom: 0; color: rgba(255,255,255,.72); }
+
+    /* Field safari */
+    .field-meta {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+    .field-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 750;
+    }
+    .field-meta span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--plastiglas);
+    }
+    .field-grid {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .field-card { padding: 28px; position: relative; overflow: hidden; }
+    .field-card::after {
+      content: attr(data-step);
+      position: absolute;
+      right: 16px;
+      top: 2px;
+      font-size: 76px;
+      line-height: 1;
+      font-weight: 950;
+      color: rgba(23,32,51,.04);
+      pointer-events: none;
+    }
+    .field-card h3 { margin: 16px 0 12px; max-width: 540px; }
+    .field-card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+    .field-card ul { margin: 17px 0 0; padding: 0; list-style: none; }
+    .field-card li { position: relative; padding-left: 20px; margin: 9px 0; color: var(--muted); font-size: 13px; }
+    .field-card li::before { content: "•"; position: absolute; left: 5px; color: var(--plastiglas); font-weight: 900; }
+    .field-verdict {
+      margin-top: 20px;
+      padding: 24px 26px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+      border-left: 5px solid var(--plastiglas);
+    }
+    .verdict-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: var(--soft-orange);
+      color: var(--plastiglas);
+      font-weight: 950;
+    }
+    .field-verdict p { margin: 7px 0 0; color: var(--muted); }
+    .test-plan {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+    }
+    .test-card { padding: 26px; }
+    .test-list { margin-top: 18px; display: grid; gap: 12px; }
+    .test-item {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 13px;
+      align-items: center;
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+    .test-item:first-child { border-top: 0; padding-top: 0; }
+    .test-rank {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--soft-orange);
+      color: var(--plastiglas);
+      font-size: 12px;
+      font-weight: 900;
+    }
+    .test-item strong { display: block; font-size: 13px; }
+    .test-item small { display: block; color: var(--muted); margin-top: 3px; }
+    .priority {
+      display: inline-flex;
+      padding: 6px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      white-space: nowrap;
+    }
+    .priority.high { background: #fff0ef; color: #9f251e; }
+    .priority.medium { background: #fff4dc; color: #8a5600; }
+    .priority.low { background: #eef1ff; color: #4a41a0; }
+    .privacy-note {
+      margin-top: 14px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* Journey */
+    .journey-grid { margin-top: 38px; display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 13px; }
+    .journey-step {
+      position: relative;
+      padding: 23px 18px 21px;
+      min-height: 185px;
+      border-radius: 22px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.11);
+    }
+    .journey-step::before {
+      content: "";
+      position: absolute;
+      right: -14px;
+      top: 52px;
+      width: 14px;
+      height: 2px;
+      background: rgba(255,255,255,.22);
+    }
+    .journey-step:last-child::before { display: none; }
+    .journey-num { color: #ffb39a; font-size: 11px; font-weight: 900; letter-spacing: .12em; }
+    .journey-step h3 { font-size: 17px; margin: 11px 0; letter-spacing: -.02em; }
+    .journey-step p { font-size: 12px; color: rgba(255,255,255,.62); margin-bottom: 0; }
+    .friction-line { margin: 28px 0; position: relative; height: 48px; }
+    .friction-line::before {
+      content: "";
+      position: absolute;
+      left: 3%; right: 3%; top: 22px;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,.22) 0 7px, transparent 7px 13px);
+    }
+    .friction-marker {
+      position: absolute; top: 4px; transform: translateX(-50%);
+      width: 38px; height: 38px; border-radius: 14px; display: grid; place-items: center;
+      background: #fff; color: var(--risk); font-weight: 900; box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .friction-marker.one { left: 42%; }
+    .friction-marker.two { left: 59%; }
+    .friction-marker.three { left: 76%; }
+    .journey-analysis { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .journey-analysis .surface { padding: 25px; }
+    .journey-analysis h3 { font-size: 19px; }
+    .top-good { border-top: 4px solid var(--good); }
+    .top-warn { border-top: 4px solid var(--warn); }
+    .top-risk { border-top: 4px solid var(--risk); }
+    .clean-list { list-style: none; padding: 0; margin: 15px 0 0; }
+    .clean-list li { position: relative; padding-left: 20px; margin: 10px 0; font-size: 13px; color: var(--muted); }
+    .clean-list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 3px; background: var(--plastiglas); transform: translateY(-50%); }
+
+    /* FTS signals */
+    .signal-layout { margin-top: 34px; display: grid; grid-template-columns: 330px minmax(0,1fr); gap: 26px; align-items: stretch; }
+    .signal-nav { display: grid; gap: 10px; }
+    .signal-btn {
+      width: 100%;
+      padding: 17px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 38px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      transition: .18s ease;
+    }
+    .signal-btn:hover { transform: translateX(3px); border-color: #d7dce5; }
+    .signal-btn.active { background: var(--genesys-purple); color: #fff; border-color: var(--genesys-purple); box-shadow: 0 15px 34px rgba(45,23,77,.18); }
+    .signal-code { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--soft-orange); color: var(--plastiglas); font-weight: 900; }
+    .signal-btn.active .signal-code { background: rgba(255,255,255,.12); color: #ffb39a; }
+    .signal-btn strong { display: block; font-size: 14px; }
+    .signal-btn small { display: block; color: var(--muted); margin-top: 3px; }
+    .signal-btn.active small { color: rgba(255,255,255,.58); }
+    .signal-arrow { color: #a2aaba; font-weight: 900; }
+    .signal-btn.active .signal-arrow { color: #fff; }
+    .signal-panel { padding: 34px; min-height: 360px; position: relative; overflow: hidden; }
+    .signal-panel::after {
+      content: ""; position: absolute; right: -70px; bottom: -70px; width: 240px; height: 240px; border-radius: 50%; background: rgba(240,82,45,.06);
+    }
+    .signal-content { display: none; position: relative; z-index: 1; }
+    .signal-content.active { display: block; animation: fadeIn .28s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+    .signal-content .signal-label { color: var(--plastiglas); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .14em; }
+    .signal-content h3 { font-size: 31px; margin: 12px 0 15px; }
+    .signal-content p { color: var(--muted); font-size: 16px; max-width: 760px; }
+    .signal-evidence { margin-top: 25px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; }
+    .evidence-chip { padding: 16px; border-radius: 16px; background: var(--soft); border: 1px solid var(--line); font-size: 13px; }
+    .evidence-chip strong { display: block; margin-bottom: 3px; }
+    .discipline-grid { margin-top: 26px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .discipline-card { padding: 26px; }
+    .discipline-card .badge {
+      display: inline-flex; padding: 7px 10px; border-radius: 999px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em;
+    }
+    .badge-known { background: #e9f8f2; color: #086c4d; }
+    .badge-hypothesis { background: #fff4dc; color: #8a5600; }
+    .badge-validate { background: #eef1ff; color: #4a41a0; }
+    .discipline-card h3 { margin-top: 17px; }
+
+    /* Evidence section */
+    .evidence-grid { margin-top: 34px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .evidence-card { padding: 28px; display: grid; grid-template-columns: 48px 1fr; gap: 18px; }
+    .evidence-icon { width: 48px; height: 48px; border-radius: 16px; display: grid; place-items: center; background: var(--soft-orange); color: var(--plastiglas); }
+    .evidence-icon svg { width: 22px; height: 22px; }
+    .evidence-card p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+    /* North star */
+    .north-grid { margin-top: 38px; display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; }
+    .north-card {
+      min-height: 220px;
+      padding: 24px 19px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.07);
+    }
+    .north-num { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 12px; background: rgba(255,255,255,.11); color: #ffb39a; font-weight: 900; }
+    .north-card h3 { font-size: 18px; margin: 18px 0 11px; }
+    .north-card p { color: rgba(255,255,255,.62); font-size: 13px; margin-bottom: 0; }
+    .day-card { margin-top: 28px; padding: 30px; }
+    .day-card h3 { margin-bottom: 24px; }
+    .day-flow { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 16px; }
+    .day-step { position: relative; padding-left: 17px; border-left: 2px solid rgba(255,255,255,.18); }
+    .day-step::before { content: ""; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: #ff9b78; box-shadow: 0 0 0 5px rgba(255,155,120,.12); }
+    .day-step strong { font-size: 13px; display: block; }
+    .day-step p { font-size: 12px; color: rgba(255,255,255,.6); margin: 7px 0 0; }
+
+    /* Roadmap */
+    .roadmap { margin-top: 34px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
+    .phase { padding: 28px; position: relative; overflow: hidden; }
+    .phase::after { content: attr(data-phase); position: absolute; right: 18px; top: 2px; font-size: 78px; font-weight: 950; color: rgba(23,32,51,.045); line-height: 1; }
+    .phase-tag { display: inline-flex; padding: 7px 10px; border-radius: 999px; font-size: 11px; font-weight: 900; background: var(--soft-orange); color: var(--plastiglas); }
+    .phase h3 { margin-top: 18px; }
+    .phase ul { padding: 0; margin: 18px 0 0; list-style: none; }
+    .phase li { font-size: 13px; color: var(--muted); margin: 11px 0; padding-left: 20px; position: relative; }
+    .phase li::before { content: "✓"; position: absolute; left: 0; color: var(--good); font-weight: 900; }
+    .kpi-card { margin-top: 24px; overflow: hidden; }
+    .kpi-head { padding: 23px 26px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .kpi-item { padding: 22px 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .kpi-item:nth-child(3n) { border-right: 0; }
+    .kpi-item:nth-last-child(-n+3) { border-bottom: 0; }
+    .kpi-item strong { display: block; font-size: 14px; }
+    .kpi-item span { display: block; color: var(--muted); font-size: 12px; margin-top: 5px; }
+
+    /* Discovery */
+    .discovery-grid { margin-top: 34px; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(340px,.9fr); gap: 24px; }
+    .questions { overflow: hidden; }
+    .question {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      padding: 21px 24px;
+      border-top: 1px solid var(--line);
+      align-items: start;
+    }
+    .question:first-child { border-top: 0; }
+    .question-num { width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; background: var(--soft-orange); color: var(--plastiglas); font-weight: 900; }
+    .question p { margin-bottom: 0; font-size: 15px; font-weight: 700; }
+    .side-stack { display: grid; gap: 18px; }
+    .play-card, .persona-card { padding: 27px; }
+    .priority-list { list-style: none; padding: 0; margin: 18px 0 0; }
+    .priority-list li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; margin: 13px 0; }
+    .priority-list span { width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; background: #f0ecf6; color: var(--genesys-purple); font-weight: 900; font-size: 12px; }
+    .priority-list strong { font-size: 13px; display: block; }
+    .priority-list small { color: var(--muted); }
+    .persona-row { padding: 13px 0; border-top: 1px solid var(--line); }
+    .persona-row:first-of-type { border-top: 0; }
+    .persona-row strong { display: block; font-size: 14px; }
+    .persona-row span { color: var(--muted); font-size: 12px; }
+
+    /* Sources */
+    .source-grid { margin-top: 34px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .source-card { padding: 26px; }
+    .source-card h3 { font-size: 18px; }
+    .source-list { list-style: none; padding: 0; margin: 16px 0 0; }
+    .source-list li { margin: 11px 0; padding-left: 18px; position: relative; font-size: 13px; }
+    .source-list li::before { content: "↗"; position: absolute; left: 0; color: var(--plastiglas); font-weight: 900; }
+    .source-list a { color: #4f46a5; text-decoration: underline; text-underline-offset: 3px; }
+    .method-note { margin-top: 22px; padding: 26px; border-radius: 22px; background: #11192c; color: #fff; }
+    .method-note p { margin-bottom: 0; color: rgba(255,255,255,.65); font-size: 13px; }
+    .method-note strong { color: #fff; }
+
+    footer { background: #0b1120; color: rgba(255,255,255,.62); padding: 30px 0; border-top: 1px solid rgba(255,255,255,.09); }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; align-items: center; font-size: 12px; }
+    .back-top { color: #fff; text-decoration: none; font-weight: 800; }
+
+
+    /* Market context and competitive benchmark */
+    .market-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .market-card { padding: 28px; }
+    .market-card h3 { margin: 14px 0 11px; }
+    .market-card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+    .market-card .market-label {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--soft-orange);
+      color: var(--plastiglas);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .market-note {
+      margin-top: 20px;
+      padding: 20px 22px;
+      border-radius: 18px;
+      background: #f4f1fb;
+      border: 1px solid #e4def2;
+      color: #514a65;
+      font-size: 13px;
+    }
+    .benchmark-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .competitor-card { padding: 27px; }
+    .competitor-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .competitor-name { display: flex; align-items: center; gap: 12px; }
+    .competitor-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: var(--soft-orange);
+      color: var(--plastiglas);
+      font-weight: 950;
+    }
+    .competitor-card h3 { margin: 0; font-size: 18px; }
+    .competitor-card p { color: var(--muted); font-size: 13px; }
+    .competitor-card ul { list-style: none; padding: 0; margin: 18px 0 0; }
+    .competitor-card li { position: relative; padding-left: 18px; margin: 10px 0; color: var(--muted); font-size: 13px; }
+    .competitor-card li::before { content: "•"; position: absolute; left: 4px; color: var(--plastiglas); font-weight: 900; }
+    .benchmark-wrap { margin-top: 24px; overflow: hidden; }
+    .benchmark-row {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr 1fr 1fr 1fr 1.45fr;
+      min-width: 1260px;
+      border-top: 1px solid var(--line);
+    }
+    .benchmark-row:first-child { border-top: 0; background: #f2f4f7; font-weight: 850; color: #4d596b; }
+    .benchmark-cell { padding: 16px 15px; font-size: 12px; }
+    .benchmark-cell + .benchmark-cell { border-left: 1px solid var(--line); }
+    .benchmark-title { font-weight: 850; }
+    .benchmark-caveat {
+      margin-top: 20px;
+      padding: 24px 26px;
+      border-left: 5px solid var(--genesys-purple);
+    }
+    .benchmark-caveat p { margin: 8px 0 0; color: var(--muted); }
+    .discovery-gap {
+      margin: 0 0 26px;
+      padding: 24px 26px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+      border-left: 5px solid var(--warn);
+    }
+    .discovery-gap .gap-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: #fff4dc;
+      color: #8a5600;
+      font-weight: 950;
+    }
+    .discovery-gap p { margin: 7px 0 0; color: var(--muted); }
+
+
+
+    /* B2B market, voice of market and competitive benchmark */
+    .market-stats {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .market-stat { padding: 28px; min-height: 205px; position: relative; overflow: hidden; }
+    .market-stat::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      right: -48px;
+      bottom: -50px;
+      border-radius: 50%;
+      background: rgba(240,82,45,.07);
+    }
+    .market-stat .big { font-size: 48px; font-weight: 950; letter-spacing: -.06em; color: var(--plastiglas); }
+    .market-stat h3 { font-size: 18px; margin: 7px 0 9px; }
+    .market-stat p { color: var(--muted); font-size: 13px; margin-bottom: 0; }
+    .market-journey {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .market-mode { padding: 28px; }
+    .market-mode ul { list-style: none; padding: 0; margin: 16px 0 0; }
+    .market-mode li { position: relative; padding-left: 20px; margin: 10px 0; color: var(--muted); font-size: 13px; }
+    .market-mode li::before { content: "✓"; position: absolute; left: 0; color: var(--good); font-weight: 900; }
+    .market-bridge {
+      width: 64px;
+      display: grid;
+      place-items: center;
+      align-self: center;
+      color: var(--plastiglas);
+      font-size: 26px;
+      font-weight: 950;
+    }
+    .source-inline {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .source-inline a { color: #4f46a5; text-underline-offset: 3px; }
+
+    .voice-grid {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .voice-card { padding: 28px; }
+    .voice-card .voice-label {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--soft-orange);
+      color: var(--plastiglas);
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .voice-card h3 { margin: 17px 0 11px; }
+    .voice-card p { color: var(--muted); font-size: 14px; margin-bottom: 0; }
+    .buyer-question-grid {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+    }
+    .buyer-question {
+      padding: 17px;
+      border-radius: 16px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .competitor-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .competitor-card { padding: 28px; position: relative; overflow: hidden; }
+    .competitor-card::after {
+      content: attr(data-letter);
+      position: absolute;
+      right: 14px;
+      top: -10px;
+      font-size: 92px;
+      line-height: 1;
+      font-weight: 950;
+      color: rgba(23,32,51,.045);
+    }
+    .competitor-type {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #eef1ff;
+      color: #4a41a0;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+    .competitor-card h3 { margin: 17px 0 11px; }
+    .competitor-card p { color: var(--muted); font-size: 13px; }
+    .competitor-card ul { list-style: none; padding: 0; margin: 16px 0 0; }
+    .competitor-card li { position: relative; padding-left: 19px; margin: 9px 0; color: var(--muted); font-size: 13px; }
+    .competitor-card li::before { content: "•"; position: absolute; left: 4px; color: var(--plastiglas); font-weight: 900; }
+    .competitor-link { display: inline-flex; margin-top: 14px; color: #4f46a5; font-size: 12px; font-weight: 850; text-decoration: underline; text-underline-offset: 3px; }
+    .benchmark-wrap { margin-top: 24px; overflow: hidden; }
+    .benchmark-row {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr 1fr 1fr 1fr 1.25fr;
+      border-top: 1px solid var(--line);
+      min-width: 1180px;
+    }
+    .benchmark-row:first-child { border-top: 0; background: #f2f4f7; font-weight: 850; color: #4d596b; }
+    .benchmark-cell { padding: 16px 15px; font-size: 12px; }
+    .benchmark-cell + .benchmark-cell { border-left: 1px solid var(--line); }
+    .benchmark-cell strong { display: block; color: var(--ink); margin-bottom: 4px; }
+    .benchmark-note {
+      margin-top: 24px;
+      padding: 27px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #11192c, #2d174d);
+      color: #fff;
+    }
+    .benchmark-note p { color: rgba(255,255,255,.72); margin-bottom: 0; }
+
+    .reference-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 18px;
+    }
+    .reference-card {
+      padding: 30px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.13);
+    }
+    .reference-card .ref-tag {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      color: #ffb39a;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .reference-card h3 { margin: 18px 0 11px; }
+    .reference-card p { color: rgba(255,255,255,.67); font-size: 14px; }
+    .reference-card ul { list-style: none; padding: 0; margin: 17px 0 0; }
+    .reference-card li { position: relative; padding-left: 20px; margin: 10px 0; color: rgba(255,255,255,.68); font-size: 13px; }
+    .reference-card li::before { content: "✓"; position: absolute; left: 0; color: #ffb39a; font-weight: 900; }
+    .reference-card a { color: #fff; text-underline-offset: 3px; }
+    .reference-bridge {
+      margin-top: 22px;
+      padding: 26px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.05);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 14px;
+      align-items: center;
+      text-align: center;
+    }
+    .reference-bridge strong { display: block; }
+    .reference-bridge span { display: block; color: rgba(255,255,255,.58); font-size: 12px; margin-top: 5px; }
+    .reference-arrow { color: #ffb39a; font-size: 22px; font-weight: 950; }
+
+    .coverage-card {
+      margin-top: 24px;
+      padding: 26px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+      border-left: 5px solid var(--cyan);
+    }
+    .coverage-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #e8f8fb;
+      color: #007d92;
+      font-weight: 950;
+    }
+
+
+    .completion-panel {
+      margin-top: 28px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #ffffff 0%, #f8f9fc 58%, #fff7f2 100%);
+    }
+    .completion-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .completion-head h3 { margin: 8px 0 0; max-width: 760px; }
+    .completion-badge {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: #fff0e9;
+      color: #a63c20;
+      border: 1px solid #ffd8c9;
+      font-size: 10px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+    .completion-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 16px;
+    }
+    .completion-card {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.88);
+      border: 1px solid var(--line);
+    }
+    .completion-card .completion-status {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 9px;
+      line-height: 1;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .completion-card.complete .completion-status { background: #e9f8ef; color: #137a42; }
+    .completion-card.partial .completion-status { background: #fff4dc; color: #8a5600; }
+    .completion-card.internal .completion-status { background: #eef1ff; color: #4a41a0; }
+    .completion-card h4 { margin: 14px 0 9px; font-size: 16px; }
+    .completion-card ul { list-style: none; padding: 0; margin: 0; }
+    .completion-card li { position: relative; padding-left: 18px; margin: 8px 0; color: var(--muted); font-size: 12px; }
+    .completion-card li::before { content: "•"; position: absolute; left: 4px; color: var(--plastiglas); font-weight: 950; }
+    .completion-note {
+      margin-top: 18px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      background: #11192c;
+      color: #fff;
+      font-size: 13px;
+    }
+    .completion-note strong { color: #ffb39a; }
+
+    @media (max-width: 980px) {
+      .market-stats, .competitor-grid, .buyer-question-grid, .completion-grid { grid-template-columns: 1fr 1fr; }
+      .market-journey { grid-template-columns: 1fr; }
+      .market-bridge { width: auto; min-height: 30px; transform: rotate(90deg); }
+      .reference-bridge { grid-template-columns: 1fr; }
+      .reference-arrow { transform: rotate(90deg); }
+    }
+    @media (max-width: 720px) {
+      .market-stats, .voice-grid, .competitor-grid, .reference-grid, .buyer-question-grid, .completion-grid { grid-template-columns: 1fr; }
+      .completion-head { flex-direction: column; }
+    }
+
+    /* Mobile */
+    @media (max-width: 1080px) {
+      .nav-links { display: none; }
+      .menu-btn { display: inline-flex; }
+      .hero-inner { grid-template-columns: 1fr; min-height: auto; }
+      .hero-panel { min-height: 460px; }
+      .journey-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .journey-step:nth-child(3)::before { display: none; }
+      .north-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .north-card:last-child { grid-column: span 2; }
+      .day-flow { grid-template-columns: repeat(3, minmax(0,1fr)); }
+      .metric-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .span-5, .span-7 { grid-column: span 12; }
+    }
+    @media (max-width: 820px) {
+      .section { padding: 68px 0; }
+      .nav-actions .nav-btn:first-child { display: none; }
+      .hero-inner { padding: 74px 0 70px; gap: 30px; }
+      .hero-panel { min-height: 400px; }
+      .promise-card { grid-template-columns: 1fr; }
+      .promise-side:first-child { border-right: 0; border-bottom: 1px solid var(--line); }
+      .channel-summary, .journey-analysis, .discipline-grid, .roadmap, .evidence-grid, .source-grid, .field-grid, .test-plan, .market-grid, .benchmark-grid { grid-template-columns: 1fr; }
+      .signal-layout { grid-template-columns: 1fr; }
+      .signal-nav { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .north-grid { grid-template-columns: 1fr; }
+      .north-card:last-child { grid-column: auto; }
+      .day-flow { grid-template-columns: 1fr 1fr; }
+      .kpi-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .kpi-item, .kpi-item:nth-child(3n) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+      .kpi-item:nth-child(2n) { border-right: 0; }
+      .kpi-item:nth-last-child(-n+2) { border-bottom: 0; }
+      .discovery-grid { grid-template-columns: 1fr; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 620px) {
+      .container { width: min(100% - 26px, var(--max)); }
+      .brand-sub { display: none; }
+      .nav-inner { min-height: 62px; }
+      .nav-btn { padding: 9px 11px; }
+      .hero-copy > p { font-size: 17px; }
+      .hero-panel { min-height: 360px; }
+      .hypothesis-card { padding: 22px; }
+      .hypothesis-card h2 { font-size: 22px; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .journey-grid { grid-template-columns: 1fr 1fr; }
+      .journey-step::before { display: none; }
+      .signal-nav { grid-template-columns: 1fr; }
+      .signal-evidence { grid-template-columns: 1fr; }
+      .day-flow { grid-template-columns: 1fr; }
+      .kpi-grid { grid-template-columns: 1fr; }
+      .kpi-item, .kpi-item:nth-child(2n), .kpi-item:nth-child(3n) { border-right: 0; border-bottom: 1px solid var(--line); }
+      .kpi-item:last-child { border-bottom: 0; }
+      .question { grid-template-columns: 40px 1fr; padding: 18px; }
+      .question-num { width: 38px; height: 38px; }
+      .evidence-card { grid-template-columns: 42px 1fr; padding: 22px; }
+      .field-verdict { grid-template-columns: 1fr; }
+      .test-item { grid-template-columns: auto 1fr; }
+      .test-item .priority { grid-column: 2; justify-self: start; }
+      .evidence-icon { width: 42px; height: 42px; }
+      .hero-cta .btn { width: 100%; }
+    }
+
+    @media print {
+      .site-nav, .hero-cta, .back-top { display: none !important; }
+      body { background: #fff; }
+      .hero { background: #11192c !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .surface { box-shadow: none; }
+      .section { padding: 48px 0; }
+      .hero-inner { min-height: auto; padding: 70px 0; }
+      .hero-panel { min-height: 420px; }
+      .section, .surface, .journey-step, .north-card, .phase, .question, .field-card, .test-item { break-inside: avoid; }
+      a { text-decoration: none !important; }
+    }
+  </style>
+</head>
+<body>
+<nav aria-label="Navegación principal" class="site-nav">
+<div class="container nav-inner">
+<a aria-label="Ir al inicio" class="brand" href="#top">
+<span aria-hidden="true" class="brand-mark"></span>
+<span>
+<span class="brand-name">PLASTIGLAS</span>
+<span class="brand-sub">Pre-discovery CX comercial 2.2</span>
+</span>
+</a>
+<div aria-label="Secciones" class="nav-links"><a href="#contexto">Contexto</a><a href="#mercado">Mercado B2B</a><a href="#campo">Safari real</a><a href="#journey">Journey</a><a href="#competencia">Competencia</a><a href="#referencia">Referencias</a><a href="#norte">North Star</a><a href="#senales">FTS</a><a href="#roadmap">Roadmap</a><a href="#discovery">Discovery</a></div>
+<div class="nav-actions">
+<button class="nav-btn" onclick="window.print()" type="button">Imprimir / PDF</button>
+<button aria-label="Abrir navegación" class="nav-btn menu-btn" onclick="toggleMobileNav()" type="button">Menú</button>
+</div>
+</div>
+</nav>
+<header class="hero" id="top">
+<div class="container hero-inner">
+<div class="hero-copy">
+<div class="hero-kicker"><span class="pulse-dot"></span>Pre-discovery comercial · actualizado 31 agosto 2026</div><div class="authorship-note">
+<div><strong>Preparado por Daniela Enríquez · Genesys</strong><span>Propósito: preparar una conversación de discovery comercial con Plastiglas.</span></div>
+<div class="purpose-pill">No es una auditoría independiente</div>
+</div>
+<h1>Plastiglas: de múltiples puertas de atención a una <span>experiencia conectada</span> para cotizar y servir mejor.</h1>
+<p>Documento de preparación comercial que combina investigación pública, una prueba exploratoria del formulario y WhatsApp, observaciones de voz y un benchmark de interfaces públicas. Su función es formular hipótesis y preguntas; no calificar el desempeño real de Plastiglas ni de sus competidores.</p>
+<div aria-label="Temas principales" class="hero-tags">
+<span class="hero-tag primary">Cotización B2B</span>
+<span class="hero-tag">Safari exploratorio n=1</span>
+<span class="hero-tag">Benchmark público, no ranking</span>
+<span class="hero-tag">Continuidad de contexto</span>
+<span class="hero-tag">Verzatec + contexto de mercado</span>
+</div>
+<div class="hero-cta">
+<a class="btn btn-primary" href="#canales">
+            Ver pre-discovery
+            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+</a>
+<a class="btn btn-light" href="https://plastiglas.com.mx/" rel="noopener noreferrer" target="_blank">
+            Abrir sitio oficial
+            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"></path></svg>
+</a>
+</div>
+</div>
+<div aria-label="Hipótesis ejecutiva" class="hero-panel">
+<div aria-hidden="true" class="acrylic-stage">
+<div class="sheet one"></div>
+<div class="sheet two"></div>
+<div class="sheet three"></div>
+<div class="sheet four"></div>
+</div>
+<article class="hypothesis-card">
+<div class="label">Hipótesis a validar</div>
+<h2>El journey observado contiene momentos de incertidumbre visible; falta comprobar si generan retrabajo, demoras o pérdida de cotizaciones.</h2>
+<div class="accent-line"></div>
+<p style="margin-top:18px">El formulario se cerró sin acuse visible y WhatsApp inició sin contexto prellenado. Un asesor humano respondió la siguiente mañana laboral, pidió el teléfono para localizar la solicitud y ofreció recibirla por WhatsApp para agilizarla. Esto sugiere un seguimiento manual, pero no demuestra fragmentación ni falla del lead.</p>
+
+<div class="scope-box">
+<div><strong>Base de evidencia:</strong> 1 envío web, 1 conversación de WhatsApp y 2 números telefónicos.</div>
+<div><strong>Uso correcto:</strong> orientar discovery y priorizar validaciones; no inferir SLA, conversión o arquitectura.</div>
+</div>
+
+</article>
+</div>
+</div>
+</header>
+<main><section class="section" id="contexto">
+<div class="container">
+<div class="grid-12" style="align-items:start">
+<div class="span-5">
+<div class="eyebrow">01 / Contexto</div>
+<h2 style="margin-top:15px">Plastiglas parte de una marca industrial sólida y una promesa explícita de acompañamiento.</h2>
+<p class="lead">El sitio posiciona una oferta amplia de lámina acrílica, documentación técnica, aplicaciones y proyectos. Tras integrarse a Grupo Verzatec, el punto de conversación no es “digitalizar desde cero”, sino conectar la experiencia comercial y de servicio conforme crecen el portafolio y la huella operativa.</p>
+</div>
+<div class="span-7">
+<div class="metric-grid">
+<article class="surface metric-card">
+<div class="metric-value">65+</div>
+<div class="metric-title">años en la industria</div>
+<div class="metric-note">La marca comunica trayectoria en lámina acrílica cell-cast.</div>
+</article>
+<article class="surface metric-card">
+<div class="metric-value">2024</div>
+<div class="metric-title">integración a Verzatec</div>
+<div class="metric-note">La adquisición se formalizó en junio de 2024.</div>
+</article>
+<article class="surface metric-card">
+<div class="metric-value">2 + 4</div>
+<div class="metric-title">plantas y centros publicados</div>
+<div class="metric-note">Dos plantas de producción y cuatro centros de servicio en el sitio de contacto.</div>
+</article>
+<article class="surface metric-card">
+<div class="metric-value">3</div>
+<div class="metric-title">mercados señalados</div>
+<div class="metric-note">México, Estados Unidos y Canadá se mencionan en el anuncio de adquisición.</div>
+</article>
+</div>
+</div>
+</div>
+<article class="surface promise-card">
+<div class="promise-side">
+<div class="quote-mark">“</div>
+<div class="quote-text">Atención personalizada en toda la cadena de servicio.</div>
+<p class="muted" style="margin:18px 0 0">La promesa pública también destaca acompañamiento técnico para proyectos especiales.</p>
+</div>
+<div class="promise-side">
+<div class="eyebrow">Lectura consultiva</div>
+<h3 style="margin-top:16px">La mejor entrada comercial es proteger esa promesa cuando el journey cambia de canal.</h3>
+<div class="readout">
+<div class="readout-icon">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M3 12h5l2-7 4 14 2-7h5"></path></svg>
+</div>
+<div><strong>Momento de verdad</strong><p class="muted small">El cliente investiga una aplicación, consulta medidas o disponibilidad y después cambia a WhatsApp, voz o correo.</p></div>
+</div>
+<div class="readout">
+<div class="readout-icon">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M8 12h8M12 8v8"></path><circle cx="12" cy="12" r="9"></circle></svg>
+</div>
+<div><strong>Pregunta clave</strong><p class="muted small">¿El asesor recibe producto, aplicación, dimensiones, ubicación, urgencia e historial, o el cliente empieza de nuevo?</p></div>
+</div>
+</div>
+</article>
+<article aria-label="Cobertura y límites del discovery" class="surface completion-panel">
+<div class="completion-head">
+<div>
+<div class="eyebrow">Cobertura del discovery</div>
+<h3>La capa pública está documentada; la capa interna todavía requiere conversación y datos de Plastiglas.</h3>
+</div>
+<span class="completion-badge">Pre-discovery público</span>
+</div>
+<div class="completion-grid">
+<div class="completion-card complete">
+<span class="completion-status">Completado</span>
+<h4>Evidencia pública y safari</h4>
+<ul>
+<li>Contexto, mercado B2B y contexto regulatorio.</li>
+<li>Formulario, WhatsApp y comportamiento de voz por sede.</li>
+<li>Journey, benchmark competitivo y referencias industriales.</li>
+<li>Hipótesis FTS, North Star y roadmap por fases.</li>
+</ul>
+</div>
+<div class="completion-card partial">
+<span class="completion-status">Parcial</span>
+<h4>Evidencia que aún puede observarse</h4>
+<ul>
+<li>Resultado de la búsqueda de la solicitud después de compartir el teléfono.</li>
+<li>Journey de correo y expectativa real de seguimiento.</li>
+<li>Prueba ligera de redes sociales, solo si operan como soporte.</li>
+<li>Confirmación de handoff entre producto, región y asesor.</li>
+</ul>
+</div>
+<div class="completion-card internal">
+<span class="completion-status">Solo cliente</span>
+<h4>Insight interno pendiente</h4>
+<ul>
+<li>Objetivos ejecutivos, dolores operativos y prioridades.</li>
+<li>Arquitectura, proveedores, ownership y reglas de routing.</li>
+<li>Volúmenes, SLA, conversión, abandono, recontacto y costos.</li>
+<li>Voz de Comercial, Servicio, Marketing e IT.</li>
+</ul>
+</div>
+</div>
+<div class="completion-note"><strong>Alcance actual:</strong> pre-discovery público y comercial. Los hallazgos de campo son exploratorios y no sustituyen datos operativos, entrevistas ni una auditoría de procesos.</div>
+</article>
+</div>
+</section><section class="section section-white" id="mercado">
+<div class="container">
+<div class="eyebrow">02 / Comportamiento del comprador B2B</div>
+<h2 class="max-copy" style="margin-top:15px">La compra industrial combina investigación autónoma con asesoría experta; la ventaja está en conectar ambas sin hacer que el comprador empiece de nuevo.</h2>
+<p class="lead max-copy">En materiales técnicos, el sitio debe permitir aprender y comparar por cuenta propia, pero el comprador todavía necesita a una persona cuando debe validar la aplicación, disponibilidad, especificaciones, volumen, entrega o viabilidad del proyecto.</p>
+<div class="market-stats">
+<article class="surface market-stat">
+<div class="big">10</div>
+<h3>canales en el journey B2B promedio</h3>
+<p>McKinsey reporta que el comprador B2B moderno combina múltiples puntos de contacto durante investigación, evaluación, compra y recompra.</p>
+</article>
+<article class="surface market-stat">
+<div class="big">&gt;50%</div>
+<h3>consideraría cambiar de proveedor por fricción omnicanal</h3>
+<p>No basta con ofrecer varios canales: la experiencia debe sentirse continua cuando el comprador cambia de uno a otro.</p>
+</article>
+<article class="surface market-stat">
+<div class="big">67%</div>
+<h3>prefiere una experiencia general sin representante</h3>
+<p>La actualización 2026 de Gartner también reporta que 69% prefiere validar insights generados por IA con un representante: autonomía primero, expertise humano en los momentos críticos.</p>
+</article>
+</div>
+<div class="market-journey">
+<article class="surface market-mode">
+<div class="eyebrow">Autoservicio útil</div>
+<h3 style="margin-top:16px">El comprador quiere avanzar sin esperar.</h3>
+<ul>
+<li>Explorar productos, aplicaciones, colores y propiedades.</li>
+<li>Consultar fichas, medidas, garantías y literatura técnica.</li>
+<li>Comparar alternativas y preparar especificaciones.</li>
+<li>Solicitar cotización, muestra o contacto con datos completos.</li>
+</ul>
+</article>
+<div aria-hidden="true" class="market-bridge">→</div>
+<article class="surface market-mode">
+<div class="eyebrow">Asesoría que agrega valor</div>
+<h3 style="margin-top:16px">La persona debe recibir el contexto ya construido.</h3>
+<ul>
+<li>Validar que el material sea adecuado para la aplicación.</li>
+<li>Confirmar disponibilidad, volumen, color y tiempos.</li>
+<li>Resolver excepciones y proyectos especiales.</li>
+<li>Dar ownership y siguiente paso claro a la solicitud.</li>
+</ul>
+</article>
+</div>
+<article class="surface coverage-card">
+<div class="coverage-icon">↔</div>
+<div><strong>Implicación para Plastiglas</strong><p class="muted" style="margin:6px 0 0">La oportunidad no es sustituir al asesor comercial. Es lograr que web, formulario, WhatsApp y voz preparen mejor la conversación y entreguen al asesor producto, aplicación, especificaciones, región e historial.</p></div>
+</article>
+<p class="source-inline">Referencias de mercado: <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" rel="noopener noreferrer" target="_blank">McKinsey B2B Pulse 2024</a> y <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" rel="noopener noreferrer" target="_blank">Gartner B2B Buyer Survey 2026</a> y <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" rel="noopener noreferrer" target="_blank">Gartner sobre validación humana de insights de IA</a>.</p>
+</div>
+</section><section class="section section-white" id="canales">
+<div class="container">
+<div class="eyebrow">03 / Safari de canales visibles</div>
+<h2 class="max-copy" style="margin-top:15px">La experiencia ofrece ayuda visible; el punto por validar es cómo se confirma y continúa una solicitud entre canales.</h2>
+<p class="lead max-copy">La evidencia de campo es exploratoria: un envío de formulario y una conversación de WhatsApp. Permite describir la experiencia observada, pero no medir desempeño, disponibilidad general ni calidad de servicio.</p>
+<div class="channel-summary">
+<article class="surface status-summary status-visible">
+<div class="status-number" style="font-size:30px">WEB</div>
+<strong>ayuda visible</strong>
+<p class="muted small" style="margin:8px 0 0">Invitación a WhatsApp e ícono que abre el formulario de contacto.</p>
+</article>
+<article class="surface status-summary status-unconfirmed">
+<div class="status-number" style="font-size:30px">WA</div>
+<strong>respuesta automática + humana</strong>
+<p class="muted small" style="margin:8px 0 0">Bienvenida a las 21:08 h y respuesta humana la siguiente mañana laboral.</p>
+</article>
+<article class="surface status-summary status-absent">
+<div class="status-number" style="font-size:30px">n=1</div>
+<strong>muestra exploratoria</strong>
+<p class="muted small" style="margin:8px 0 0">Las ausencias observadas no se convierten en cifras de madurez ni en conclusiones generales.</p>
+</article>
+</div>
+<div aria-label="Matriz de canales" class="surface matrix-wrap" role="region" tabindex="0">
+<div style="overflow-x:auto">
+<div class="matrix-row">
+<div class="matrix-cell">Canal / capacidad</div>
+<div class="matrix-cell">Estado observado</div>
+<div class="matrix-cell">Lectura CX</div>
+<div class="matrix-cell">Siguiente validación / oportunidad</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Catálogo y literatura técnica</div>
+<div class="matrix-cell"><span class="status visible">Visible</span></div>
+<div class="matrix-cell">Contenido amplio para explorar aplicaciones, propiedades y productos.</div>
+<div class="matrix-cell">Validar qué contenidos responden dudas frecuentes y cómo llegan al asesor.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Cotización / formulario web</div>
+<div class="matrix-cell"><span class="status visible">Probado n=1</span></div>
+<div class="matrix-cell">Captura nombre, empresa, ciudad, país, correo, teléfono, producto y comentarios. El modal se cerró sin mensaje visible de éxito o error, folio o plazo. No se reportó correo automático entre el envío del 27 y el corte documentado del 31 de agosto.</div>
+<div class="matrix-cell">Confirmar en backend si se creó el registro, su propietario, deduplicación y la comunicación posterior al usuario.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Invitación “¿Necesitas ayuda?”</div>
+<div class="matrix-cell"><span class="status visible">Confirmado</span></div>
+<div class="matrix-cell">Dirige a la cuenta verificada de WhatsApp de Plastiglas.</div>
+<div class="matrix-cell">Validar si puede conservar página, producto, campaña y motivo de contacto.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Ícono flotante de mensaje</div>
+<div class="matrix-cell"><span class="status visible">Confirmado</span></div>
+<div class="matrix-cell">Abre el mismo formulario de contacto probado en el safari.</div>
+<div class="matrix-cell">Hacer visible el estado del envío y un siguiente paso claro, si los datos confirman la necesidad.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">WhatsApp</div>
+<div class="matrix-cell"><span class="status visible">Probado n=1</span></div>
+<div class="matrix-cell">Abrió sin mensaje prellenado. A las 21:08 h emitió una bienvenida automática. A las 09:05 h del siguiente día laboral, una persona pidió el teléfono para localizar la solicitud y ofreció recibirla por este medio para agilizarla. Tras compartir el número el 31 de agosto a las 08:36 h, no había respuesta adicional al corte de la captura.</div>
+<div class="matrix-cell">Esperar el resultado de la búsqueda y validar si recuperan producto, ciudad y comentarios sin recapturarlos.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Bot / autoservicio en WhatsApp</div>
+<div class="matrix-cell"><span class="status none">No observado en esta interacción</span></div>
+<div class="matrix-cell">La bienvenida no interpretó la intención ni inició un flujo guiado. La prueba comenzó fuera de horario laboral; por sí sola no permite describir todos los flujos disponibles.</div>
+<div class="matrix-cell">Validar motivos y volumen antes de proponer automatización; no convertir una sola conversación en una conclusión de plataforma.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Voz / acceso telefónico</div>
+<div class="matrix-cell"><span class="status visible">Observado</span></div>
+<div class="matrix-cell"><strong>Ocoyoacac:</strong> una contestadora solicita extensión o marcar 0 y luego enruta a una persona. <strong>Monterrey:</strong> atención directa por una persona, sin IVR observado.</div>
+<div class="matrix-cell">Validar si ambas sedes comparten plataforma, métricas, reglas de routing e historial.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Correo</div>
+<div class="matrix-cell"><span class="status partial">Pendiente</span></div>
+<div class="matrix-cell">Correo principal y buzones regionales son visibles; el journey de respuesta no fue probado.</div>
+<div class="matrix-cell">Medir acuse, tiempo, propietario, región y continuidad con una sola prueba autorizada.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Webchat / live agent embebido</div>
+<div class="matrix-cell"><span class="status none">No observado en el journey probado</span></div>
+<div class="matrix-cell">Los accesos visibles lanzan WhatsApp o formulario; no se desarrolló una conversación dentro del sitio.</div>
+<div class="matrix-cell">Evaluar asistencia embebida solo si abandono, motivos y valor del journey justifican el caso.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Redes sociales</div>
+<div class="matrix-cell"><span class="status partial">Baja prioridad</span></div>
+<div class="matrix-cell">La investigación pública las sugiere principalmente como marca/marketing; soporte no confirmado.</div>
+<div class="matrix-cell">Una prueba ligera en una cuenta oficial es suficiente para saber si resuelve o redirige.</div>
+</div>
+<div class="matrix-row">
+<div class="matrix-cell matrix-title">Callback / proactividad / personalización</div>
+<div class="matrix-cell"><span class="status none">No observado en el journey probado</span></div>
+<div class="matrix-cell">No se observó una oferta de callback ni una intervención contextual basada en la navegación.</div>
+<div class="matrix-cell">Validar primero abandono, intención y capacidad operativa antes de recomendar proactividad.</div>
+</div>
+</div>
+</div>
+<aside class="diagnostic-callout">
+<div class="callout-number">n=1</div>
+<div>
+<h3>No convertir observaciones puntuales en un diagnóstico de desempeño.</h3>
+<p>El safari identifica preguntas concretas sobre confirmación, búsqueda y continuidad. No demuestra que el lead se haya perdido, que exista fragmentación tecnológica ni que un SLA se haya incumplido.</p>
+</div>
+</aside>
+</div>
+</section><section class="section" id="campo">
+<div class="container">
+<div class="eyebrow">04 / Safari de campo documentado</div>
+<h2 class="max-copy" style="margin-top:15px">La cronología muestra acceso humano y una búsqueda manual en curso; la continuidad todavía no está confirmada.</h2>
+<p class="lead max-copy">La prueba comenzó el jueves 27 de agosto de 2026 y se actualizó con la respuesta humana y el mensaje del lunes 31. Se documenta el tiempo de reloj, pero no se interpreta como SLA porque el primer contacto ocurrió a las 21:08 h y no conocemos el horario oficial del equipo.</p>
+<div aria-label="Metadatos del safari" class="field-meta">
+<span>Formulario: minutos antes de 21:08 h · 27 ago</span>
+<span>Bienvenida automática: 21:08 h · 27 ago</span>
+<span>Respuesta humana: 09:05 h · 28 ago</span>
+<span>Teléfono compartido: 08:36 h · 31 ago</span>
+<span>Muestra: n=1 web + n=1 WhatsApp</span>
+</div>
+<div class="methodology-banner">
+<div class="methodology-mark">!</div>
+<div>
+<h3>Limitación metodológica</h3>
+<p>Una sola prueba no representa todos los horarios, agentes, rutas, productos o regiones. Los tiempos se presentan como cronología observada y no como evaluación de cumplimiento.</p>
+<div class="basis-row"><span class="evidence-basis basis-tested">Safari Plastiglas n=1</span><span class="evidence-basis basis-limited">Inicio fuera de horario</span><span class="evidence-basis basis-limited">SLA desconocido</span></div>
+</div>
+</div>
+<div class="field-grid">
+<article class="surface field-card" data-step="01">
+<span class="status visible">Observado</span>
+<h3>El formulario captura datos útiles, pero no confirma el resultado al usuario.</h3>
+<p>Se completaron nombre, empresa, ciudad, país, correo, teléfono, producto y comentarios. Después de presionar “Enviar”:</p>
+<ul><li>El modal se cerró.</li><li>No apareció mensaje visible de éxito o error.</li><li>No se mostró folio o identificador.</li><li>No se indicó un tiempo esperado de respuesta.</li><li>No se reportó correo automático entre el envío y el corte documentado del 31 de agosto.</li></ul>
+</article>
+<article class="surface field-card" data-step="02">
+<span class="status visible">Observado</span>
+<h3>Los dos accesos visibles de ayuda conducen a canales distintos.</h3>
+<p>La invitación “Hola, ¿Necesitas ayuda?” dirige a WhatsApp. El ícono flotante naranja abre el formulario.</p>
+<ul><li>La asistencia es visible.</li><li>El usuario cambia a WhatsApp o completa un formulario.</li><li>No se observó una conversación embebida en la página probada.</li></ul>
+</article>
+<article class="surface field-card" data-step="03">
+<span class="status visible">Observado</span>
+<h3>El paso de web a WhatsApp inicia sin contexto visible.</h3>
+<p>La cuenta verificada se abrió con la conversación vacía: no había texto prellenado, producto, página de origen, ciudad ni referencia a la solicitud.</p>
+<ul><li>La persona inició manualmente la conversación.</li><li>No se transfirió de forma visible el producto o URL.</li><li>Esto describe el front-end; no revela qué datos existen en backend.</li></ul>
+</article>
+<article class="surface field-card" data-step="04">
+<span class="status partial">Fuera de horario</span>
+<h3>A las 21:08 h se recibió una bienvenida automática genérica.</h3>
+<p>El mensaje “Gracias por comunicarte con Plastiglas de México. ¿Cómo podemos ayudarte?” no respondió la pregunta sobre la solicitud.</p>
+<ul><li>Confirma una automatización de bienvenida.</li><li>No se observó un flujo conversacional de varios pasos.</li><li>Al ocurrir fuera de horario, no se usa para juzgar disponibilidad humana ni SLA.</li></ul>
+</article>
+<article class="surface field-card" data-step="05">
+<span class="status visible">Respuesta humana observada</span>
+<h3>La siguiente mañana laboral, una persona intentó encaminar la búsqueda.</h3>
+<p>A las 09:05 h del viernes 28 de agosto, el equipo pidió compartir el teléfono para localizar la solicitud y también ofreció recibirla por WhatsApp para agilizarla.</p>
+<ul><li>Existe atención humana en el canal.</li><li>La respuesta demuestra intención de buscar la solicitud, no que ya la hubiera localizado.</li><li>La opción de compartirla de nuevo puede ser un mecanismo de agilización; no se interpreta por sí sola como pérdida de contexto.</li><li>El teléfono se envió el lunes 31 a las 08:36 h; aparecía leído y no había respuesta adicional al corte de la captura.</li></ul>
+</article>
+<article class="surface field-card" data-step="06">
+<span class="status visible">Observado</span>
+<h3>La entrada telefónica varía entre las sedes probadas.</h3>
+<p><strong>Ocoyoacac:</strong> una contestadora solicita extensión o marcar 0 y luego enruta a una persona.</p>
+<p><strong>Monterrey:</strong> la llamada fue atendida directamente por una persona, sin IVR observado.</p>
+<p class="muted small">No se validó la recuperación de la solicitud web ni la continuidad de contexto durante las llamadas.</p>
+</article>
+</div>
+<article class="surface field-verdict">
+<div class="verdict-icon">CX</div>
+<div><h3>Conclusión provisional</h3><p>Plastiglas ofrece accesos digitales y respuesta humana en WhatsApp la siguiente mañana laboral. La incertidumbre visible permanece en el acuse del formulario y en si el equipo puede recuperar sus detalles sin recaptura. Con n=1 no se concluye incumplimiento, fragmentación ni pérdida de leads.</p></div>
+</article>
+<div class="test-plan">
+<article class="surface test-card">
+<div class="eyebrow">Siguiente evidencia</div>
+<h3 style="margin-top:15px">Cerrar el safari sin sobreprobar al equipo.</h3>
+<div class="test-list">
+<div class="test-item"><div class="test-rank">1</div><div><strong>Resultado de la búsqueda en WhatsApp</strong><small>Esperar si confirman la solicitud y qué datos recuperan; no es necesario enviar otro mensaje por ahora.</small></div><span class="priority high">Alta</span></div>
+<div class="test-item"><div class="test-rank">2</div><div><strong>Correo</strong><small>Una sola prueba autorizada para medir acuse, propietario, región y continuidad.</small></div><span class="priority medium">Media</span></div>
+<div class="test-item"><div class="test-rank">3</div><div><strong>Redes sociales</strong><small>Prueba ligera en un perfil oficial; detener si solo redirige.</small></div><span class="priority low">Baja</span></div>
+</div>
+</article>
+<aside class="surface test-card">
+<div class="eyebrow">Criterio para redes</div>
+<h3 style="margin-top:15px">Sirve para clasificar el canal, no para buscar otra falla.</h3>
+<p class="muted small">La pregunta es si la mensajería social resuelve, deriva o simplemente funciona como marketing. No necesitas probar todas las redes.</p>
+<ul class="clean-list" style="margin-top:18px"><li>Usar una cuenta oficial enlazada por la marca.</li><li>Enviar una consulta breve y legítima.</li><li>Medir respuesta automática, respuesta humana y redirección.</li><li>No comparar tiempos con WhatsApp sin conocer horarios.</li><li>Evitar inventar una queja o urgencia.</li></ul>
+<p class="privacy-note">Las capturas con datos personales no se incluyen en esta página.</p>
+</aside>
+</div>
+</div>
+</section><section class="section section-dark" id="journey">
+<div class="container">
+<div class="eyebrow">05 / Journey industrial</div>
+<h2 class="max-copy" style="margin-top:15px">La experiencia no termina cuando el cliente encuentra el producto; se prueba en el paso de investigación a cotización y asesoría.</h2>
+<p class="lead max-copy">En un journey de materiales, las preguntas de aplicación, medidas, espesor, color, transformación, disponibilidad, ubicación y tiempo pueden aparecer antes y después de solicitar una cotización.</p>
+<div class="journey-grid">
+<article class="journey-step"><span class="journey-num">01</span><h3>Descubrir</h3><p>Producto, segmento, aplicación, inspiración y proyecto.</p></article>
+<article class="journey-step"><span class="journey-num">02</span><h3>Comparar</h3><p>Propiedades, medidas, espesores, colores y literatura técnica.</p></article>
+<article class="journey-step"><span class="journey-num">03</span><h3>Cotizar</h3><p>Volumen, especificaciones, ubicación, urgencia y datos de contacto.</p></article>
+<article class="journey-step"><span class="journey-num">04</span><h3>Contactar</h3><p>WhatsApp, teléfono, correo o formulario según preferencia.</p></article>
+<article class="journey-step"><span class="journey-num">05</span><h3>Asesorar</h3><p>Canalización regional, factibilidad, disponibilidad y propuesta.</p></article>
+<article class="journey-step"><span class="journey-num">06</span><h3>Dar seguimiento</h3><p>Pedido, entrega, soporte técnico, recompra y satisfacción.</p></article>
+</div>
+<div aria-label="Puntos de fricción potenciales" class="friction-line">
+<span class="friction-marker one" title="Producto a cotización">!</span>
+<span class="friction-marker two" title="Cotización a canal asistido">!</span>
+<span class="friction-marker three" title="Canal a asesor regional">!</span>
+</div>
+<div class="journey-analysis">
+<article class="surface top-good">
+<h3>Lo que Plastiglas ya tiene</h3>
+<ul class="clean-list">
+<li>Portafolio y aplicaciones visibles.</li>
+<li>Literatura técnica extensa.</li>
+<li>Dos accesos visibles de ayuda.</li>
+<li>Voz, correo y WhatsApp publicados.</li>
+<li>Directorio automático por extensión en Ocoyoacac y atención humana directa en Monterrey.</li>
+<li>Saludo automático básico en WhatsApp.</li>
+</ul>
+</article>
+<article class="surface top-warn">
+<h3>Brecha visible por validar</h3>
+<ul class="clean-list">
+<li>El formulario no confirma el envío al usuario.</li>
+<li>WhatsApp inicia sin mensaje o contexto prellenado.</li>
+<li>En el journey probado no apareció un bot conversacional o webchat embebido.</li>
+<li>No se validó si la operación de voz comparte routing, métricas y contexto entre sedes.</li>
+<li>El resultado de la búsqueda manual de la solicitud sigue pendiente.</li>
+</ul>
+</article>
+<article class="surface top-risk">
+<h3>Riesgo CX potencial</h3>
+<ul class="clean-list">
+<li>El cliente duda si la solicitud fue enviada.</li>
+<li>El cliente puede repetir intención y especificaciones.</li>
+<li>Ownership y tiempo de respuesta quedan invisibles.</li>
+<li>Puede generarse recontacto o envío duplicado.</li>
+</ul>
+</article>
+</div>
+</div>
+</section><section class="section section-white" id="voz">
+<div class="container">
+<div class="eyebrow">06 / Voz pública y contexto de mercado</div>
+<h2 class="max-copy" style="margin-top:15px">La señal pública no demuestra un problema de servicio; aporta contexto para formular preguntas sobre certeza, disponibilidad y diferenciación.</h2>
+<p class="lead max-copy">La huella de reseñas de clientes es demasiado limitada para afirmar que Plastiglas atiende bien o mal. Por eso, esta capa combina evidencia pública, el safari observado y preguntas de comprador que deben validarse con datos internos.</p>
+<div class="voice-grid">
+<article class="surface voice-card">
+<span class="voice-label">Evidencia disponible</span>
+<h3>Baja huella pública de reseñas confiables</h3>
+<p>No se encontró un volumen suficientemente sólido de opiniones de clientes B2B para construir una conclusión reputacional. Las reseñas de empleados tampoco deben utilizarse como sustituto de voz del cliente.</p>
+</article>
+<article class="surface voice-card">
+<span class="voice-label">Promesa de marca</span>
+<h3>“Atención personalizada en toda la cadena” eleva la expectativa</h3>
+<p>Cuando la marca promete acompañamiento, la falta de acuse visible tras el formulario y el paso a WhatsApp sin contexto se convierten en momentos de incertidumbre, aunque el backend sí pudiera estar registrando la solicitud.</p>
+</article>
+<article class="surface voice-card"><span class="voice-label">Contexto regulatorio</span><h3>La investigación antidumping no es evidencia de vulnerabilidad ni de un problema CX</h3><p>La investigación se abrió a solicitud de Plastiglas. En este documento se usa únicamente para entender el entorno competitivo y definir un universo inicial de empresas comparables; no se infiere presión financiera, pérdida de participación ni necesidad de una solución de CX.</p></article>
+<article class="surface voice-card"><span class="voice-label">Límite metodológico</span><h3>Sin sesión con el cliente no existe todavía un insight interno</h3><p>No contamos con volúmenes, SLAs, CRM, datos de abandono, comentarios de asesores ni dolores operativos confirmados. Esos elementos deben obtenerse en discovery y no inferirse desde fuera.</p></article>
+</div>
+<div aria-label="Preguntas probables del comprador por validar" class="buyer-question-grid">
+<div class="buyer-question">¿Qué material y espesor funcionan para mi aplicación?</div>
+<div class="buyer-question">¿Hay existencia, color y volumen disponibles?</div>
+<div class="buyer-question">¿Quién es el asesor correcto para mi región?</div>
+<div class="buyer-question">¿Cuándo recibiré la cotización?</div>
+<div class="buyer-question">¿La solicitud sí quedó registrada?</div>
+<div class="buyer-question">¿Puedo continuar sin repetir toda la información?</div>
+</div>
+</div>
+</section><section class="section" id="competencia">
+<div class="container">
+<div class="eyebrow">07 / Benchmark competitivo visible</div>
+<h2 class="max-copy" style="margin-top:15px">Los competidores muestran patrones distintos de diseño público; esta comparación no clasifica su desempeño real.</h2>
+<p class="lead max-copy">Solo Plastiglas fue probado mediante mystery shopping. Para Acrílicos Newton, Garen y Plaskolite se revisaron interfaces y mensajes públicos; no se enviaron formularios, no se midieron tiempos y no se evaluó la calidad de sus agentes.</p>
+<div class="methodology-banner">
+<div class="methodology-mark">=</div>
+<div>
+<h3>Regla de comparación</h3>
+<p>La tabla compara funciones y promesas visibles antes de la interacción. Los resultados posteriores al envío de Plastiglas se documentan en el safari, fuera del benchmark. Una promesa como “en minutos” se presenta como copy de marketing, no como resultado verificado.</p>
+<div class="basis-row"><span class="evidence-basis basis-tested">Plastiglas: interfaz + safari n=1</span><span class="evidence-basis basis-public">Competidores: revisión pública</span><span class="evidence-basis basis-limited">Sin ranking de servicio</span></div>
+</div>
+</div>
+<div class="competitor-grid">
+<article class="surface competitor-card" data-letter="N"><span class="competitor-type">Revisión pública · no se envió solicitud</span><h3>Acrílicos Newton</h3><p>El sitio conecta catálogo y cotización: permite agregar productos a una solicitud, muestra WhatsApp y publica contactos por sucursal.</p><ul><li>Productos agregables a cotización.</li><li>WhatsApp visible.</li><li>Contactos diferenciados por ubicación.</li><li>Formulario con archivo adjunto.</li></ul><a class="competitor-link" href="https://newton.com.mx/solicitud-de-cotizacion/" rel="noopener noreferrer" target="_blank">Ver experiencia pública ↗</a></article>
+<article class="surface competitor-card" data-letter="G"><span class="competitor-type">Revisión pública · no se envió solicitud</span><h3>Plásticos Especiales Garen</h3><p>La landing prioriza WhatsApp, cotización y cobertura nacional. La expresión de contacto “en minutos” es una promesa pública no medida.</p><ul><li>WhatsApp destacado.</li><li>Formulario con producto y ubicación.</li><li>Promesa pública de contacto rápido.</li><li>Red de sucursales publicada.</li></ul><a class="competitor-link" href="https://acrilico.garen.com.mx/" rel="noopener noreferrer" target="_blank">Ver experiencia pública ↗</a></article>
+<article class="surface competitor-card" data-letter="P"><span class="competitor-type">Revisión pública · no se envió solicitud</span><h3>Plaskolite</h3><p>El journey público enfatiza especificación técnica mediante formularios de cotización o muestra y herramientas para soluciones a medida.</p><ul><li>Cotización con aplicación y especificaciones.</li><li>Solicitud de muestra.</li><li>Recursos y herramientas técnicas.</li><li>Captura de región y relación con distribuidor.</li></ul><a class="competitor-link" href="https://plaskolite.com/contact-us/request-quote" rel="noopener noreferrer" target="_blank">Ver experiencia pública ↗</a></article>
+</div>
+<div aria-label="Comparativo de patrones públicos" class="surface benchmark-wrap" role="region" tabindex="0">
+<div style="overflow-x:auto">
+<div class="benchmark-row"><div class="benchmark-cell">Patrón público</div><div class="benchmark-cell">Plastiglas</div><div class="benchmark-cell">A. Newton</div><div class="benchmark-cell">Garen</div><div class="benchmark-cell">Plaskolite</div><div class="benchmark-cell">Pregunta para discovery</div></div>
+<div class="benchmark-row"><div class="benchmark-cell"><strong>Producto → cotización</strong></div><div class="benchmark-cell">Catálogo y formulario general con selector de producto y comentarios.</div><div class="benchmark-cell">Productos agregables a una solicitud.</div><div class="benchmark-cell">Formulario con producto de interés y ubicación.</div><div class="benchmark-cell">CTA desde producto y captura de aplicación/especificaciones.</div><div class="benchmark-cell">¿Qué datos técnicos reducen más el retrabajo del asesor?</div></div>
+<div class="benchmark-row"><div class="benchmark-cell"><strong>Canales visibles</strong></div><div class="benchmark-cell">WhatsApp, formulario, teléfono y correo.</div><div class="benchmark-cell">WhatsApp y contactos por sucursal.</div><div class="benchmark-cell">WhatsApp, formulario y sucursales.</div><div class="benchmark-cell">Formularios especializados y contactos regionales.</div><div class="benchmark-cell">¿Qué canal prefieren los compradores por motivo y etapa?</div></div>
+<div class="benchmark-row"><div class="benchmark-cell"><strong>Promesa pública de respuesta</strong></div><div class="benchmark-cell">No se observó una promesa de tiempo antes del envío en el journey muestreado. El resultado posterior se documenta aparte.</div><div class="benchmark-cell">Copy de contacto “a la brevedad”; no medido.</div><div class="benchmark-cell">Copy de contacto “en minutos”; no medido.</div><div class="benchmark-cell">No se observó SLA público en el formulario revisado.</div><div class="benchmark-cell">¿Qué expectativa puede prometer Plastiglas y cumplir de forma consistente?</div></div>
+<div class="benchmark-row"><div class="benchmark-cell"><strong>Profundidad del intake</strong></div><div class="benchmark-cell">Datos de contacto, ciudad, país, producto y comentarios abiertos.</div><div class="benchmark-cell">Productos seleccionados y archivo adjunto.</div><div class="benchmark-cell">Producto y ubicación.</div><div class="benchmark-cell">Producto, aplicación, dimensiones, espesor, cantidad, región y distribuidor.</div><div class="benchmark-cell">¿Cuál es el mínimo dato viable para calificar sin alargar el formulario?</div></div>
+<div class="benchmark-row"><div class="benchmark-cell"><strong>Autoservicio técnico visible</strong></div><div class="benchmark-cell">Literatura, aplicaciones, academia y variedad de producto.</div><div class="benchmark-cell">Catálogo y servicios de transformación.</div><div class="benchmark-cell">Contenido de selección y cotización.</div><div class="benchmark-cell">Especificaciones, muestras, recursos y calculadora.</div><div class="benchmark-cell">¿Qué contenido ya existente puede activarse en el momento de contacto?</div></div>
+</div>
+</div>
+<article class="benchmark-note"><h3>Lectura competitiva responsable</h3><p>El benchmark identifica opciones de diseño, no ganadores. Plastiglas muestra una base técnica fuerte; la oportunidad hipotética es decidir qué nivel de contexto, confirmación y guía aporta valor real a sus compradores y a su operación.</p></article>
+</div>
+</section><section class="section section-dark" id="referencia">
+<div class="container">
+<div class="eyebrow">08 / Referencias análogas de Genesys</div>
+<h2 class="max-copy" style="margin-top:15px">Casos industriales ilustrativos: patrones de operación, no prueba de fit ni de ROI para Plastiglas.</h2>
+<p class="lead max-copy">Estas referencias forman parte de la perspectiva comercial de Genesys. Sirven para formular preguntas sobre operación multisitio, conocimiento de producto, routing y medición; no sustituyen un business case ni demuestran que Plastiglas tenga los mismos problemas.</p>
+<div class="reference-grid">
+<article class="reference-card">
+<span class="ref-tag">Industrial distribution</span>
+<h3>Ferguson: 1,200+ ubicaciones conectadas</h3>
+<p>Ferguson buscó resolver sistemas desarticulados y routing incorrecto entre operaciones locales y centrales. Genesys Cloud se utilizó como base común para mantener la atención de sucursal y mejorar consistencia, medición y escalabilidad.</p>
+<ul>
+<li>Unificación de engagement local y centralizado.</li>
+<li>Expertos accesibles desde sucursales, almacenes y campo.</li>
+<li>Reporting consolidado sin eliminar la flexibilidad local.</li>
+</ul>
+<a href="https://www.genesys.com/customer-stories/ferguson" rel="noopener noreferrer" target="_blank">Caso oficial de Genesys ↗</a>
+</article>
+<article class="reference-card">
+<span class="ref-tag">Industrial manufacturing</span>
+<h3>Legrand: complejidad de catálogo y journeys B2B/B2C</h3>
+<p>Legrand opera un portafolio amplio y distintos journeys de compra. Su historia pública destaca una plataforma cloud para adaptar el servicio por mercado, mejorar visibilidad, reporting y seguimiento de satisfacción.</p>
+<ul>
+<li>Más de 100 agentes y operación global.</li>
+<li>Voz, outbound, email e integraciones en una misma plataforma.</li>
+<li>Mayor control de colas, historia reciente y factores de experiencia.</li>
+</ul>
+<a href="https://www.genesys.com/customer-stories/legrand" rel="noopener noreferrer" target="_blank">Caso oficial de Genesys ↗</a>
+</article>
+</div>
+<div class="reference-bridge">
+<div><strong>Experiencia regional</strong><span>Asesores y centros conservan conocimiento local.</span></div>
+<div aria-hidden="true" class="reference-arrow">→</div>
+<div><strong>Capa común de interacción</strong><span>Routing, identidad, contexto, SLA y medición.</span></div>
+<div aria-hidden="true" class="reference-arrow">→</div>
+<div><strong>Escala sin fragmentación</strong><span>Visibilidad central con flexibilidad por región y producto.</span></div>
+</div>
+</div>
+</section><section class="section section-gradient" id="norte">
+<div class="container">
+<div class="eyebrow">09 / Estado objetivo ilustrativo · punto de vista Genesys</div>
+<h2 class="max-copy" style="margin-top:15px">North Star: una puerta de entrada conectada que entiende la necesidad técnica y conserva el contexto hasta el asesor correcto.</h2>
+<p class="lead max-copy">Esta visión es una hipótesis de solución preparada por el proveedor. Debe validarse contra problemas, volúmenes, integraciones, prioridades y valor de negocio antes de recomendar capacidades concretas.</p>
+<div class="north-grid">
+<article class="north-card"><div class="north-num">1</div><h3>Canales unificados</h3><p>Voz, WhatsApp, web messaging y correo dentro de una capa común de routing, identidad e historial.</p></article>
+<article class="north-card"><div class="north-num">2</div><h3>Intake técnico</h3><p>Capturar producto, aplicación, medidas, espesor, color, volumen, región y urgencia antes de asignar.</p></article>
+<article class="north-card"><div class="north-num">3</div><h3>Escalamiento con contexto</h3><p>El asesor recibe lo consultado, datos capturados, transcripción, historial y razón de contacto.</p></article>
+<article class="north-card"><div class="north-num">4</div><h3>Engagement predictivo</h3><p>Detectar alta intención o abandono en producto/cotización y ofrecer ayuda en el momento adecuado.</p></article>
+<article class="north-card"><div class="north-num">5</div><h3>Analítica de journey</h3><p>Ver dónde se pierden solicitudes, se repite contacto, se transfiere o se incumple una promesa.</p></article>
+</div>
+<article class="surface dark day-card">
+<div class="eyebrow">Día en la vida del asesor</div>
+<h3 style="margin-top:15px">De recapturar especificaciones a trabajar una solicitud ya entendida y priorizada.</h3>
+<div class="day-flow">
+<div class="day-step"><strong>1. El cliente explora</strong><p>Revisa un producto, aplicación y documentación técnica.</p></div>
+<div class="day-step"><strong>2. Se detecta intención</strong><p>Inicia cotización o recibe ayuda contextual ante fricción.</p></div>
+<div class="day-step"><strong>3. Se prepara la solicitud</strong><p>Intake guiado, humano o virtual, solo si el volumen y el caso de uso lo justifican.</p></div>
+<div class="day-step"><strong>4. Llega al asesor</strong><p>Routing por región, segmento, habilidad, prioridad y disponibilidad.</p></div>
+<div class="day-step"><strong>5. Se aprende</strong><p>Analytics conecta resultado, motivo, handoff, SLA y oportunidad comercial.</p></div>
+</div>
+</article>
+</div>
+</section><section class="section" id="senales">
+<div class="container">
+<div class="eyebrow">10 / Señales FTS</div>
+<h2 class="max-copy" style="margin-top:15px">Del síntoma visible a la causa raíz probable, sin confundir hipótesis con hechos.</h2>
+<p class="lead max-copy">La investigación pública permite construir una conversación de discovery. No permite afirmar niveles de conversión, SLA, abandono, FCR, NPS/CSAT ni arquitectura de contact center.</p>
+<div class="signal-layout">
+<div aria-label="Tipos de señal FTS" class="signal-nav" role="tablist">
+<button aria-selected="true" class="signal-btn active" data-signal="leading" role="tab" type="button">
+<span class="signal-code">L</span><span><strong>Leading</strong><small>Señales tempranas</small></span><span class="signal-arrow">›</span>
+</button>
+<button aria-selected="false" class="signal-btn" data-signal="leaning" role="tab" type="button">
+<span class="signal-code">M</span><span><strong>Leaning</strong><small>Fricción operativa</small></span><span class="signal-arrow">›</span>
+</button>
+<button aria-selected="false" class="signal-btn" data-signal="lagging" role="tab" type="button">
+<span class="signal-code">R</span><span><strong>Lagging</strong><small>Resultados afectados</small></span><span class="signal-arrow">›</span>
+</button>
+<button aria-selected="false" class="signal-btn" data-signal="root" role="tab" type="button">
+<span class="signal-code">?</span><span><strong>Root cause</strong><small>Hipótesis central</small></span><span class="signal-arrow">›</span>
+</button>
+</div>
+<div class="surface signal-panel">
+<div class="signal-content active" id="signal-leading" role="tabpanel">
+<div class="signal-label">Leading indicators</div>
+<h3>Múltiples entradas visibles sin evidencia pública de una capa única de interacción y contexto.</h3>
+<p>El sitio dirige a cotización, WhatsApp, teléfono y correo. El formulario no mostró acuse visible; WhatsApp abrió sin contexto y posteriormente un asesor pidió el teléfono para buscar la solicitud. La recuperación efectiva aún no está confirmada.</p>
+<div class="signal-evidence">
+<div class="evidence-chip"><strong>Formulario</strong>Cierre sin confirmación visible en una prueba; registro interno desconocido.</div>
+<div class="evidence-chip"><strong>Journey clave</strong>Producto → cotización → asesor, no carrito → checkout.</div>
+<div class="evidence-chip"><strong>WhatsApp</strong>Bienvenida fuera de horario y respuesta humana al siguiente día laboral; búsqueda en curso.</div>
+<div class="evidence-chip"><strong>Proactividad</strong>No se observaron disparadores predictivos públicos.</div>
+</div>
+</div>
+<div class="signal-content" id="signal-leaning" role="tabpanel">
+<div class="signal-label">Leaning indicators</div>
+<h3>El cliente y el asesor podrían invertir esfuerzo en reconstruir la solicitud al pasar entre canales o regiones.</h3>
+<p>La fricción intermedia se puede manifestar como transferencias, correos de seguimiento, preguntas repetidas, canalización manual, solicitudes sin propietario claro o tiempos variables de respuesta.</p>
+<div class="signal-evidence">
+<div class="evidence-chip"><strong>Tiempo de respuesta</strong>Comparar WhatsApp, email, voz y formulario.</div>
+<div class="evidence-chip"><strong>Transferencias</strong>Medir cuántas interacciones cambian de equipo o ubicación.</div>
+<div class="evidence-chip"><strong>Recontacto</strong>Identificar clientes que preguntan lo mismo por otro canal.</div>
+<div class="evidence-chip"><strong>Calificación manual</strong>Cuánto tiempo toma capturar producto, medidas, uso y región.</div>
+</div>
+</div>
+<div class="signal-content" id="signal-lagging" role="tabpanel">
+<div class="signal-label">Lagging indicators</div>
+<h3>La consecuencia puede aparecer en conversión de cotización, satisfacción, recompra y productividad comercial.</h3>
+<p>La investigación pública no aporta cifras. El discovery debe establecer la línea base de conversión, abandono, respuesta, repetición, resolución, cumplimiento de SLA y costo por interacción.</p>
+<div class="signal-evidence">
+<div class="evidence-chip"><strong>Cotización</strong>Inicio, finalización, contacto y cierre comercial.</div>
+<div class="evidence-chip"><strong>Servicio</strong>CSAT, tiempo de resolución y contactos repetidos.</div>
+<div class="evidence-chip"><strong>Productividad</strong>Tiempo del asesor en clasificación, búsqueda y seguimiento.</div>
+<div class="evidence-chip"><strong>Lealtad</strong>Recompra, recomendación y retención de distribuidores/clientes.</div>
+</div>
+</div>
+<div class="signal-content" id="signal-root" role="tabpanel">
+<div class="signal-label">Root cause probable</div>
+<h3>La continuidad podría depender de búsquedas y handoffs manuales, con o sin sistemas compartidos.</h3>
+<p>Es una hipótesis, no una conclusión. La petición del teléfono para localizar la solicitud muestra un paso manual, pero no revela si los canales están integrados, separados o sujetos a reglas de privacidad y proceso.</p>
+<div class="signal-evidence">
+<div class="evidence-chip"><strong>Arquitectura</strong>Proveedor, colas, números, buzones e integraciones actuales.</div>
+<div class="evidence-chip"><strong>Gobierno</strong>Quién es propietario de cada canal y cada tipo de solicitud.</div>
+<div class="evidence-chip"><strong>Datos</strong>Cómo se vincula una interacción con cliente, cotización y oportunidad.</div>
+<div class="evidence-chip"><strong>Escala futura</strong>Cómo cambia la complejidad tras integrar portafolio y huella de Verzatec.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="discipline-grid">
+<article class="surface discipline-card">
+<span class="badge badge-known">Lo conocido</span>
+<h3>Se probaron el formulario, el acceso a WhatsApp y dos entradas telefónicas; hubo respuesta humana en WhatsApp.</h3>
+<p class="muted small">Se observó falta de acuse visible, handoff sin texto prellenado y solicitud de teléfono para buscar el registro.</p>
+</article>
+<article class="surface discipline-card">
+<span class="badge badge-hypothesis">Hipótesis</span>
+<h3>El cambio de canal puede romper contexto, routing u ownership.</h3>
+<p class="muted small">La complejidad podría aumentar al crecer el portafolio y combinar operaciones con Grupo Verzatec.</p>
+</article>
+<article class="surface discipline-card">
+<span class="badge badge-validate">Por validar</span>
+<h3>Resultado de la búsqueda, correo, SLA, volumen, conversión y continuidad interna.</h3>
+<p class="muted small">La siguiente evidencia debe mostrar si el equipo localiza la solicitud y qué contexto puede recuperar.</p>
+</article>
+</div>
+</div>
+</section><section class="section" id="roadmap">
+<div class="container">
+<div class="eyebrow">11 / Oportunidades y hoja de ruta</div>
+<h2 class="max-copy" style="margin-top:15px">Empezar por confirmar el problema y medirlo; después decidir qué automatizar y optimizar.</h2>
+<p class="lead max-copy">La hoja de ruta es una hipótesis comercial, no una recomendación final. Cada fase debe avanzar solo si el discovery demuestra necesidad, capacidad operativa y valor medible.</p>
+<div class="roadmap">
+<article class="surface phase" data-phase="1"><span class="phase-tag">Fase 1 · Confirmar y medir</span><h3>Dar certeza y ownership al journey</h3><ul><li>Mapear el flujo actual de formulario, WhatsApp, voz, correo y sedes.</li><li>Confirmar registro, responsable, SLA y comunicación al usuario.</li><li>Establecer baseline de volumen, respuesta, transferencia, recontacto y conversión.</li><li>Definir el journey prioritario y el problema cuantificado.</li></ul></article>
+<article class="surface phase" data-phase="2"><span class="phase-tag">Fase 2 · Simplificar</span><h3>Reducir recaptura y orientar mejor</h3><ul><li>Conservar producto, aplicación, región y datos ya capturados.</li><li>Diseñar intake guiado con el mínimo dato viable.</li><li>Activar conocimiento consistente para cliente y asesor.</li><li>Evaluar asistencia virtual o al agente solo donde el volumen lo justifique.</li></ul></article>
+<article class="surface phase" data-phase="3"><span class="phase-tag">Fase 3 · Optimizar</span><h3>Gestionar journeys y capacidad</h3><ul><li>Detectar abandono e intención en journeys de alto valor.</li><li>Analizar causas de contacto, handoff y repetición.</li><li>Optimizar calidad, capacidad y desempeño.</li><li>Relacionar experiencia con cotización, venta y recompra.</li></ul></article>
+</div>
+<div class="commercial-map"><strong>Mapeo ilustrativo de Genesys, sujeto a discovery:</strong><p>Genesys Cloud puede aportar routing digital y de voz, WhatsApp/Web Messaging, Knowledge, Virtual Agent, Agent Copilot, Predictive Engagement, Journey Management, Speech and Text Analytics y WEM. Estas capacidades no se presentan como requerimientos confirmados; son opciones a evaluar contra los hallazgos y el business case.</p></div>
+<article class="surface kpi-card">
+<div class="kpi-head"><div><div class="eyebrow">Baseline de negocio</div><h3 style="margin:13px 0 0">Métricas necesarias antes de cuantificar el caso.</h3></div><span class="status partial">Discovery requerido</span></div>
+<div class="kpi-grid"><div class="kpi-item"><strong>Conversión de cotización</strong><span>Inicio → envío → contacto → propuesta → cierre.</span></div><div class="kpi-item"><strong>Tiempo de respuesta</strong><span>Por canal, motivo, región y horario.</span></div><div class="kpi-item"><strong>Transferencia / handoff</strong><span>Cantidad y causa de reasignaciones.</span></div><div class="kpi-item"><strong>Contacto repetido</strong><span>Mismo cliente/motivo en distintos canales.</span></div><div class="kpi-item"><strong>Digital a asistido</strong><span>Qué journey antecede la llamada o WhatsApp.</span></div><div class="kpi-item"><strong>Satisfacción y recompra</strong><span>CSAT, resolución, recomendación y recurrencia.</span></div></div>
+</article>
+</div>
+</section><section class="section section-white" id="discovery">
+<div class="container">
+<div class="eyebrow">12 / Discovery recomendado</div>
+<h2 class="max-copy" style="margin-top:15px">Diez preguntas para completar la capa interna que el safari y el benchmark no pueden revelar.</h2>
+<p class="lead max-copy"><strong>Observación de voz:</strong> En Ocoyoacac se observó un directorio automático que solicita extensión o permite marcar 0; al ingresar la extensión, enruta directamente a una persona. En Monterrey, la atención fue directa por una persona, sin IVR observado. Esto muestra experiencias de entrada distintas por sede, pero no permite concluir cómo se integran o miden internamente.</p>
+<article class="surface discovery-gap"><div class="gap-mark">!</div><div><strong>Lo que todavía no puede completarse desde afuera</strong><p>La arquitectura, los dueños de canal, los volúmenes, SLA, conversión, costos, objetivos ejecutivos y la voz de Comercial, Servicio, Marketing e IT requieren validación directa con Plastiglas. La investigación pública y el safari solo preparan esas preguntas.</p></div></article>
+<div class="discovery-grid">
+<article class="surface questions"><div class="question"><div class="question-num">1</div><p>Cuando alguien inicia una cotización en web y después cambia a WhatsApp, ¿el asesor puede ver la página, producto, aplicación y datos que ya capturó?</p></div><div class="question"><div class="question-num">2</div><p>¿El número de WhatsApp se atiende centralmente, por región o por varios usuarios? ¿Qué ocurre cuando una conversación queda sin propietario?</p></div><div class="question"><div class="question-num">3</div><p>¿Las llamadas de Ocoyoacac, CDMX, Monterrey, Guadalajara y otros centros se miden y enrutan en una misma plataforma?</p></div><div class="question"><div class="question-num">4</div><p>¿Cómo se asignan hoy las solicitudes por producto, segmento, región, distribuidor, volumen y urgencia?</p></div><div class="question"><div class="question-num">5</div><p>¿Cuáles son los principales motivos de contacto y qué porcentaje podría resolverse con conocimiento o intake guiado?</p></div><div class="question"><div class="question-num">6</div><p>¿Cuántos visitantes llegan a páginas de producto, inician el formulario, lo abandonan, lo envían y terminan en una oportunidad o venta?</p></div><div class="question"><div class="question-num">7</div><p>Cuando un cliente contacta dos veces por canales distintos, ¿el segundo asesor puede ver la interacción anterior, su estado y su propietario?</p></div><div class="question"><div class="question-num">8</div><p>¿Qué confirmación, folio, SLA y seguimiento recibe hoy quien envía una solicitud, y cómo se evitan duplicados cuando no hay acuse visible?</p></div><div class="question"><div class="question-num">9</div><p>¿Por qué se pierden cotizaciones frente a Plaskolite, Garen, Newton u otros proveedores: precio, disponibilidad, tiempo, especificación, seguimiento o cobertura?</p></div><div class="question"><div class="question-num">10</div><p>¿Qué sistemas sostienen telefonía, WhatsApp, correo, formularios, CRM, ERP, inventario y analítica, y qué integraciones ya existen?</p></div></article>
+<aside class="side-stack">
+<article class="surface play-card"><div class="eyebrow">Hipótesis comerciales a validar</div><h3 style="margin-top:16px">Priorizar problemas antes que productos.</h3><ol class="priority-list"><li><span>1</span><div><strong>Confirmación y ownership del lead</strong><small>Validar si acuse, responsable y seguimiento son un problema medible.</small></div></li><li><span>2</span><div><strong>Continuidad entre canales y sedes</strong><small>Confirmar qué contexto se conserva y dónde ocurre recaptura.</small></div></li><li><span>3</span><div><strong>Intake técnico y conocimiento</strong><small>Identificar dudas y datos que más consumen tiempo.</small></div></li><li><span>4</span><div><strong>Analítica y proactividad</strong><small>Evaluar solo después de tener baseline de journey y abandono.</small></div></li><li><span>5</span><div><strong>Asistencia y WEM</strong><small>Mapear a Genesys cuando exista caso de uso, volumen y valor.</small></div></li></ol></article>
+<article class="surface persona-card">
+<div class="eyebrow">Personas</div>
+<h3 style="margin-top:16px">Orden de conversación</h3>
+<div class="persona-row"><strong>1. Liderazgo comercial</strong><span>Conversión, velocidad, distribución y crecimiento.</span></div>
+<div class="persona-row"><strong>2. Customer Service</strong><span>Volumen, handoffs, respuesta y continuidad.</span></div>
+<div class="persona-row"><strong>3. IT / arquitectura Verzatec</strong><span>Canales, integraciones, seguridad y escalabilidad.</span></div>
+<div class="persona-row"><strong>4. Dirección General</strong><span>Patrocinio cuando la hipótesis estratégica ya esté validada.</span></div>
+</article>
+</aside>
+</div>
+</div>
+</section><section class="section compact" id="fuentes">
+<div class="container">
+<div class="eyebrow">13 / Fuentes, evidencia de campo y metodología</div>
+<h2 class="max-copy" style="margin-top:15px">Separar evidencia externa, observación primaria e hipótesis comerciales.</h2>
+<div class="source-grid">
+<article class="surface source-card"><h3>Fuentes externas: Plastiglas y contexto</h3><ul class="source-list"><li><a href="https://plastiglas.com.mx/" rel="noopener noreferrer" target="_blank">Sitio oficial de Plastiglas de México</a></li><li><a href="https://www.plastiglas.com.mx/Contacto" rel="noopener noreferrer" target="_blank">Contacto, plantas y centros de servicio</a></li><li><a href="https://www.verzatec.com/noticias/plastiglas-ahora-forma-parte-de-grupo-verzatec" rel="noopener noreferrer" target="_blank">Adquisición por Grupo Verzatec</a></li><li><a href="https://sidof.segob.gob.mx/notas/5777136" rel="noopener noreferrer" target="_blank">Inicio de investigación antidumping (contexto regulatorio)</a></li></ul></article>
+<article class="surface source-card"><h3>Fuentes externas: benchmark público</h3><ul class="source-list"><li><a href="https://newton.com.mx/solicitud-de-cotizacion/" rel="noopener noreferrer" target="_blank">Acrílicos Newton: cotización</a></li><li><a href="https://newton.com.mx/nosotros/" rel="noopener noreferrer" target="_blank">Acrílicos Newton: contactos regionales</a></li><li><a href="https://acrilico.garen.com.mx/" rel="noopener noreferrer" target="_blank">Garen: acrílico, WhatsApp y cotización</a></li><li><a href="https://plaskolite.com/contact-us/request-quote" rel="noopener noreferrer" target="_blank">Plaskolite: solicitud de cotización</a></li><li><a href="https://plaskolite.com/contact-us/request-sample" rel="noopener noreferrer" target="_blank">Plaskolite: solicitud de muestra</a></li><li><a href="https://es.plaskolite.com/products-services/solutions/run-to-size" rel="noopener noreferrer" target="_blank">Plaskolite: fabricación a medida</a></li></ul></article>
+<article class="surface source-card"><h3>Fuentes externas: mercado y Genesys</h3><ul class="source-list"><li><a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" rel="noopener noreferrer" target="_blank">McKinsey B2B Pulse 2024</a></li><li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" rel="noopener noreferrer" target="_blank">Gartner B2B Buyer Survey 2026</a></li><li><a href="https://www.genesys.com/customer-stories/ferguson" rel="noopener noreferrer" target="_blank">Ferguson + Genesys Cloud</a></li><li><a href="https://www.genesys.com/customer-stories/legrand" rel="noopener noreferrer" target="_blank">Legrand + Genesys Cloud</a></li><li><a href="https://www.genesys.com/es-mx/capabilities/whatsapp" rel="noopener noreferrer" target="_blank">Genesys Cloud: WhatsApp</a></li></ul></article>
+<article class="surface source-card"><h3>Evidencia primaria de campo</h3><ul class="source-list"><li>Registro realizado por Daniela Enríquez, Genesys, del 27 al 31 de agosto de 2026.</li><li>1 envío de formulario y 1 conversación de WhatsApp.</li><li>Observación de entrada telefónica en Ocoyoacac y Monterrey.</li><li>Capturas con datos personales conservadas fuera de esta página.</li><li>Este registro no es una fuente externa ni una muestra estadística.</li></ul></article>
+</div>
+<div class="method-note"><p><strong>Nota metodológica:</strong> documento preparado por Genesys con propósito comercial de pre-discovery. Solo Plastiglas fue probado; los competidores se revisaron mediante sus interfaces públicas y sus promesas no se trataron como resultados. El contacto de WhatsApp comenzó a las 21:08 h, por lo que la bienvenida automática no se utiliza para juzgar SLA o disponibilidad humana. Las expresiones “no observado” se limitan al journey, fecha y muestra documentados. No se infieren arquitectura, conversión, abandono, satisfacción, costos ni causa raíz sin datos del cliente.</p></div>
+</div>
+</section></main>
+<footer>
+<div class="container footer-inner">
+<div><strong style="color:#fff">Pre-discovery CX comercial 2.2 / Plastiglas de México</strong><br/>Preparado por Daniela Enríquez · Genesys · Actualizado 31 agosto 2026 · No es auditoría independiente</div>
+<a class="back-top" href="#top">Volver arriba ↑</a>
+</div>
+</footer>
+<script>
+    const signalButtons = document.querySelectorAll('.signal-btn');
+    const signalPanels = document.querySelectorAll('.signal-content');
+
+    signalButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.signal;
+        signalButtons.forEach((item) => {
+          item.classList.remove('active');
+          item.setAttribute('aria-selected', 'false');
+        });
+        signalPanels.forEach((panel) => panel.classList.remove('active'));
+        button.classList.add('active');
+        button.setAttribute('aria-selected', 'true');
+        document.getElementById(`signal-${target}`).classList.add('active');
+      });
+    });
+
+    const observedSections = [...document.querySelectorAll('main section[id]')];
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+        }
+      });
+    }, { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 });
+    observedSections.forEach((section) => observer.observe(section));
+
+    function toggleMobileNav() {
+      const current = document.querySelector('.mobile-sheet');
+      if (current) { current.remove(); return; }
+      const sheet = document.createElement('div');
+      sheet.className = 'mobile-sheet';
+      sheet.setAttribute('style', 'position:fixed;inset:62px 12px 12px 12px;z-index:120;background:#11192c;border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:12px;box-shadow:0 25px 70px rgba(0,0,0,.35);display:grid;gap:4px;overflow:auto;align-content:start');
+      const links = [
+        ['Contexto','#contexto'],['Mercado B2B','#mercado'],['Canales visibles','#canales'],['Safari real','#campo'],
+        ['Journey','#journey'],['Voz y mercado','#voz'],['Competencia','#competencia'],['Referencias','#referencia'],
+        ['North Star','#norte'],['Señales FTS','#senales'],['Roadmap','#roadmap'],['Discovery','#discovery'],['Fuentes','#fuentes']
+      ];
+      links.forEach(([label, href]) => {
+        const link = document.createElement('a');
+        link.href = href;
+        link.textContent = label;
+        link.setAttribute('style', 'color:#fff;text-decoration:none;padding:12px 14px;border-radius:12px;font-size:14px;font-weight:750;background:rgba(255,255,255,.04)');
+        link.addEventListener('click', () => sheet.remove());
+        sheet.appendChild(link);
+      });
+      document.body.appendChild(sheet);
+    }
+
+    document.addEventListener('click', (event) => {
+      const sheet = document.querySelector('.mobile-sheet');
+      if (sheet && !sheet.contains(event.target) && !event.target.classList.contains('menu-btn')) sheet.remove();
+    });
+  </script>
+</body>
+</html>
