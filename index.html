@@ -1295,7 +1295,7 @@
 <span class="brand-sub">Análisis del journey de cotización</span>
 </span>
 </a>
-<div aria-label="Secciones" class="nav-links"><a href="#contexto">Resumen</a><a href="#canales">Canales</a><a href="#campo">Evidencia</a><a href="#journey">Momentos clave</a><a href="#vozcliente">Voz del cliente</a><a href="#competencia">Benchmark</a><a href="#senales">Hallazgos</a><a href="#norte">Visión</a><a href="#capacidades">Capacidades</a><a href="#roadmap">Roadmap</a><a href="#discovery">Workshop</a></div>
+<div aria-label="Secciones" class="nav-links"><a href="#contexto">Resumen</a><a href="#canales">Canales</a><a href="#campo">Evidencia</a><a href="#journey">Momentos clave</a><a href="#vozcliente">Voz del cliente</a><a href="#competencia">Benchmark</a><a href="#senales">Costo operativo</a><a href="#norte">Visión</a><a href="#capacidades">Capacidades</a><a href="#roadmap">Roadmap</a><a href="#discovery">Validación</a></div>
 <div class="nav-actions">
 <button class="nav-btn" onclick="window.print()" type="button">Imprimir / PDF</button>
 <button aria-label="Abrir navegación" class="nav-btn menu-btn" onclick="toggleMobileNav()" type="button">Menú</button>
@@ -1677,7 +1677,7 @@
 <article class="surface listening-panel">
 <div class="listening-head">
 <div><div class="eyebrow">Plan de escucha conjunto</div><h3 style="margin:13px 0 0">Cuatro fuentes para convertir la hipótesis externa en una lectura de cliente y operación.</h3></div>
-<span class="listening-badge">A completar en workshop</span>
+<span class="listening-badge">A completar con Plastiglas</span>
 </div>
 <div class="listening-matrix" role="table" aria-label="Plan de escucha de cliente y operación">
 <div class="listening-row header" role="row"><div class="listening-cell">Fuente</div><div class="listening-cell">Qué permite entender</div><div class="listening-cell">Ejemplos de evidencia</div><div class="listening-cell">Estado</div></div>
@@ -1834,7 +1834,7 @@
 <p class="lead max-copy">Esta sección traduce el estado objetivo en casos de uso concretos para discusión.</p>
 <div class="quick-win-lead">
 <div class="eyebrow">Candidatos a primera victoria</div>
-<h3 style="margin:13px 0 0">Un movimiento por cada momento de la sección 05, sin depender de una plataforma nueva, para elegir en el workshop.</h3>
+<h3 style="margin:13px 0 0">Un movimiento por cada momento de la sección 05, sin depender de una plataforma nueva.</h3>
 <p class="muted small" style="margin:9px 0 0;max-width:800px">No se presentan como recomendaciones cerradas. Son los movimientos con menor dependencia técnica dentro de lo observado, para que la primera mejora sea visible antes de decidir cualquier inversión.</p>
 </div>
 <div class="quick-win-grid" aria-label="Candidatos a primera victoria">
@@ -1909,10 +1909,11 @@
       sheet.className = 'mobile-sheet';
       sheet.setAttribute('style', 'position:fixed;inset:62px 12px 12px 12px;z-index:120;background:#11192c;border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:12px;box-shadow:0 25px 70px rgba(0,0,0,.35);display:grid;gap:4px;overflow:auto;align-content:start');
       const links = [
-        ['Resumen','#contexto'],['Comprador B2B','#mercado'],['Canales','#canales'],['Evidencia de campo','#campo'],
-        ['Momentos clave','#journey'],['Voz del cliente','#vozcliente'],['Benchmark','#competencia'],['Referencias','#referencia'],
-        ['Visión y arquitectura','#norte'],['Capacidades','#capacidades'],['Hallazgos','#senales'],['Roadmap','#roadmap'],
-        ['Workshop','#discovery'],['Fuentes','#fuentes']
+        ['Resumen','#contexto'],['Contexto de mercado','#mercado'],['Canales','#canales'],
+        ['Evidencia de campo','#campo'],['Momentos clave','#journey'],['Voz del cliente','#vozcliente'],
+        ['Benchmark','#competencia'],['Costo operativo','#senales'],['Referencias','#referencia'],
+        ['Visión y arquitectura','#norte'],['Capacidades','#capacidades'],['Roadmap','#roadmap'],
+        ['Validación','#discovery'],['Fuentes','#fuentes']
       ];
       links.forEach(([label, href]) => {
         const link = document.createElement('a');
