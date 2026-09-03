@@ -577,56 +577,7 @@
     .clean-list li { position: relative; padding-left: 20px; margin: 10px 0; font-size: 13px; color: var(--muted); }
     .clean-list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 3px; background: var(--plastiglas); transform: translateY(-50%); }
 
-    /* FTS signals */
-    .signal-layout { margin-top: 34px; display: grid; grid-template-columns: 330px minmax(0,1fr); gap: 26px; align-items: stretch; }
-    .signal-nav { display: grid; gap: 10px; }
-    .signal-btn {
-      width: 100%;
-      padding: 17px 18px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--ink);
-      text-align: left;
-      font: inherit;
-      cursor: pointer;
-      display: grid;
-      grid-template-columns: 38px 1fr auto;
-      gap: 12px;
-      align-items: center;
-      transition: .18s ease;
-    }
-    .signal-btn:hover { transform: translateX(3px); border-color: #d7dce5; }
-    .signal-btn.active { background: var(--genesys-purple); color: #fff; border-color: var(--genesys-purple); box-shadow: 0 15px 34px rgba(45,23,77,.18); }
-    .signal-code { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: var(--soft-orange); color: var(--plastiglas); font-weight: 900; }
-    .signal-btn.active .signal-code { background: rgba(255,255,255,.12); color: #ffb39a; }
-    .signal-btn strong { display: block; font-size: 14px; }
-    .signal-btn small { display: block; color: var(--muted); margin-top: 3px; }
-    .signal-btn.active small { color: rgba(255,255,255,.58); }
-    .signal-arrow { color: #a2aaba; font-weight: 900; }
-    .signal-btn.active .signal-arrow { color: #fff; }
-    .signal-panel { padding: 34px; min-height: 360px; position: relative; overflow: hidden; }
-    .signal-panel::after {
-      content: ""; position: absolute; right: -70px; bottom: -70px; width: 240px; height: 240px; border-radius: 50%; background: rgba(240,82,45,.06);
-    }
-    .signal-content { display: none; position: relative; z-index: 1; }
-    .signal-content.active { display: block; animation: fadeIn .28s ease; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
-    .signal-content .signal-label { color: var(--plastiglas); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .14em; }
-    .signal-content h3 { font-size: 31px; margin: 12px 0 15px; }
-    .signal-content p { color: var(--muted); font-size: 16px; max-width: 760px; }
-    .signal-evidence { margin-top: 25px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; }
-    .evidence-chip { padding: 16px; border-radius: 16px; background: var(--soft); border: 1px solid var(--line); font-size: 13px; }
-    .evidence-chip strong { display: block; margin-bottom: 3px; }
-    .discipline-grid { margin-top: 26px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .discipline-card { padding: 26px; }
-    .discipline-card .badge {
-      display: inline-flex; padding: 7px 10px; border-radius: 999px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em;
-    }
-    .badge-known { background: #e9f8f2; color: #086c4d; }
-    .badge-hypothesis { background: #fff4dc; color: #8a5600; }
-    .badge-validate { background: #eef1ff; color: #4a41a0; }
-    .discipline-card h3 { margin-top: 17px; }
+    /* FTS signals */ }
 
     /* Evidence section */
     .evidence-grid { margin-top: 34px; display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
@@ -998,9 +949,7 @@
       .hero-panel { min-height: 400px; }
       .promise-card { grid-template-columns: 1fr; }
       .promise-side:first-child { border-right: 0; border-bottom: 1px solid var(--line); }
-      .channel-summary, .discipline-grid, .roadmap, .evidence-grid, .source-grid, .field-grid, .test-plan, .benchmark-grid { grid-template-columns: 1fr; }
-      .signal-layout { grid-template-columns: 1fr; }
-      .signal-nav { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .channel-summary, .roadmap, .evidence-grid, .source-grid, .field-grid, .test-plan, .benchmark-grid { grid-template-columns: 1fr; }
       .north-grid { grid-template-columns: 1fr; }
       .north-card:last-child { grid-column: auto; }
       .day-flow { grid-template-columns: 1fr 1fr; }
@@ -1016,8 +965,6 @@
       .hero-panel { min-height: 360px; }
       .hypothesis-card { padding: 22px; }
       .hypothesis-card h2 { font-size: 22px; }
-      .signal-nav { grid-template-columns: 1fr; }
-      .signal-evidence { grid-template-columns: 1fr; }
       .day-flow { grid-template-columns: 1fr; }
       .question { grid-template-columns: 40px 1fr; padding: 18px; }
       .question-num { width: 38px; height: 38px; }
@@ -1331,6 +1278,25 @@
       .shift-row .shift-cell:first-child { padding: 14px 18px 0; }
     }
     @media print { .shift-card, .exec-finding { break-inside: avoid; } }
+    .cost-grid { margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .cost-card { padding: 30px; }
+    .cost-card .cost-tag {
+      display: inline-flex; padding: 7px 11px; border-radius: 999px;
+      background: var(--soft-orange); color: var(--plastiglas);
+      font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .cost-card h3 { margin: 17px 0 11px; font-size: 21px; }
+    .cost-card > p { color: var(--muted); font-size: 14px; }
+    .cost-items { margin-top: 20px; display: grid; gap: 11px; }
+    .cost-items > div { padding: 15px 16px; border-radius: 14px; background: var(--soft); border: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    .cost-items strong { display: block; color: var(--ink); margin-bottom: 3px; }
+    .scale-note {
+      margin-top: 22px; padding: 22px 24px; border-radius: 20px;
+      background: #11192c; color: rgba(255,255,255,.72); font-size: 14px;
+    }
+    .scale-note strong { color: #fff; }
+    @media (max-width: 900px) { .cost-grid { grid-template-columns: 1fr; } }
+    @media print { .cost-card, .scale-note { break-inside: avoid; } }
     .buyer-voice { margin-top: 30px; }
     @media print { .buyer-voice { break-inside: avoid; } }
 
@@ -1776,88 +1742,34 @@
 </div>
 </section><section class="section section-white" id="senales">
 <div class="container">
-<div class="eyebrow">08 / Hallazgos e hipótesis de impacto</div>
-<h2 class="max-copy" style="margin-top:15px">De la observación visible a las preguntas de operación y negocio que conviene validar.</h2>
-<p class="lead max-copy">La evidencia pública y el recorrido permiten identificar los momentos donde el cliente pierde certeza. Las cifras de conversión, SLA, abandono, satisfacción y costo las tiene Plastiglas.</p>
-<div class="signal-layout">
-<div aria-label="Capas de lectura de los hallazgos" class="signal-nav" role="tablist">
-<button aria-selected="true" class="signal-btn active" data-signal="leading" role="tab" type="button">
-<span class="signal-code">V</span><span><strong>Visible</strong><small>Lo observado</small></span><span class="signal-arrow">›</span>
-</button>
-<button aria-selected="false" class="signal-btn" data-signal="leaning" role="tab" type="button">
-<span class="signal-code">O</span><span><strong>Operación</strong><small>Lo que conviene medir</small></span><span class="signal-arrow">›</span>
-</button>
-<button aria-selected="false" class="signal-btn" data-signal="lagging" role="tab" type="button">
-<span class="signal-code">I</span><span><strong>Impacto</strong><small>Resultados de negocio</small></span><span class="signal-arrow">›</span>
-</button>
-<button aria-selected="false" class="signal-btn" data-signal="root" role="tab" type="button">
-<span class="signal-code">?</span><span><strong>Validación</strong><small>Causa interna</small></span><span class="signal-arrow">›</span>
-</button>
+<div class="eyebrow">08 / De la experiencia del cliente al costo de la operación</div>
+<h2 class="max-copy" style="margin-top:15px">Lo que el cliente percibe como silencio, la operación lo paga en esfuerzo; y ahí es donde una mejora se vuelve medible.</h2>
+<p class="lead max-copy">Los tres momentos describen lo visible. Esta sección plantea las dos preguntas que siguen: cuánto trabajo cuesta hoy sostener esa experiencia, y dónde aparecería el valor si mejorara. Las cifras las tiene Plastiglas.</p>
+<div class="cost-grid">
+<article class="surface cost-card">
+<span class="cost-tag">Costo operativo</span>
+<h3>Cuánto esfuerzo requiere reconstruir una solicitud al pasar entre canales, equipos o regiones.</h3>
+<p>La fricción intermedia rara vez se ve desde fuera. Se manifiesta como transferencias, correos de seguimiento, preguntas repetidas, canalización manual, solicitudes sin propietario claro o tiempos de respuesta variables.</p>
+<div class="cost-items">
+<div><strong>Tiempo de respuesta</strong>Comparar WhatsApp, correo, voz y formulario.</div>
+<div><strong>Transferencias</strong>Cuántas interacciones cambian de equipo o ubicación.</div>
+<div><strong>Recontacto</strong>Clientes que preguntan lo mismo por otro canal.</div>
+<div><strong>Calificación manual</strong>Tiempo del asesor en capturar producto, medidas, uso y región.</div>
 </div>
-<div class="surface signal-panel">
-<div class="signal-content active" id="signal-leading" role="tabpanel">
-<div class="signal-label">Evidencia visible</div>
-<h3>Los tres momentos —certeza, contexto y continuidad— quedaron abiertos en el recorrido documentado.</h3>
-<p>El sitio dirige a cotización, WhatsApp, teléfono y correo. El formulario no mostró acuse visible; WhatsApp abrió sin contexto y posteriormente un asesor pidió el teléfono para buscar la solicitud. La recuperación efectiva aún no está confirmada.</p>
-<div class="signal-evidence">
-<div class="evidence-chip"><strong>Formulario</strong>Cierre sin confirmación visible en una prueba; registro interno desconocido.</div>
-<div class="evidence-chip"><strong>Journey clave</strong>Producto → cotización → asesor, no carrito → checkout.</div>
-<div class="evidence-chip"><strong>WhatsApp</strong>Bienvenida fuera de horario y respuesta humana al siguiente día laboral; búsqueda en curso.</div>
-<div class="evidence-chip"><strong>Proactividad</strong>No se observaron disparadores predictivos públicos.</div>
-</div>
-</div>
-<div class="signal-content" id="signal-leaning" role="tabpanel">
-<div class="signal-label">Preguntas de operación</div>
-<h3>Conviene medir cuánto esfuerzo requiere reconstruir una solicitud al pasar entre canales, equipos o regiones.</h3>
-<p>La fricción intermedia se puede manifestar como transferencias, correos de seguimiento, preguntas repetidas, canalización manual, solicitudes sin propietario claro o tiempos variables de respuesta.</p>
-<div class="signal-evidence">
-<div class="evidence-chip"><strong>Tiempo de respuesta</strong>Comparar WhatsApp, email, voz y formulario.</div>
-<div class="evidence-chip"><strong>Transferencias</strong>Medir cuántas interacciones cambian de equipo o ubicación.</div>
-<div class="evidence-chip"><strong>Recontacto</strong>Identificar clientes que preguntan lo mismo por otro canal.</div>
-<div class="evidence-chip"><strong>Calificación manual</strong>Cuánto tiempo toma capturar producto, medidas, uso y región.</div>
-</div>
-</div>
-<div class="signal-content" id="signal-lagging" role="tabpanel">
-<div class="signal-label">Impacto por comprobar</div>
-<h3>El valor del caso debe demostrarse en conversión, satisfacción, recompra y productividad comercial.</h3>
+</article>
+<article class="surface cost-card">
+<span class="cost-tag">Dónde aparecería el valor</span>
+<h3>El caso no se demuestra en tecnología, sino en conversión, servicio, productividad y lealtad.</h3>
 <p>La investigación pública no aporta cifras. El discovery debe establecer la línea base de conversión de cotización, tiempo de respuesta, transferencias, contacto repetido, satisfacción y recompra.</p>
-<div class="signal-evidence">
-<div class="evidence-chip"><strong>Cotización</strong>Inicio, finalización, contacto y cierre comercial.</div>
-<div class="evidence-chip"><strong>Servicio</strong>CSAT, tiempo de resolución y contactos repetidos.</div>
-<div class="evidence-chip"><strong>Productividad</strong>Tiempo del asesor en clasificación, búsqueda y seguimiento.</div>
-<div class="evidence-chip"><strong>Lealtad</strong>Recompra, recomendación y retención de distribuidores/clientes.</div>
+<div class="cost-items">
+<div><strong>Cotización</strong>Inicio, finalización, contacto y cierre comercial.</div>
+<div><strong>Servicio</strong>CSAT, tiempo de resolución y contactos repetidos.</div>
+<div><strong>Productividad</strong>Tiempo del asesor en clasificación, búsqueda y seguimiento.</div>
+<div><strong>Lealtad</strong>Recompra, recomendación y retención de distribuidores y clientes.</div>
 </div>
-</div>
-<div class="signal-content" id="signal-root" role="tabpanel">
-<div class="signal-label">Causa interna por validar</div>
-<h3>La arquitectura, el ownership y los handoffs no pueden inferirse desde fuera; deben mapearse con Plastiglas.</h3>
-<p>Es una hipótesis, no una conclusión. La petición del teléfono para localizar la solicitud muestra un paso manual, pero no revela si los canales están integrados, separados o sujetos a reglas de privacidad y proceso.</p>
-<div class="signal-evidence">
-<div class="evidence-chip"><strong>Arquitectura</strong>Proveedor, colas, números, buzones e integraciones actuales.</div>
-<div class="evidence-chip"><strong>Gobierno</strong>Quién es propietario de cada canal y cada tipo de solicitud.</div>
-<div class="evidence-chip"><strong>Datos</strong>Cómo se vincula una interacción con cliente, cotización y oportunidad.</div>
-<div class="evidence-chip"><strong>Escala futura</strong>Cómo cambia la complejidad tras integrar portafolio y huella de Verzatec.</div>
-</div>
-</div>
-</div>
-</div>
-<div class="discipline-grid">
-<article class="surface discipline-card">
-<span class="badge badge-known">Observado</span>
-<h3>Se probaron el formulario, el acceso a WhatsApp y dos entradas telefónicas; hubo respuesta humana en WhatsApp.</h3>
-<p class="muted small">Se observó falta de acuse visible, handoff sin texto prellenado, solicitud de teléfono para buscar el registro y ausencia de cierre por WhatsApp o correo al 3 de septiembre.</p>
-</article>
-<article class="surface discipline-card">
-<span class="badge badge-hypothesis">Hipótesis de trabajo</span>
-<h3>El cambio de canal puede romper contexto, routing u ownership.</h3>
-<p class="muted small">La complejidad podría aumentar al crecer el portafolio y combinar operaciones con Grupo Verzatec.</p>
-</article>
-<article class="surface discipline-card">
-<span class="badge badge-validate">Validación necesaria</span>
-<h3>Resultado de la búsqueda, correo, SLA, volumen, conversión y continuidad interna.</h3>
-<p class="muted small">La evidencia externa ya se agotó: lo que sigue solo puede responderse desde dentro, revisando si el registro existe, quién es su propietario y qué comunicación debía generarse.</p>
 </article>
 </div>
+<div class="scale-note"><strong>Un factor de escala:</strong> la complejidad de este journey puede aumentar conforme crezca el portafolio y se combinen operaciones con Grupo Verzatec. Lo que hoy se resuelve con una búsqueda manual escala distinto cuando hay más productos, más regiones y más equipos involucrados.</div>
 </div>
 </section><section class="section section-dark" id="referencia">
 <div class="container">
@@ -2004,23 +1916,6 @@
 </div>
 </footer>
 <script>
-    const signalButtons = document.querySelectorAll('.signal-btn');
-    const signalPanels = document.querySelectorAll('.signal-content');
-
-    signalButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        const target = button.dataset.signal;
-        signalButtons.forEach((item) => {
-          item.classList.remove('active');
-          item.setAttribute('aria-selected', 'false');
-        });
-        signalPanels.forEach((panel) => panel.classList.remove('active'));
-        button.classList.add('active');
-        button.setAttribute('aria-selected', 'true');
-        document.getElementById(`signal-${target}`).classList.add('active');
-      });
-    });
-
     const observedSections = [...document.querySelectorAll('main section[id]')];
     const navLinks = [...document.querySelectorAll('.nav-links a')];
     const observer = new IntersectionObserver((entries) => {
