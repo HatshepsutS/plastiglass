@@ -1532,6 +1532,9 @@
     @media (max-width: 900px) { .next-step { grid-template-columns: 1fr; padding: 24px; } }
     @media print { .next-step { break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
 
+    .buyer-voice { margin-top: 30px; }
+    @media print { .buyer-voice { break-inside: avoid; } }
+
     /* Reading guide v3.4 */
     .read-guide-section { padding: 40px 0 0; }
     .read-guide {
@@ -1871,7 +1874,7 @@
 <div class="eyebrow">04 / Evidencia del journey web → WhatsApp y voz</div>
 <h2 class="max-copy" style="margin-top:15px">La cronología conserva el detalle del recorrido, el horario y lo que todavía falta confirmar.</h2>
 <p class="lead max-copy">El propósito de esta cronología es darle a Plastiglas visibilidad de lo que ve su propio cliente, no calificar al equipo. El recorrido inició el jueves 27 de agosto de 2026 con una consulta legítima, registró respuesta humana en WhatsApp el viernes 28 y se mantuvo abierto hasta el corte del jueves 3 de septiembre. Se documentan horas de reloj, pero no se interpretan como SLA porque el contacto inicial ocurrió a las 21:08 h y el horario oficial del equipo lo conoce Plastiglas.</p>
-<div aria-label="Metadatos del safari" class="field-meta">
+<div aria-label="Metadatos del recorrido" class="field-meta">
 <span>Formulario: minutos antes de 21:08 h · 27 ago</span>
 <span>Bienvenida automática: 21:08 h · 27 ago</span>
 <span>Respuesta humana: 09:05 h · 28 ago</span>
@@ -2066,6 +2069,18 @@
 <p class="muted">Comentarios abiertos, razones de no avance, contactos repetidos, preguntas técnicas y feedback de distribuidores permiten priorizar mejoras con evidencia.</p>
 </article>
 </div>
+<div class="buyer-voice">
+<div class="eyebrow">Lo que pregunta un comprador</div>
+<h3 style="margin:13px 0 20px">Las dudas que hoy llegan a Plastiglas, en las palabras del cliente.</h3>
+<div class="buyer-question-grid">
+<div class="buyer-question">¿Qué material y espesor funcionan para mi aplicación?</div>
+<div class="buyer-question">¿Hay existencia, color y volumen disponibles?</div>
+<div class="buyer-question">¿Quién es el asesor correcto para mi región?</div>
+<div class="buyer-question">¿Cuándo recibiré la cotización?</div>
+<div class="buyer-question">¿La solicitud sí quedó registrada?</div>
+<div class="buyer-question">¿Puedo continuar sin repetir toda la información?</div>
+</div>
+</div>
 <article class="surface listening-panel">
 <div class="listening-head">
 <div><div class="eyebrow">Plan de escucha conjunto</div><h3 style="margin:13px 0 0">Cuatro fuentes para convertir la hipótesis externa en una lectura de cliente y operación.</h3></div>
@@ -2096,8 +2111,8 @@
 <div class="methodology-mark">=</div>
 <div>
 <h3>Regla de comparación</h3>
-<p>La tabla compara funciones y promesas visibles antes de la interacción. Los resultados posteriores al envío de Plastiglas se documentan en el safari, fuera del benchmark. Una promesa como “en minutos” se presenta como copy de marketing, no como resultado verificado.</p>
-<div class="basis-row"><span class="evidence-basis basis-tested">Plastiglas: interfaz + safari n=1</span><span class="evidence-basis basis-public">Competidores: revisión pública</span><span class="evidence-basis basis-limited">Sin ranking de servicio</span></div>
+<p>La tabla compara funciones y promesas visibles antes de la interacción. Los resultados posteriores al envío de Plastiglas se documentan en la sección de evidencia, fuera del benchmark. Una promesa como “en minutos” se presenta como copy de marketing, no como resultado verificado.</p>
+<div class="basis-row"><span class="evidence-basis basis-tested">Plastiglas: interfaz + recorrido n=1</span><span class="evidence-basis basis-public">Competidores: revisión pública</span><span class="evidence-basis basis-limited">Sin ranking de servicio</span></div>
 </div>
 </div>
 <div class="competitor-grid">
@@ -2323,7 +2338,7 @@
 <p class="lead max-copy">La entrada telefónica observada fue distinta por sede: Ocoyoacac utilizó directorio por extensión y Monterrey atención humana directa. Este contraste se registra como experiencia visible; la plataforma, las métricas y el routing interno siguen pendientes de validación.</p>
 <article class="surface discovery-gap"><div class="gap-mark">!</div><div><strong>Información que solo Plastiglas puede aportar</strong><p>Objetivos, ownership, arquitectura, volúmenes, SLA, conversión, costos y experiencia de los equipos requieren una sesión conjunta. El documento organiza la conversación, pero no sustituye esa evidencia.</p></div></article>
 <div class="discovery-grid">
-<article class="surface questions"><div class="question"><div class="question-num">1</div><p>Cuando alguien inicia una cotización en web y después cambia a WhatsApp, ¿el asesor puede ver la página, producto, aplicación y datos que ya capturó?</p></div><div class="question"><div class="question-num">2</div><p>¿El número de WhatsApp se atiende centralmente, por región o por varios usuarios? ¿Qué ocurre cuando una conversación queda sin propietario?</p></div><div class="question"><div class="question-num">3</div><p>¿Las llamadas de Ocoyoacac, CDMX, Monterrey, Guadalajara y otros centros se miden y enrutan en una misma plataforma?</p></div><div class="question"><div class="question-num">4</div><p>¿Cómo se asignan hoy las solicitudes por producto, segmento, región, distribuidor, volumen y urgencia?</p></div><div class="question"><div class="question-num">5</div><p>¿Cuáles son los principales motivos de contacto y qué porcentaje podría resolverse con conocimiento o intake guiado?</p></div><div class="question"><div class="question-num">6</div><p>¿Cuántos visitantes llegan a páginas de producto, inician el formulario, lo abandonan, lo envían y terminan en una oportunidad o venta?</p></div><div class="question"><div class="question-num">7</div><p>Cuando un cliente contacta dos veces por canales distintos, ¿el segundo asesor puede ver la interacción anterior, su estado y su propietario?</p></div><div class="question"><div class="question-num">8</div><p>¿Qué confirmación, folio, SLA y seguimiento recibe hoy quien envía una solicitud, y cómo se evitan duplicados cuando no hay acuse visible?</p></div><div class="question"><div class="question-num">9</div><p>¿Qué factores influyen cuando una cotización avanza o no avanza —precio, disponibilidad, especificación, tiempo, seguimiento o cobertura— y cómo se comparan con las expectativas del mercado?</p></div><div class="question"><div class="question-num">10</div><p>¿Qué sistemas sostienen telefonía, WhatsApp, correo, formularios, CRM, ERP, inventario y analítica, y qué integraciones ya existen?</p></div></article>
+<article class="surface questions"><div class="question"><div class="question-num">1</div><p>Cuando alguien inicia una cotización en web y después cambia a WhatsApp, ¿el asesor puede ver la página, producto, aplicación y datos que ya capturó?</p></div><div class="question"><div class="question-num">2</div><p>¿El número de WhatsApp se atiende centralmente, por región o por varios usuarios? ¿Qué ocurre cuando una conversación queda sin propietario?</p></div><div class="question"><div class="question-num">3</div><p>¿Las llamadas de Ocoyoacac, CDMX, Monterrey, Guadalajara y otros centros se miden y enrutan en una misma plataforma?</p></div><div class="question"><div class="question-num">4</div><p>¿Cómo se asignan hoy las solicitudes por producto, segmento, región, distribuidor, volumen y urgencia?</p></div><div class="question"><div class="question-num">5</div><p>¿Cuáles son los principales motivos de contacto y qué porcentaje podría resolverse con conocimiento o intake guiado?</p></div><div class="question"><div class="question-num">6</div><p>¿Cuántos visitantes llegan a páginas de producto, inician el formulario, lo abandonan, lo envían y terminan en una oportunidad o venta?</p></div><div class="question"><div class="question-num">7</div><p>Cuando un cliente contacta dos veces por canales distintos, ¿el segundo asesor puede ver la interacción anterior, su estado y su propietario?</p></div><div class="question"><div class="question-num">8</div><p>¿Qué confirmación, folio, SLA y seguimiento recibe hoy quien envía una solicitud, y cómo se evitan duplicados cuando no hay acuse visible?</p></div><div class="question"><div class="question-num">9</div><p>Cuando una cotización se pierde frente a Plaskolite, Garen, Newton u otro proveedor, ¿qué pesa más: precio, disponibilidad, especificación, tiempo de respuesta, seguimiento o cobertura?</p></div><div class="question"><div class="question-num">10</div><p>¿Qué sistemas sostienen telefonía, WhatsApp, correo, formularios, CRM, ERP, inventario y analítica, y qué integraciones ya existen?</p></div></article>
 <aside class="side-stack">
 <article class="surface play-card"><div class="eyebrow">Temas prioritarios para el workshop</div><h3 style="margin-top:16px">Alinear problemas, evidencia y resultados antes de seleccionar capacidades.</h3><ol class="priority-list"><li><span>1</span><div><strong>Confirmación y ownership de la solicitud</strong><small>Validar si acuse, responsable y seguimiento son un problema medible.</small></div></li><li><span>2</span><div><strong>Continuidad entre canales y sedes</strong><small>Confirmar qué contexto se conserva y dónde aparece recaptura.</small></div></li><li><span>3</span><div><strong>Intake técnico y conocimiento</strong><small>Identificar dudas y datos que más consumen tiempo.</small></div></li><li><span>4</span><div><strong>Analítica y proactividad</strong><small>Evaluar después de establecer un baseline de journey y abandono.</small></div></li><li><span>5</span><div><strong>Capacidades habilitadoras</strong><small>Mapear tecnología únicamente cuando exista caso de uso, volumen y valor.</small></div></li></ol></article>
 <article class="surface persona-card">
@@ -2356,7 +2371,6 @@
 <li><strong>Marketing / Digital:</strong> analítica del sitio, formularios iniciados y enviados, y origen del tráfico.</li>
 <li><strong>IT / Arquitectura:</strong> qué sistemas sostienen telefonía, WhatsApp, correo, formularios y CRM, y qué integraciones existen.</li>
 </ul>
-<p style="margin-top:20px">Para agendar: <strong style="color:#fff">Nick Lebin</strong> · <a href="mailto:Nick.Lebin@genesys.com" style="color:#fff">Nick.Lebin@genesys.com</a></p>
 </div>
 </article>
 </div>
@@ -2367,7 +2381,7 @@
 <div class="source-grid">
 <article class="surface source-card"><h3>Fuentes externas: Plastiglas y contexto</h3><ul class="source-list"><li><a href="https://plastiglas.com.mx/" rel="noopener noreferrer" target="_blank">Sitio oficial de Plastiglas de México</a></li><li><a href="https://www.plastiglas.com.mx/Contacto" rel="noopener noreferrer" target="_blank">Contacto, plantas y centros de servicio</a></li><li><a href="https://www.verzatec.com/noticias/plastiglas-ahora-forma-parte-de-grupo-verzatec" rel="noopener noreferrer" target="_blank">Adquisición por Grupo Verzatec</a></li></ul></article>
 <article class="surface source-card"><h3>Fuentes externas: benchmark público</h3><ul class="source-list"><li><a href="https://newton.com.mx/solicitud-de-cotizacion/" rel="noopener noreferrer" target="_blank">Acrílicos Newton: cotización</a></li><li><a href="https://newton.com.mx/nosotros/" rel="noopener noreferrer" target="_blank">Acrílicos Newton: contactos regionales</a></li><li><a href="https://acrilico.garen.com.mx/" rel="noopener noreferrer" target="_blank">Garen: acrílico, WhatsApp y cotización</a></li><li><a href="https://plaskolite.com/contact-us/request-quote" rel="noopener noreferrer" target="_blank">Plaskolite: solicitud de cotización</a></li><li><a href="https://plaskolite.com/contact-us/request-sample" rel="noopener noreferrer" target="_blank">Plaskolite: solicitud de muestra</a></li><li><a href="https://es.plaskolite.com/products-services/solutions/run-to-size" rel="noopener noreferrer" target="_blank">Plaskolite: fabricación a medida</a></li></ul></article>
-<article class="surface source-card"><h3>Fuentes externas: mercado y Genesys</h3><ul class="source-list"><li><a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" rel="noopener noreferrer" target="_blank">McKinsey B2B Pulse 2024</a></li><li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" rel="noopener noreferrer" target="_blank">Gartner B2B Buyer Survey 2026</a></li><li><a href="https://www.genesys.com/customer-stories/ferguson" rel="noopener noreferrer" target="_blank">Ferguson + Genesys Cloud</a></li><li><a href="https://www.genesys.com/customer-stories/legrand" rel="noopener noreferrer" target="_blank">Legrand + Genesys Cloud</a></li><li><a href="https://www.genesys.com/es-mx/capabilities/whatsapp" rel="noopener noreferrer" target="_blank">Genesys Cloud: WhatsApp</a></li></ul></article>
+<article class="surface source-card"><h3>Fuentes externas: mercado y Genesys</h3><ul class="source-list"><li><a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" rel="noopener noreferrer" target="_blank">McKinsey B2B Pulse 2024</a></li><li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" rel="noopener noreferrer" target="_blank">Gartner B2B Buyer Survey 2026</a></li><li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" rel="noopener noreferrer" target="_blank">Gartner: validación humana de insights de IA</a></li><li><a href="https://www.genesys.com/customer-stories/ferguson" rel="noopener noreferrer" target="_blank">Ferguson + Genesys Cloud</a></li><li><a href="https://www.genesys.com/customer-stories/legrand" rel="noopener noreferrer" target="_blank">Legrand + Genesys Cloud</a></li><li><a href="https://www.genesys.com/es-mx/capabilities/whatsapp" rel="noopener noreferrer" target="_blank">Genesys Cloud: WhatsApp</a></li></ul></article>
 <article class="surface source-card"><h3>Evidencia primaria de campo</h3><ul class="source-list"><li>Registro de campo abierto del 27 de agosto al 3 de septiembre de 2026.</li><li>1 envío de formulario y 1 conversación de WhatsApp.</li><li>Observación de entrada telefónica en Ocoyoacac y Monterrey.</li><li>Capturas con datos personales conservadas fuera de esta página.</li><li>Al 3 de septiembre: sin respuesta posterior en WhatsApp y sin acuse por correo.</li>
 <li>Este registro no es una fuente externa ni una muestra estadística.</li></ul></article>
 </div>
@@ -2376,7 +2390,7 @@
 </section></main>
 <footer>
 <div class="container footer-inner">
-<div><strong style="color:#fff">Análisis del journey de cotización y atención / Plastiglas de México</strong><br/>Preparado por Nick Lebin · Genesys · <a href="mailto:Nick.Lebin@genesys.com" style="color:#fff">Nick.Lebin@genesys.com</a><br/>Actualizado 3 septiembre 2026</div>
+<div><strong style="color:#fff">Análisis del journey de cotización y atención / Plastiglas de México</strong><br/>Preparado por Genesys<br/>Actualizado 3 septiembre 2026</div>
 <a class="back-top" href="#top">Volver arriba ↑</a>
 </div>
 </footer>
