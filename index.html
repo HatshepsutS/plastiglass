@@ -323,16 +323,6 @@
     .hypothesis-card h2 { font-size: 27px; margin: 13px 0 18px; }
     .hypothesis-card p { color: rgba(255,255,255,.7); margin-bottom: 0; font-size: 15px; }
     .hypothesis-card strong { color: #fff; }
-    .confidence {
-      margin-top: 20px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 10px 14px;
-      align-items: center;
-    }
-    .confidence span { font-size: 11px; color: rgba(255,255,255,.55); }
-    .confidence-track { height: 6px; background: rgba(255,255,255,.11); border-radius: 999px; overflow: hidden; }
-    .confidence-fill { width: 72%; height: 100%; background: linear-gradient(90deg, #ff9b78, #fff0eb); border-radius: inherit; }
 
 
 
@@ -388,15 +378,6 @@
     .basis-tested { background: #e9f8f2; color: #086c4d; }
     .basis-public { background: #eef1ff; color: #4a41a0; }
     .basis-limited { background: #fff4dc; color: #8a5600; }
-    .commercial-map {
-      margin-top: 22px;
-      padding: 20px 22px;
-      border-radius: 20px;
-      background: #f5f1f8;
-      border: 1px solid #e5dceb;
-    }
-    .commercial-map strong { color: var(--genesys-purple); }
-    .commercial-map p { margin: 6px 0 0; color: var(--muted); font-size: 13px; }
 
     /* Cards and layouts */
     .grid-12 { display: grid; grid-template-columns: repeat(12, minmax(0,1fr)); gap: 24px; }
@@ -566,12 +547,6 @@
       font-weight: 950;
     }
     .field-verdict p { margin: 7px 0 0; color: var(--muted); }
-    .test-plan {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 18px;
-    }
     .test-card { padding: 26px; }
     .test-list { margin-top: 18px; display: grid; gap: 12px; }
     .test-item {
@@ -616,50 +591,6 @@
     }
 
     /* Journey */
-    .journey-grid { margin-top: 38px; display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); gap: 13px; }
-    .journey-step {
-      position: relative;
-      padding: 23px 18px 21px;
-      min-height: 185px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.11);
-    }
-    .journey-step::before {
-      content: "";
-      position: absolute;
-      right: -14px;
-      top: 52px;
-      width: 14px;
-      height: 2px;
-      background: rgba(255,255,255,.22);
-    }
-    .journey-step:last-child::before { display: none; }
-    .journey-num { color: #ffb39a; font-size: 11px; font-weight: 900; letter-spacing: .12em; }
-    .journey-step h3 { font-size: 17px; margin: 11px 0; letter-spacing: -.02em; }
-    .journey-step p { font-size: 12px; color: rgba(255,255,255,.62); margin-bottom: 0; }
-    .friction-line { margin: 28px 0; position: relative; height: 48px; }
-    .friction-line::before {
-      content: "";
-      position: absolute;
-      left: 3%; right: 3%; top: 22px;
-      height: 2px;
-      background: repeating-linear-gradient(90deg, rgba(255,255,255,.22) 0 7px, transparent 7px 13px);
-    }
-    .friction-marker {
-      position: absolute; top: 4px; transform: translateX(-50%);
-      width: 38px; height: 38px; border-radius: 14px; display: grid; place-items: center;
-      background: #fff; color: var(--risk); font-weight: 900; box-shadow: 0 10px 30px rgba(0,0,0,.25);
-    }
-    .friction-marker.one { left: 42%; }
-    .friction-marker.two { left: 59%; }
-    .friction-marker.three { left: 76%; }
-    .journey-analysis { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
-    .journey-analysis .surface { padding: 25px; }
-    .journey-analysis h3 { font-size: 19px; }
-    .top-good { border-top: 4px solid var(--good); }
-    .top-warn { border-top: 4px solid var(--warn); }
-    .top-risk { border-top: 4px solid var(--risk); }
     .clean-list { list-style: none; padding: 0; margin: 15px 0 0; }
     .clean-list li { position: relative; padding-left: 20px; margin: 10px 0; font-size: 13px; color: var(--muted); }
     .clean-list li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 3px; background: var(--plastiglas); transform: translateY(-50%); }
@@ -751,17 +682,9 @@
     .phase ul { padding: 0; margin: 18px 0 0; list-style: none; }
     .phase li { font-size: 13px; color: var(--muted); margin: 11px 0; padding-left: 20px; position: relative; }
     .phase li::before { content: "✓"; position: absolute; left: 0; color: var(--good); font-weight: 900; }
-    .kpi-card { margin-top: 24px; overflow: hidden; }
-    .kpi-head { padding: 23px 26px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .kpi-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); }
-    .kpi-item { padding: 22px 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-    .kpi-item:nth-child(3n) { border-right: 0; }
-    .kpi-item:nth-last-child(-n+3) { border-bottom: 0; }
-    .kpi-item strong { display: block; font-size: 14px; }
-    .kpi-item span { display: block; color: var(--muted); font-size: 12px; margin-top: 5px; }
 
     /* Discovery */
-    .discovery-grid { margin-top: 34px; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(340px,.9fr); gap: 24px; }
+    .discovery-grid { margin-top: 34px; display: grid; grid-template-columns: 1fr; gap: 24px; }
     .questions { overflow: hidden; }
     .question {
       display: grid;
@@ -774,17 +697,6 @@
     .question:first-child { border-top: 0; }
     .question-num { width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; background: var(--soft-orange); color: var(--plastiglas); font-weight: 900; }
     .question p { margin-bottom: 0; font-size: 15px; font-weight: 700; }
-    .side-stack { display: grid; gap: 18px; }
-    .play-card, .persona-card { padding: 27px; }
-    .priority-list { list-style: none; padding: 0; margin: 18px 0 0; }
-    .priority-list li { display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; margin: 13px 0; }
-    .priority-list span { width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; background: #f0ecf6; color: var(--genesys-purple); font-weight: 900; font-size: 12px; }
-    .priority-list strong { font-size: 13px; display: block; }
-    .priority-list small { color: var(--muted); }
-    .persona-row { padding: 13px 0; border-top: 1px solid var(--line); }
-    .persona-row:first-of-type { border-top: 0; }
-    .persona-row strong { display: block; font-size: 14px; }
-    .persona-row span { color: var(--muted); font-size: 12px; }
 
     /* Sources */
     .source-grid { margin-top: 34px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
@@ -873,7 +785,6 @@
       padding: 24px 26px;
       border-left: 5px solid var(--genesys-purple);
     }
-    .benchmark-caveat p { margin: 8px 0 0; color: var(--muted); }
     .discovery-gap {
       margin: 0 0 26px;
       padding: 24px 26px;
@@ -918,26 +829,6 @@
     .market-stat .big { font-size: 48px; font-weight: 950; letter-spacing: -.06em; color: var(--plastiglas); }
     .market-stat h3 { font-size: 18px; margin: 7px 0 9px; }
     .market-stat p { color: var(--muted); font-size: 13px; margin-bottom: 0; }
-    .market-journey {
-      margin-top: 22px;
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 18px;
-      align-items: stretch;
-    }
-    .market-mode { padding: 28px; }
-    .market-mode ul { list-style: none; padding: 0; margin: 16px 0 0; }
-    .market-mode li { position: relative; padding-left: 20px; margin: 10px 0; color: var(--muted); font-size: 13px; }
-    .market-mode li::before { content: "✓"; position: absolute; left: 0; color: var(--good); font-weight: 900; }
-    .market-bridge {
-      width: 64px;
-      display: grid;
-      place-items: center;
-      align-self: center;
-      color: var(--plastiglas);
-      font-size: 26px;
-      font-weight: 950;
-    }
     .source-inline {
       margin-top: 16px;
       color: var(--muted);
@@ -1025,14 +916,6 @@
     .benchmark-cell { padding: 16px 15px; font-size: 12px; }
     .benchmark-cell + .benchmark-cell { border-left: 1px solid var(--line); }
     .benchmark-cell strong { display: block; color: var(--ink); margin-bottom: 4px; }
-    .benchmark-note {
-      margin-top: 24px;
-      padding: 27px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, #11192c, #2d174d);
-      color: #fff;
-    }
-    .benchmark-note p { color: rgba(255,255,255,.72); margin-bottom: 0; }
 
     .reference-grid {
       margin-top: 34px;
@@ -1128,12 +1011,7 @@
       text-transform: uppercase;
       letter-spacing: .09em;
     }
-    .completion-grid {
-      margin-top: 24px;
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 16px;
-    }
+    .completion-grid { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
     .completion-card {
       padding: 22px;
       border-radius: 20px;
@@ -1170,8 +1048,6 @@
 
     @media (max-width: 980px) {
       .market-stats, .competitor-grid, .buyer-question-grid, .completion-grid { grid-template-columns: 1fr 1fr; }
-      .market-journey { grid-template-columns: 1fr; }
-      .market-bridge { width: auto; min-height: 30px; transform: rotate(90deg); }
       .reference-bridge { grid-template-columns: 1fr; }
       .reference-arrow { transform: rotate(90deg); }
     }
@@ -1186,8 +1062,6 @@
       .menu-btn { display: inline-flex; }
       .hero-inner { grid-template-columns: 1fr; min-height: auto; }
       .hero-panel { min-height: 460px; }
-      .journey-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
-      .journey-step:nth-child(3)::before { display: none; }
       .north-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .north-card:last-child { grid-column: span 2; }
       .day-flow { grid-template-columns: repeat(3, minmax(0,1fr)); }
@@ -1201,16 +1075,12 @@
       .hero-panel { min-height: 400px; }
       .promise-card { grid-template-columns: 1fr; }
       .promise-side:first-child { border-right: 0; border-bottom: 1px solid var(--line); }
-      .channel-summary, .journey-analysis, .discipline-grid, .roadmap, .evidence-grid, .source-grid, .field-grid, .test-plan, .market-grid, .benchmark-grid { grid-template-columns: 1fr; }
+      .channel-summary, .discipline-grid, .roadmap, .evidence-grid, .source-grid, .field-grid, .test-plan, .benchmark-grid { grid-template-columns: 1fr; }
       .signal-layout { grid-template-columns: 1fr; }
       .signal-nav { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .north-grid { grid-template-columns: 1fr; }
       .north-card:last-child { grid-column: auto; }
       .day-flow { grid-template-columns: 1fr 1fr; }
-      .kpi-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .kpi-item, .kpi-item:nth-child(3n) { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-      .kpi-item:nth-child(2n) { border-right: 0; }
-      .kpi-item:nth-last-child(-n+2) { border-bottom: 0; }
       .discovery-grid { grid-template-columns: 1fr; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
     }
@@ -1224,14 +1094,9 @@
       .hypothesis-card { padding: 22px; }
       .hypothesis-card h2 { font-size: 22px; }
       .metric-grid { grid-template-columns: 1fr; }
-      .journey-grid { grid-template-columns: 1fr 1fr; }
-      .journey-step::before { display: none; }
       .signal-nav { grid-template-columns: 1fr; }
       .signal-evidence { grid-template-columns: 1fr; }
       .day-flow { grid-template-columns: 1fr; }
-      .kpi-grid { grid-template-columns: 1fr; }
-      .kpi-item, .kpi-item:nth-child(2n), .kpi-item:nth-child(3n) { border-right: 0; border-bottom: 1px solid var(--line); }
-      .kpi-item:last-child { border-bottom: 0; }
       .question { grid-template-columns: 40px 1fr; padding: 18px; }
       .question-num { width: 38px; height: 38px; }
       .evidence-card { grid-template-columns: 42px 1fr; padding: 22px; }
@@ -1250,7 +1115,7 @@
       .section { padding: 48px 0; }
       .hero-inner { min-height: auto; padding: 70px 0; }
       .hero-panel { min-height: 420px; }
-      .section, .surface, .journey-step, .north-card, .phase, .question, .field-card, .test-item { break-inside: avoid; }
+      .section, .surface, .moment, .north-card, .phase, .question, .field-card, .test-item { break-inside: avoid; }
       a { text-decoration: none !important; }
     }
   
@@ -1260,12 +1125,6 @@
     .journey-log .matrix-row { grid-template-columns: .72fr 1.05fr 1.55fr 1.38fr; min-width: 980px; }
     .journey-log .matrix-row:first-child { background: #f2f4f7; }
     .journey-log .matrix-cell:first-child { font-weight: 850; color: var(--genesys-purple); }
-    .client-note {
-      margin-top: 22px; padding: 18px 20px; border-radius: 18px;
-      background: linear-gradient(135deg, #fff8f5, #ffffff);
-      border: 1px solid #ffd9cc; color: var(--ink); font-size: 13px;
-    }
-    .client-note strong { color: var(--plastiglas); }
     .section-anchor-note { margin-top: 18px; color: var(--muted); font-size: 13px; }
 
 
@@ -1419,10 +1278,19 @@
 
     .quick-win-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
       margin-top: 28px;
     }
+    .quick-win-proof {
+      margin-top: 15px;
+      padding-top: 13px;
+      border-top: 1px dashed var(--line);
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .quick-win-proof strong { color: var(--ink); display: block; margin-bottom: 3px; }
+    .quick-win-lead { margin-top: 26px; }
     .quick-win {
       padding: 20px;
       border: 1px solid var(--line);
@@ -1486,16 +1354,6 @@
       font-size: 10px;
       font-weight: 750;
     }
-    .capability-disclaimer {
-      margin-top: 22px;
-      padding: 18px 20px;
-      border-radius: 16px;
-      border: 1px solid #dbe3f0;
-      background: #f6f8fb;
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .capability-disclaimer strong { color: var(--genesys-purple); }
 
     @media (max-width: 1000px) {
       .voice-client-grid, .outcome-grid { grid-template-columns: 1fr; }
@@ -1512,48 +1370,39 @@
     }
 
 
-    /* Next-step card v3.4 */
-    .next-step {
-      margin-top: 26px; padding: 32px; border-radius: 24px;
-      background: #11192c; color: #fff;
-      display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
-    }
-    .next-step h3 { color: #fff; margin: 12px 0 0; font-size: 24px; line-height: 1.26; }
-    .next-step .eyebrow { color: rgba(255,255,255,.55); }
-    .next-step p { color: rgba(255,255,255,.7); font-size: 14px; }
-    .ns-specs { display: grid; gap: 12px; margin-top: 20px; }
-    .ns-specs div { display: grid; grid-template-columns: 128px 1fr; gap: 14px; font-size: 13.5px;
-      padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,.1); }
-    .ns-specs strong { color: #fff; }
-    .ns-specs span { color: rgba(255,255,255,.7); }
-    .ns-bring { margin-top: 4px; }
-    .ns-bring li { color: rgba(255,255,255,.75); font-size: 13.5px; margin-bottom: 9px; }
-    .ns-bring strong { color: #fff; }
-    @media (max-width: 900px) { .next-step { grid-template-columns: 1fr; padding: 24px; } }
-    @media print { .next-step { break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
 
+    .maps-signal {
+      margin-top: 26px;
+      padding: 28px 30px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #fff8f5, #ffffff);
+    }
+    .maps-signal h3 { margin: 13px 0 10px; max-width: 820px; }
+    .maps-signal > p { color: var(--muted); font-size: 14px; max-width: 860px; }
+    .maps-grid { margin-top: 20px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 14px; }
+    .maps-item { padding: 18px; border-radius: 16px; background: #fff; border: 1px solid var(--line); }
+    .maps-item .maps-when { font-size: 10px; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+    .maps-item strong { display: block; margin: 9px 0 5px; font-size: 14px; }
+    .maps-item span { display: block; color: var(--muted); font-size: 12.5px; }
+    .maps-caveat { margin: 18px 0 0; font-size: 12.5px; color: var(--muted); }
+    @media (max-width: 900px) { .maps-grid { grid-template-columns: 1fr; } .maps-signal { padding: 22px; } }
+    @media print { .maps-signal { break-inside: avoid; } }
+    .moment-grid { margin-top: 38px; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .moment { padding: 30px 26px; border-radius: 24px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.13); }
+    .moment-tag { display: inline-flex; padding: 7px 11px; border-radius: 999px; background: rgba(255,155,120,.15); border: 1px solid rgba(255,155,120,.28); color: #ffd5c7; font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; }
+    .moment h3 { margin: 18px 0 6px; font-size: 26px; }
+    .moment-step { color: #ffb39a; font-size: 12.5px; font-weight: 800; }
+    .moment-q { margin: 14px 0 0; font-size: 15px; color: rgba(255,255,255,.88); font-weight: 700; }
+    .moment-obs { margin: 16px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px; color: rgba(255,255,255,.66); }
+    .moment-obs strong { display: block; color: #fff; margin-bottom: 4px; font-size: 11px; letter-spacing: .09em; text-transform: uppercase; }
+    .moment-foot { margin-top: 24px; padding: 24px 26px; border-radius: 22px; border: 1px solid rgba(255,255,255,.13); background: rgba(255,255,255,.05); color: rgba(255,255,255,.72); font-size: 14px; }
+    .moment-foot strong { color: #fff; }
+    @media (max-width: 900px) { .moment-grid { grid-template-columns: 1fr; } }
+    @media print { .moment { break-inside: avoid; } }
     .buyer-voice { margin-top: 30px; }
     @media print { .buyer-voice { break-inside: avoid; } }
 
-    /* Reading guide v3.4 */
-    .read-guide-section { padding: 40px 0 0; }
-    .read-guide {
-      display: grid; grid-template-columns: .82fr 1.18fr; gap: 30px;
-      padding: 30px 32px; border-radius: 24px;
-      background: linear-gradient(135deg, #f6f7fb, #ffffff);
-      border: 1px solid #e2e6ef;
-    }
-    .read-guide h3 { margin: 12px 0 0; font-size: 21px; line-height: 1.28; }
-    .read-guide .rg-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-    .read-guide .rg-list li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; font-size: 13.5px; color: var(--ink); }
-    .read-guide .rg-list span.rg-num {
-      width: 26px; height: 26px; border-radius: 9px; display: grid; place-items: center;
-      background: var(--genesys-purple); color: #fff; font-weight: 850; font-size: 12px;
-    }
-    .read-guide .rg-list strong { display: block; margin-bottom: 2px; }
-    .read-guide .rg-foot { margin: 18px 0 0; font-size: 12.5px; color: var(--muted); }
-    @media (max-width: 900px) { .read-guide { grid-template-columns: 1fr; padding: 24px; } }
-    @media print { .read-guide { break-inside: avoid; } }
 
     @media print {
       .voice-client-card, .listening-panel, .architecture-card, .outcome-card, .quick-win, .capability-card { break-inside: avoid; }
@@ -1571,7 +1420,7 @@
 <span class="brand-sub">Análisis del journey de cotización</span>
 </span>
 </a>
-<div aria-label="Secciones" class="nav-links"><a href="#contexto">Resumen</a><a href="#canales">Canales</a><a href="#campo">Evidencia</a><a href="#journey">Journey</a><a href="#vozcliente">Voz del cliente</a><a href="#competencia">Benchmark</a><a href="#senales">Hallazgos</a><a href="#norte">Visión</a><a href="#capacidades">Capacidades</a><a href="#roadmap">Roadmap</a><a href="#discovery">Workshop</a></div>
+<div aria-label="Secciones" class="nav-links"><a href="#contexto">Resumen</a><a href="#canales">Canales</a><a href="#campo">Evidencia</a><a href="#journey">Momentos clave</a><a href="#vozcliente">Voz del cliente</a><a href="#competencia">Benchmark</a><a href="#senales">Hallazgos</a><a href="#norte">Visión</a><a href="#capacidades">Capacidades</a><a href="#roadmap">Roadmap</a><a href="#discovery">Workshop</a></div>
 <div class="nav-actions">
 <button class="nav-btn" onclick="window.print()" type="button">Imprimir / PDF</button>
 <button aria-label="Abrir navegación" class="nav-btn menu-btn" onclick="toggleMobileNav()" type="button">Menú</button>
@@ -1583,7 +1432,7 @@
 <div class="hero-copy">
 <div class="hero-kicker"><span class="pulse-dot"></span>Preparado para Plastiglas de México · Genesys · septiembre 2026</div>
 <h1>Journey de <span>cotización y atención</span> de Plastiglas.</h1>
-<p>Plastiglas ya tiene lo más difícil: más de 65 años de conocimiento técnico en acrílico y una promesa de atención personalizada en toda la cadena de servicio. Este documento busca ayudar a que esa promesa se sostenga con la misma fuerza en cada canal —sitio, formulario, WhatsApp y teléfono— en el momento en que un cliente pasa de investigar un material a hablar con un asesor. Recorrimos ese trayecto como lo haría un comprador industrial, lo contrastamos con el mercado y lo dejamos aquí junto con una ruta de evolución, para que el equipo de Plastiglas lo use como punto de partida.</p>
+<p>Plastiglas ya tiene lo más difícil: más de 65 años de conocimiento técnico en acrílico y una promesa de atención personalizada en toda la cadena de servicio. Este documento busca ayudar a que esa promesa se sostenga con la misma fuerza en cada canal —sitio, formulario, WhatsApp y teléfono— en el momento en que un cliente pasa de investigar un material a hablar con un asesor. Recorrimos ese trayecto como lo haría un comprador industrial y encontramos que se juega en tres momentos: la certeza de que la solicitud existe, el contexto que viaja con ella y la continuidad hasta el asesor. Contrastamos el recorrido con el mercado y lo dejamos aquí junto con una ruta de evolución, para que el equipo de Plastiglas lo use como punto de partida.</p>
 <div aria-label="Temas principales" class="hero-tags"><span class="hero-tag primary">Journey de cotización B2B</span><span class="hero-tag">Evidencia web → WhatsApp</span><span class="hero-tag">Voz del cliente</span><span class="hero-tag">Benchmark competitivo</span><span class="hero-tag">Arquitectura objetivo</span><span class="hero-tag">Roadmap conjunto</span></div>
 <div class="hero-cta">
 <a class="btn btn-primary" href="#contexto">Ver resumen ejecutivo <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
@@ -1613,22 +1462,7 @@
 </div>
 </div>
 </header>
-<main><section class="section read-guide-section compact" id="comoleer">
-<div class="container">
-<div class="read-guide">
-<div>
-<div class="eyebrow">Cómo leer este documento</div>
-<h3>Tres criterios que aplican a todo el documento, para no repetirlos en cada sección.</h3>
-<p class="rg-foot">La nota metodológica completa está en la sección 14.</p>
-</div>
-<ul class="rg-list">
-<li><span class="rg-num">1</span><div><strong>Evidencia exploratoria, no medición.</strong>El recorrido de campo fue un envío de formulario y una conversación de WhatsApp, entre el 27 de agosto y el 3 de septiembre de 2026. Sirve para formular preguntas precisas, no para calificar el desempeño del equipo ni para establecer cifras.</div></li>
-<li><span class="rg-num">2</span><div><strong>Solo describe lo visible desde fuera.</strong>Todo lo observado corresponde a la experiencia pública. Lo que ocurre en el backend —si existe el registro, quién es su propietario, qué reglas de routing aplican— no puede inferirse desde la interfaz y aparece siempre como tema a revisar en conjunto.</div></li>
-<li><span class="rg-num">3</span><div><strong>La visión Genesys es un punto de partida.</strong>Las secciones 09 a 12 presentan opciones de diseño y capacidades a modo ilustrativo. Ninguna se propone como recomendación cerrada antes de que Plastiglas confirme el problema, la prioridad y las métricas de éxito.</div></li>
-</ul>
-</div>
-</div>
-</section><section class="section" id="contexto">
+<main><section class="section" id="contexto">
 <div class="container">
 <div class="grid-12" style="align-items:start">
 <div class="span-5">
@@ -1703,25 +1537,19 @@
 <h4>Evidencia adicional posible</h4>
 <ul><li>Confirmación de si la solicitud fue localizada después de compartir el teléfono.</li><li>Journey de correo y expectativa real de seguimiento.</li><li>Prueba ligera de redes sociales, solo si funcionan como soporte.</li><li>Confirmación del handoff entre producto, región y asesor.</li></ul>
 </div>
-<div class="completion-card internal">
-<span class="completion-status">Validación conjunta</span>
-<h4>Información interna de Plastiglas</h4>
-<ul><li>Objetivos, prioridades y principales motivos de contacto.</li><li>Arquitectura, ownership, integraciones y reglas de routing.</li><li>Volúmenes, SLA, conversión, abandono, recontacto y costos.</li><li>Experiencia de Comercial, Servicio, Marketing e IT.</li></ul>
 </div>
-</div>
-<div class="completion-note"><strong>Alcance actual:</strong> revisión exploratoria de canales públicos. La evidencia de campo se presenta con sus fechas, horarios y límites, y la operación interna queda sujeta a validación.</div>
+<div class="completion-note"><strong>Alcance actual:</strong> revisión exploratoria de canales públicos. La evidencia de campo se presenta con sus fechas, horarios y límites. La información interna —objetivos, arquitectura, volúmenes y resultados— la aporta Plastiglas; la sección 13 la detalla.</div>
 </article>
 </div>
 </section><section class="section section-white" id="mercado">
 <div class="container">
-<div class="eyebrow">02 / Cómo compra un cliente industrial</div>
-<h2 class="max-copy" style="margin-top:15px">La compra industrial combina investigación autónoma con asesoría experta; el valor está en conectar ambas sin reiniciar la conversación.</h2>
-<p class="lead max-copy">En materiales técnicos, el sitio debe permitir aprender y comparar por cuenta propia, pero el comprador todavía necesita a una persona cuando debe validar la aplicación, disponibilidad, especificaciones, volumen, entrega o viabilidad del proyecto.</p>
+<div class="eyebrow">02 / Contexto de mercado</div>
+<h2 class="max-copy" style="margin-top:15px">El comprador industrial investiga solo y decide con una persona; el valor está en que ambas etapas no se desconecten.</h2>
 <div class="market-stats">
 <article class="surface market-stat">
 <div class="big">10</div>
 <h3>canales en el journey B2B promedio</h3>
-<p>McKinsey reporta que el comprador B2B moderno combina múltiples puntos de contacto durante investigación, evaluación, compra y recompra.</p>
+<p>McKinsey reporta que el comprador combina múltiples puntos de contacto durante investigación, evaluación, compra y recompra.</p>
 </article>
 <article class="surface market-stat">
 <div class="big">&gt;50%</div>
@@ -1730,38 +1558,15 @@
 </article>
 <article class="surface market-stat">
 <div class="big">67%</div>
-<h3>prefiere una experiencia general sin representante</h3>
-<p>La actualización 2026 de Gartner también reporta que 69% prefiere validar insights generados por IA con un representante: autonomía primero, expertise humano en los momentos críticos.</p>
-</article>
-</div>
-<div class="market-journey">
-<article class="surface market-mode">
-<div class="eyebrow">Autoservicio útil</div>
-<h3 style="margin-top:16px">El comprador quiere avanzar sin esperar.</h3>
-<ul>
-<li>Explorar productos, aplicaciones, colores y propiedades.</li>
-<li>Consultar fichas, medidas, garantías y literatura técnica.</li>
-<li>Comparar alternativas y preparar especificaciones.</li>
-<li>Solicitar cotización, muestra o contacto con datos completos.</li>
-</ul>
-</article>
-<div aria-hidden="true" class="market-bridge">→</div>
-<article class="surface market-mode">
-<div class="eyebrow">Asesoría que agrega valor</div>
-<h3 style="margin-top:16px">La persona debe recibir el contexto ya construido.</h3>
-<ul>
-<li>Validar que el material sea adecuado para la aplicación.</li>
-<li>Confirmar disponibilidad, volumen, color y tiempos.</li>
-<li>Resolver excepciones y proyectos especiales.</li>
-<li>Dar ownership y siguiente paso claro a la solicitud.</li>
-</ul>
+<h3>prefiere avanzar sin representante</h3>
+<p>Gartner reporta a la vez que 69% prefiere validar insights de IA con una persona: autonomía primero, expertise humano en los momentos críticos.</p>
 </article>
 </div>
 <article class="surface coverage-card">
 <div class="coverage-icon">↔</div>
 <div><strong>Implicación para Plastiglas</strong><p class="muted" style="margin:6px 0 0">La oportunidad no es sustituir al asesor comercial. Es lograr que web, formulario, WhatsApp y voz preparen mejor la conversación y entreguen al asesor producto, aplicación, especificaciones, región e historial.</p></div>
 </article>
-<p class="source-inline">Referencias de mercado: <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" rel="noopener noreferrer" target="_blank">McKinsey B2B Pulse 2024</a> y <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" rel="noopener noreferrer" target="_blank">Gartner B2B Buyer Survey 2026</a> y <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" rel="noopener noreferrer" target="_blank">Gartner sobre validación humana de insights de IA</a>.</p>
+<p class="source-inline">Referencias de mercado: <a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" rel="noopener noreferrer" target="_blank">McKinsey B2B Pulse 2024</a>, <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" rel="noopener noreferrer" target="_blank">Gartner B2B Buyer Survey 2026</a> y <a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" rel="noopener noreferrer" target="_blank">Gartner sobre validación humana de insights de IA</a>.</p>
 </div>
 </section><section class="section section-white" id="canales">
 <div class="container">
@@ -1882,14 +1687,7 @@
 <span>Corte del registro: 3 sep · sin respuesta posterior</span>
 <span>Muestra: n=1 web + n=1 WhatsApp</span>
 </div>
-<div class="methodology-banner">
-<div class="methodology-mark">!</div>
-<div>
-<h3>Cómo leer esta evidencia</h3>
-<p>Muestra exploratoria n=1. El saludo automático ocurrió fuera de horario y la respuesta humana de la siguiente mañana sí se registra. Lo que se documenta es el resultado visible para el cliente al 3 de septiembre; no se extrapola a disponibilidad general, calidad de servicio ni arquitectura.</p>
-<div class="basis-row"><span class="evidence-basis basis-tested">Recorrido Plastiglas n=1</span><span class="evidence-basis basis-limited">Inicio fuera de horario</span><span class="evidence-basis basis-limited">SLA desconocido</span><span class="evidence-basis basis-tested">Ventana: 27 ago – 3 sep</span></div>
-</div>
-</div><div aria-label="Cronología del journey web a WhatsApp" class="surface matrix-wrap journey-log" role="region" tabindex="0">
+<div class="basis-row" style="margin-top:18px"><span class="evidence-basis basis-tested">Recorrido Plastiglas n=1</span><span class="evidence-basis basis-limited">Inicio fuera de horario</span><span class="evidence-basis basis-limited">SLA desconocido</span><span class="evidence-basis basis-tested">Ventana: 27 ago – 3 sep</span></div><div aria-label="Cronología del journey web a WhatsApp" class="surface matrix-wrap journey-log" role="region" tabindex="0">
 <div class="matrix-row">
 <div class="matrix-cell">Momento</div>
 <div class="matrix-cell">Interacción</div>
@@ -1918,7 +1716,7 @@
 <div class="matrix-cell">28 ago · 09:05</div>
 <div class="matrix-cell">Respuesta humana</div>
 <div class="matrix-cell">El equipo pidió el teléfono para localizar la solicitud y ofreció recibir la información por WhatsApp para agilizarla.</div>
-<div class="matrix-cell">Confirma atención humana e intención de búsqueda; no confirma todavía que la solicitud haya sido localizada.</div>
+<div class="matrix-cell">Confirma atención humana e intención de búsqueda; no confirma todavía que la solicitud haya sido localizada. Pedir los datos de nuevo puede ser un mecanismo de agilización y no se interpreta por sí solo como pérdida de contexto.</div>
 </div>
 <div class="matrix-row">
 <div class="matrix-cell">31 ago · 08:36</div>
@@ -1935,36 +1733,12 @@
 </div>
 <div class="field-grid">
 <article class="surface field-card" data-step="01">
-<span class="status visible">Observado</span>
-<h3>El formulario captura datos útiles, pero no confirma el resultado al usuario.</h3>
-<p>Se completaron nombre, empresa, ciudad, país, correo, teléfono, producto y comentarios. Después de presionar “Enviar”:</p>
-<ul><li>El modal se cerró.</li><li>No apareció mensaje visible de éxito o error.</li><li>No se mostró folio o identificador.</li><li>No se indicó un tiempo esperado de respuesta.</li><li>No se recibió correo automático ni comunicación posterior entre el envío del 27 de agosto y el corte del 3 de septiembre.</li></ul>
-</article>
-<article class="surface field-card" data-step="02">
-<span class="status visible">Observado</span>
-<h3>Los dos accesos visibles de ayuda conducen a canales distintos.</h3>
-<p>La invitación “Hola, ¿Necesitas ayuda?” dirige a WhatsApp. El ícono flotante naranja abre el formulario.</p>
-<ul><li>La asistencia es visible.</li><li>El usuario cambia a WhatsApp o completa un formulario.</li><li>No se observó una conversación embebida en la página probada.</li></ul>
-</article>
-<article class="surface field-card" data-step="03">
-<span class="status visible">Observado</span>
-<h3>El paso de web a WhatsApp inicia sin contexto visible.</h3>
-<p>La cuenta verificada se abrió con la conversación vacía: no había texto prellenado, producto, página de origen, ciudad ni referencia a la solicitud.</p>
-<ul><li>La persona inició manualmente la conversación.</li><li>No se transfirió de forma visible el producto o URL.</li><li>Esto describe el front-end; no revela qué datos existen en backend.</li></ul>
-</article>
-<article class="surface field-card" data-step="04">
 <span class="status partial">Fuera de horario</span>
 <h3>A las 21:08 h se recibió una bienvenida automática genérica.</h3>
 <p>El mensaje “Gracias por comunicarte con Plastiglas de México. ¿Cómo podemos ayudarte?” no respondió la pregunta sobre la solicitud.</p>
 <ul><li>Confirma una automatización de bienvenida.</li><li>No se observó un flujo conversacional de varios pasos.</li><li>Al ocurrir fuera de horario, no se usa para juzgar disponibilidad humana ni SLA.</li></ul>
 </article>
-<article class="surface field-card" data-step="05">
-<span class="status visible">Respuesta humana observada</span>
-<h3>La siguiente mañana laboral, una persona intentó encaminar la búsqueda.</h3>
-<p>A las 09:05 h del viernes 28 de agosto, el equipo pidió compartir el teléfono para localizar la solicitud y también ofreció recibirla por WhatsApp para agilizarla.</p>
-<ul><li>Existe atención humana en el canal.</li><li>La respuesta demuestra intención de buscar la solicitud, no que ya la hubiera localizado.</li><li>La opción de compartirla de nuevo puede ser un mecanismo de agilización; no se interpreta por sí sola como pérdida de contexto.</li><li>El teléfono se envió el lunes 31 a las 08:36 h; el mensaje aparecía leído y al 3 de septiembre no se había recibido respuesta adicional.</li></ul>
-</article>
-<article class="surface field-card" data-step="06">
+<article class="surface field-card" data-step="02">
 <span class="status visible">Observado</span>
 <h3>La entrada telefónica varía entre las sedes probadas.</h3>
 <p><strong>Ocoyoacac:</strong> una contestadora solicita extensión o marcar 0 y luego enruta a una persona.</p>
@@ -1976,82 +1750,52 @@
 <div class="verdict-icon">CX</div>
 <div><h3>Conclusión provisional</h3><p>Plastiglas ofrece accesos digitales y hubo respuesta humana en WhatsApp la siguiente mañana laboral, lo que confirma atención real en el canal. El punto abierto es el cierre: al 3 de septiembre la solicitud no había recibido acuse por correo ni respuesta posterior por WhatsApp, de modo que el cliente no tiene forma de saber si su consulta avanza ni quién la atiende. Con n=1 esto no prueba incumplimiento de SLA, fragmentación tecnológica ni pérdida del lead; sí describe con precisión lo que un comprador experimenta hoy.</p></div>
 </article>
-<div class="test-plan">
-<article class="surface test-card">
+<article class="surface test-card" style="margin-top:22px">
 <div class="eyebrow">Siguiente evidencia</div>
-<h3 style="margin-top:15px">Completar la validación sin generar interacciones innecesarias.</h3>
+<h3 style="margin-top:15px">Lo que sigue solo puede responderse desde dentro.</h3>
 <div class="test-list">
-<div class="test-item"><div class="test-rank">1</div><div><strong>Trazabilidad interna de la solicitud</strong><small>Con Plastiglas: verificar en backend si el registro del 27 de agosto existe, quién quedó como propietario y qué comunicación debió generarse. Es la pregunta que la evidencia externa ya no puede responder.</small></div><span class="priority high">Alta</span></div>
-<div class="test-item"><div class="test-rank">2</div><div><strong>Journey de correo</strong><small>Una sola prueba autorizada para medir acuse, propietario, región y continuidad, ahora que se sabe que la vía del formulario no generó comunicación.</small></div><span class="priority medium">Media</span></div>
-<div class="test-item"><div class="test-rank">3</div><div><strong>Redes sociales</strong><small>Prueba ligera en un perfil oficial; detener si solo redirige.</small></div><span class="priority low">Baja</span></div>
+<div class="test-item"><div class="test-rank">1</div><div><strong>Trazabilidad interna de la solicitud</strong><small>Verificar con Plastiglas si el registro del 27 de agosto existe, quién quedó como propietario y qué comunicación debió generarse.</small></div><span class="priority high">Alta</span></div>
+<div class="test-item"><div class="test-rank">2</div><div><strong>Journey de correo</strong><small>Medir acuse, propietario, región y continuidad, ahora que se sabe que la vía del formulario no generó comunicación.</small></div><span class="priority medium">Media</span></div>
 </div>
-</article>
-<aside class="surface test-card">
-<div class="eyebrow">Criterio para redes</div>
-<h3 style="margin-top:15px">Sirve para clasificar el canal, no para buscar otra falla.</h3>
-<p class="muted small">La pregunta es si la mensajería social resuelve, deriva o simplemente funciona como marketing. No necesitas probar todas las redes.</p>
-<ul class="clean-list" style="margin-top:18px"><li>Usar una cuenta oficial enlazada por la marca.</li><li>Enviar una consulta breve y legítima.</li><li>Medir respuesta automática, respuesta humana y redirección.</li><li>No comparar tiempos con WhatsApp sin conocer horarios.</li><li>Evitar inventar una queja o urgencia.</li></ul>
 <p class="privacy-note">Las capturas con datos personales no se incluyen en esta página.</p>
-</aside>
-</div>
+</article>
 </div>
 </section><section class="section section-dark" id="journey">
 <div class="container">
-<div class="eyebrow">05 / Journey de cotización y asesoría</div>
-<h2 class="max-copy" style="margin-top:15px">La experiencia no termina cuando el cliente encuentra el producto; se prueba en el paso de investigación a cotización y asesoría.</h2>
-<p class="lead max-copy">En un journey de materiales, las preguntas de aplicación, medidas, espesor, color, transformación, disponibilidad, ubicación y tiempo pueden aparecer antes y después de solicitar una cotización.</p>
-<div class="journey-grid">
-<article class="journey-step"><span class="journey-num">01</span><h3>Descubrir</h3><p>Producto, segmento, aplicación, inspiración y proyecto.</p></article>
-<article class="journey-step"><span class="journey-num">02</span><h3>Comparar</h3><p>Propiedades, medidas, espesores, colores y literatura técnica.</p></article>
-<article class="journey-step"><span class="journey-num">03</span><h3>Cotizar</h3><p>Volumen, especificaciones, ubicación, urgencia y datos de contacto.</p></article>
-<article class="journey-step"><span class="journey-num">04</span><h3>Contactar</h3><p>WhatsApp, teléfono, correo o formulario según preferencia.</p></article>
-<article class="journey-step"><span class="journey-num">05</span><h3>Asesorar</h3><p>Canalización regional, factibilidad, disponibilidad y propuesta.</p></article>
-<article class="journey-step"><span class="journey-num">06</span><h3>Dar seguimiento</h3><p>Pedido, entrega, soporte técnico, recompra y satisfacción.</p></article>
-</div>
-<div aria-label="Puntos de fricción potenciales" class="friction-line">
-<span class="friction-marker one" title="Producto a cotización">!</span>
-<span class="friction-marker two" title="Cotización a canal asistido">!</span>
-<span class="friction-marker three" title="Canal a asesor regional">!</span>
-</div>
-<div class="journey-analysis">
-<article class="surface top-good">
-<h3>Lo que Plastiglas ya tiene</h3>
-<ul class="clean-list">
-<li>Portafolio y aplicaciones visibles.</li>
-<li>Literatura técnica extensa.</li>
-<li>Dos accesos visibles de ayuda.</li>
-<li>Voz, correo y WhatsApp publicados.</li>
-<li>Directorio automático por extensión en Ocoyoacac y atención humana directa en Monterrey.</li>
-<li>Saludo automático básico en WhatsApp.</li>
-</ul>
+<div class="eyebrow">05 / Dónde se puede perder valor</div>
+<h2 class="max-copy" style="margin-top:15px">El journey no se rompe cuando el cliente encuentra el producto. Se prueba en tres momentos: certeza, contexto y continuidad.</h2>
+<p class="lead max-copy">Son los tres puntos donde el recorrido documentado dejó preguntas abiertas, y también los tres donde una mejora se notaría primero.</p>
+<div class="moment-grid">
+<article class="moment">
+<span class="moment-tag">Momento 1</span>
+<h3>Certeza</h3>
+<div class="moment-step">Intención → cotización</div>
+<p class="moment-q">¿El cliente sabe que su solicitud existe?</p>
+<div class="moment-obs"><strong>Lo observado</strong>El formulario se cerró sin acuse, folio ni plazo, y al 3 de septiembre no había llegado comunicación por correo. El cliente no puede distinguir entre una solicitud en proceso y una solicitud perdida.</div>
 </article>
-<article class="surface top-warn">
-<h3>Oportunidad visible por validar</h3>
-<ul class="clean-list">
-<li>El formulario no confirma el envío al usuario.</li>
-<li>WhatsApp inicia sin mensaje o contexto prellenado.</li>
-<li>En el journey probado no apareció un bot conversacional o webchat embebido.</li>
-<li>No se validó si la operación de voz comparte routing, métricas y contexto entre sedes.</li>
-<li>El resultado de la búsqueda manual de la solicitud sigue pendiente.</li>
-</ul>
+<article class="moment">
+<span class="moment-tag">Momento 2</span>
+<h3>Contexto</h3>
+<div class="moment-step">Cotización → contacto</div>
+<p class="moment-q">¿La información viaja con el cliente?</p>
+<div class="moment-obs"><strong>Lo observado</strong>WhatsApp abrió con la conversación vacía: sin producto, página de origen, ciudad ni referencia a la solicitud. El asesor pidió el teléfono para localizarla, lo que apunta a una búsqueda manual.</div>
 </article>
-<article class="surface top-risk">
-<h3>Lo que puede percibir el cliente</h3>
-<ul class="clean-list">
-<li>El cliente duda si la solicitud fue enviada.</li>
-<li>El cliente puede repetir intención y especificaciones.</li>
-<li>Ownership y tiempo de respuesta quedan invisibles.</li>
-<li>Puede generarse recontacto o envío duplicado.</li>
-</ul>
+<article class="moment">
+<span class="moment-tag">Momento 3</span>
+<h3>Continuidad</h3>
+<div class="moment-step">Contacto → asesor</div>
+<p class="moment-q">¿Hay un responsable y un siguiente paso?</p>
+<div class="moment-obs"><strong>Lo observado</strong>Hubo atención humana real la mañana siguiente, pero tras compartir el teléfono el mensaje quedó leído y sin respuesta durante tres días hábiles. La entrada telefónica además difiere entre sedes.</div>
 </article>
 </div>
+<div class="moment-foot"><strong>Lo que Plastiglas ya tiene y no está en discusión:</strong> portafolio y aplicaciones visibles, literatura técnica extensa, dos accesos de ayuda en el sitio, voz, correo y WhatsApp publicados, y atención humana confirmada en el canal. Los tres momentos no cuestionan la capacidad técnica ni la disposición del equipo; describen dónde el cliente pierde visibilidad del proceso.</div>
 </div>
 
 </section><section class="section section-white" id="vozcliente">
 <div class="container">
 <div class="eyebrow">06 / Voz del cliente y evidencia disponible</div>
 <h2 class="max-copy" style="margin-top:15px">La evidencia pública no permite declarar satisfacción o dolor; sí muestra qué preguntas deben responder los datos y la voz interna.</h2>
-<p class="lead max-copy">A diferencia de mercados con abundantes reseñas, no se identificó una muestra pública suficientemente robusta para calificar la experiencia de Plastiglas. La lectura responsable es usar la promesa de servicio, el journey observado y la información operativa del cliente para construir una voz del cliente real.</p>
+<p class="lead max-copy">La huella pública de Plastiglas es reducida: cinco reseñas en el perfil de Google Maps de la planta, repartidas en cuatro años, y evaluaciones de empleados que no hablan de servicio. Es una señal pequeña y mixta, no una calificación. La lectura responsable es combinarla con la promesa de servicio, el journey observado y la información operativa que tiene Plastiglas.</p>
 <div class="voice-client-grid">
 <article class="surface voice-client-card">
 <span class="voice-label">Señal pública</span>
@@ -2060,8 +1804,8 @@
 </article>
 <article class="surface voice-client-card">
 <span class="voice-label">Límite de evidencia</span>
-<h3>La ausencia de reseñas suficientes no equivale a una experiencia negativa.</h3>
-<p class="muted">No se utilizan comentarios aislados ni señales de empleados para inferir calidad de servicio. CSAT, NPS, conversión, abandono y repetición requieren datos internos.</p>
+<h3>Cinco reseñas en cuatro años no son una calificación de servicio.</h3>
+<p class="muted">Dos son elogios al producto y a la atención en sitio, y una corresponde a un proveedor entregando material, fuera del journey de cotización. Las evaluaciones de empleados no se usan para inferir calidad de servicio. CSAT, NPS, conversión y repetición requieren datos internos.</p>
 </article>
 <article class="surface voice-client-card">
 <span class="voice-label">Oportunidad de escucha</span>
@@ -2069,6 +1813,20 @@
 <p class="muted">Comentarios abiertos, razones de no avance, contactos repetidos, preguntas técnicas y feedback de distribuidores permiten priorizar mejoras con evidencia.</p>
 </article>
 </div>
+<article class="maps-signal">
+<div class="eyebrow">Señal pública disponible</div>
+<h3>La huella es mínima, pero un comentario apunta al mismo punto que el recorrido de campo.</h3>
+<p>El perfil de Google Maps de la planta de Ocoyoacac acumula cinco reseñas en aproximadamente cuatro años. La mayoría son visitas al sitio, no compradores a distancia, y las más relevantes para el journey de cotización son antiguas. Se resumen aquí completas, incluidas las favorables, porque seleccionar solo las negativas daría una lectura falsa.</p>
+<div class="maps-grid">
+<div class="maps-item"><div class="maps-when">hace ~3 años</div><strong>Teléfono sin respuesta y viaje sin producto</strong><span>Un comercio relata que no le contestaron el teléfono y que, tras casi una hora de traslado, el producto no estaba disponible. Sugiere que la atención mejoraría con incentivo comercial.</span></div>
+<div class="maps-item"><div class="maps-when">hace ~4 años</div><strong>Pregunta cómo comprar a distancia</strong><span>Otro usuario utiliza la reseña para preguntar dónde contactarlos para venta en línea o por mensajería hacia el interior del país. La pregunta quedó sin respuesta visible.</span></div>
+<div class="maps-item"><div class="maps-when">hace ~2 meses</div><strong>Espera en recepción de material</strong><span>Un proveedor que entregaba mercancía describe al personal de almacén como amable y atento, pero reporta una espera prolongada para ser recibido. Corresponde a logística de entrada, fuera del journey de cotización.</span></div>
+<div class="maps-item"><div class="maps-when">hace ~3 años</div><strong>Valoración positiva de la visita</strong><span>Un visitante califica a la empresa como excelente y destaca la seguridad del sitio y el trato amable.</span></div>
+<div class="maps-item"><div class="maps-when">hace ~4 años</div><strong>Valoración positiva del producto</strong><span>Otro comentario destaca la calidad y la variedad de la lámina acrílica.</span></div>
+<div class="maps-item"><div class="maps-when">lectura</div><strong>Qué se puede y qué no se puede concluir</strong><span>Dos de las cinco reseñas tocan accesibilidad por teléfono y compra a distancia, y ambas anteceden por años al recorrido documentado. No prueban un patrón, pero sí indican que vale la pena medir la atención telefónica y la ruta de compra remota con datos propios.</span></div>
+</div>
+<p class="maps-caveat">Los comentarios se parafrasean y no se identifica a sus autores. Fuente: perfil público de Google Maps, consultado en septiembre de 2026.</p>
+</article>
 <div class="buyer-voice">
 <div class="eyebrow">Lo que pregunta un comprador</div>
 <h3 style="margin:13px 0 20px">Las dudas que hoy llegan a Plastiglas, en las palabras del cliente.</h3>
@@ -2099,7 +1857,6 @@
 <div><strong>Datos y sistemas</strong>¿Dónde viven cliente, cotización, inventario, historial y seguimiento?</div>
 <div><strong>Éxito medible</strong>¿Qué cambio demostraría valor en 60–90 días?</div>
 </div>
-<div class="client-note"><strong>Importante:</strong> esta sección sustituye una “voz del cliente” inferida desde reseñas por un plan para incorporar evidencia propia de Plastiglas. Después del workshop puede actualizarse con lenguaje, métricas y prioridades aportadas por Comercial, Servicio, Marketing e IT.</div>
 </article>
 </div>
 </section><section class="section" id="competencia">
@@ -2130,7 +1887,6 @@
 <div class="benchmark-row"><div class="benchmark-cell"><strong>Autoservicio técnico visible</strong></div><div class="benchmark-cell">Literatura, aplicaciones, academia y variedad de producto.</div><div class="benchmark-cell">Catálogo y servicios de transformación.</div><div class="benchmark-cell">Contenido de selección y cotización.</div><div class="benchmark-cell">Especificaciones, muestras, recursos y calculadora.</div><div class="benchmark-cell">¿Qué contenido ya existente puede activarse en el momento de contacto?</div></div>
 </div>
 </div>
-<article class="benchmark-note"><h3>Lectura competitiva responsable</h3><p>El benchmark identifica opciones de diseño, no ganadores. Plastiglas muestra una base técnica fuerte; la oportunidad hipotética es decidir qué nivel de contexto, confirmación y guía aporta valor real a sus compradores y a su operación.</p></article>
 </div>
 </section><section class="section section-white" id="senales">
 <div class="container">
@@ -2155,7 +1911,7 @@
 <div class="surface signal-panel">
 <div class="signal-content active" id="signal-leading" role="tabpanel">
 <div class="signal-label">Evidencia visible</div>
-<h3>La experiencia ofrece múltiples entradas, pero el acuse y el contexto visible no siempre acompañan el cambio de canal.</h3>
+<h3>Los tres momentos —certeza, contexto y continuidad— quedaron abiertos en el recorrido documentado.</h3>
 <p>El sitio dirige a cotización, WhatsApp, teléfono y correo. El formulario no mostró acuse visible; WhatsApp abrió sin contexto y posteriormente un asesor pidió el teléfono para buscar la solicitud. La recuperación efectiva aún no está confirmada.</p>
 <div class="signal-evidence">
 <div class="evidence-chip"><strong>Formulario</strong>Cierre sin confirmación visible en una prueba; registro interno desconocido.</div>
@@ -2178,7 +1934,7 @@
 <div class="signal-content" id="signal-lagging" role="tabpanel">
 <div class="signal-label">Impacto por comprobar</div>
 <h3>El valor del caso debe demostrarse en conversión, satisfacción, recompra y productividad comercial.</h3>
-<p>La investigación pública no aporta cifras. El discovery debe establecer la línea base de conversión, abandono, respuesta, repetición, resolución, cumplimiento de SLA y costo por interacción.</p>
+<p>La investigación pública no aporta cifras. El discovery debe establecer la línea base de conversión de cotización, tiempo de respuesta, transferencias, contacto repetido, satisfacción y recompra.</p>
 <div class="signal-evidence">
 <div class="evidence-chip"><strong>Cotización</strong>Inicio, finalización, contacto y cierre comercial.</div>
 <div class="evidence-chip"><strong>Servicio</strong>CSAT, tiempo de resolución y contactos repetidos.</div>
@@ -2301,11 +2057,15 @@
 <div class="eyebrow">11 / Casos de uso y capacidades habilitadoras</div>
 <h2 class="max-copy" style="margin-top:15px">La tecnología entra después del problema: primero quick wins visibles; después automatización, asistencia y optimización.</h2>
 <p class="lead max-copy">Esta sección traduce el estado objetivo en casos de uso concretos para discusión.</p>
-<div class="quick-win-grid" aria-label="Quick wins ilustrativos">
-<article class="quick-win"><div class="quick-win-num">1</div><h3>Acuse y siguiente paso</h3><p>Confirmar que la solicitud fue recibida, quién la atenderá y cuándo esperar contacto.</p></article>
-<article class="quick-win"><div class="quick-win-num">2</div><h3>Handoff web → WhatsApp</h3><p>Transferir página, producto, región y referencia para no iniciar una conversación vacía.</p></article>
-<article class="quick-win"><div class="quick-win-num">3</div><h3>Intake técnico guiado</h3><p>Capturar aplicación, medidas, espesor, volumen y urgencia con el mínimo esfuerzo.</p></article>
-<article class="quick-win"><div class="quick-win-num">4</div><h3>Vista única del asesor</h3><p>Mostrar historial, datos capturados, ownership, SLA y conocimiento relevante.</p></article>
+<div class="quick-win-lead">
+<div class="eyebrow">Candidatos a primera victoria</div>
+<h3 style="margin:13px 0 0">Un movimiento por cada momento de la sección 05, sin depender de una plataforma nueva, para elegir en el workshop.</h3>
+<p class="muted small" style="margin:9px 0 0;max-width:800px">No se presentan como recomendaciones cerradas. Son los movimientos con menor dependencia técnica dentro de lo observado, para que la primera mejora sea visible antes de decidir cualquier inversión.</p>
+</div>
+<div class="quick-win-grid" aria-label="Candidatos a primera victoria">
+<article class="quick-win"><div class="quick-win-num">1</div><h3>Certeza: acuse de la solicitud</h3><p>Confirmar en pantalla que se recibió, con folio y tiempo esperado de respuesta, más un correo automático. Es lo que convierte una solicitud enviada en una solicitud que el cliente sabe que existe.</p><div class="quick-win-proof"><strong>Cómo se sabría que funcionó</strong>Bajan los envíos duplicados y los recontactos por otro canal preguntando si la solicitud llegó.</div></article>
+<article class="quick-win"><div class="quick-win-num">2</div><h3>Contexto: al pasar a WhatsApp</h3><p>Que el enlace del sitio lleve prellenado producto, página de origen y referencia de la solicitud, para que la conversación no arranque vacía. Es un cambio en el enlace, no en la plataforma.</p><div class="quick-win-proof"><strong>Cómo se sabría que funcionó</strong>El asesor deja de pedir datos que el cliente ya había capturado.</div></article>
+<article class="quick-win"><div class="quick-win-num">3</div><h3>Continuidad: propietario y plazo visibles</h3><p>Que cada solicitud tenga un responsable asignado y un plazo comprometido, aunque al principio se haga de forma manual. Es una decisión de proceso antes que de tecnología.</p><div class="quick-win-proof"><strong>Cómo se sabría que funcionó</strong>Ninguna conversación queda leída sin respuesta, como ocurrió entre el 31 de agosto y el 3 de septiembre.</div></article>
 </div>
 <div class="capability-grid">
 <article class="surface capability-card"><div class="cap-title"><div class="capability-icon">D</div><h3>Fortalecer el servicio digital</h3></div><p>Convertir sitio y mensajería en una puerta de entrada que informa, captura intención y escala con contexto.</p><div class="capability-result"><strong>Resultado esperado:</strong> más certeza en el contacto inicial y menos abandono por falta de guía.</div><div class="capability-tags"><span>Web Messaging</span><span>WhatsApp</span><span>Knowledge</span><span>Acuse automático</span></div></article>
@@ -2313,7 +2073,6 @@
 <article class="surface capability-card"><div class="cap-title"><div class="capability-icon">A</div><h3>Potenciar al asesor</h3></div><p>Entregar contexto, resumen, conocimiento y datos faltantes dentro de una experiencia de trabajo unificada.</p><div class="capability-result"><strong>Resultado esperado:</strong> menor tiempo de búsqueda y respuestas más consistentes.</div><div class="capability-tags"><span>Agent Workspace</span><span>Agent Copilot</span><span>Knowledge</span><span>Integraciones</span></div></article>
 <article class="surface capability-card"><div class="cap-title"><div class="capability-icon">I</div><h3>Optimizar experiencia y operación</h3></div><p>Relacionar comportamiento digital, conversaciones, journeys y resultados comerciales para priorizar mejoras.</p><div class="capability-result"><strong>Resultado esperado:</strong> decisiones basadas en causas de abandono, repetición, transferencia y conversión.</div><div class="capability-tags"><span>Journey Management</span><span>Speech & Text Analytics</span><span>Predictive Engagement</span><span>WEM</span></div></article>
 </div>
-<div class="capability-disclaimer"><strong>Criterio de selección:</strong> cada capacidad debe vincularse a un problema confirmado, una población afectada, un proceso propietario y una métrica de éxito. La página propone una conversación de valor, no un catálogo predeterminado.</div>
 </div>
 </section><section class="section" id="roadmap">
 <div class="container">
@@ -2321,15 +2080,10 @@
 <h2 class="max-copy" style="margin-top:15px">Confirmar y medir primero; después diseñar, pilotear y escalar lo que aporte valor.</h2>
 <p class="lead max-copy">La secuencia es deliberadamente gradual. Cada fase debe avanzar solo cuando Plastiglas confirme el problema, la prioridad operativa y las métricas de éxito.</p>
 <div class="roadmap">
-<article class="surface phase" data-phase="1"><span class="phase-tag">Fase 1 · Confirmar y medir</span><h3>Dar certeza y ownership al journey</h3><ul><li>Mapear el flujo actual de formulario, WhatsApp, voz, correo y sedes.</li><li>Confirmar registro, responsable, SLA y comunicación al usuario.</li><li>Establecer baseline de volumen, respuesta, transferencia, recontacto y conversión.</li><li>Definir el journey prioritario y el problema cuantificado.</li></ul></article>
+<article class="surface phase" data-phase="1"><span class="phase-tag">Fase 1 · Confirmar y medir</span><h3>Cerrar certeza, contexto y continuidad</h3><ul><li>Mapear el flujo actual de formulario, WhatsApp, voz, correo y sedes.</li><li>Confirmar registro, responsable, SLA y comunicación al usuario.</li><li>Establecer baseline de volumen, tiempo de respuesta, transferencia, recontacto y conversión.</li><li>Definir el journey prioritario y el problema cuantificado.</li></ul></article>
 <article class="surface phase" data-phase="2"><span class="phase-tag">Fase 2 · Simplificar</span><h3>Reducir recaptura y orientar mejor</h3><ul><li>Conservar producto, aplicación, región y datos ya capturados.</li><li>Diseñar intake guiado con el mínimo dato viable.</li><li>Activar conocimiento consistente para cliente y asesor.</li><li>Evaluar asistencia virtual o al agente solo donde el volumen lo justifique.</li></ul></article>
 <article class="surface phase" data-phase="3"><span class="phase-tag">Fase 3 · Optimizar</span><h3>Gestionar journeys y capacidad</h3><ul><li>Detectar abandono e intención en journeys de alto valor.</li><li>Analizar causas de contacto, handoff y repetición.</li><li>Optimizar calidad, capacidad y desempeño.</li><li>Relacionar experiencia con cotización, venta y recompra.</li></ul></article>
 </div>
-<div class="commercial-map"><strong>Mapeo ilustrativo de Genesys, sujeto a discovery:</strong><p>A modo ilustrativo, Genesys Cloud puede habilitar routing digital y de voz, WhatsApp y Web Messaging, Knowledge, Virtual Agent, Agent Copilot, Predictive Engagement, Journey Management, Speech and Text Analytics y WEM. La selección final dependerá de los hallazgos y del caso de negocio, no de un catálogo predeterminado.</p></div>
-<article class="surface kpi-card">
-<div class="kpi-head"><div><div class="eyebrow">Baseline de negocio</div><h3 style="margin:13px 0 0">Métricas necesarias antes de cuantificar el caso.</h3></div><span class="status partial">Discovery requerido</span></div>
-<div class="kpi-grid"><div class="kpi-item"><strong>Conversión de cotización</strong><span>Inicio → envío → contacto → propuesta → cierre.</span></div><div class="kpi-item"><strong>Tiempo de respuesta</strong><span>Por canal, motivo, región y horario.</span></div><div class="kpi-item"><strong>Transferencia / handoff</strong><span>Cantidad y causa de reasignaciones.</span></div><div class="kpi-item"><strong>Contacto repetido</strong><span>Mismo cliente/motivo en distintos canales.</span></div><div class="kpi-item"><strong>Digital a asistido</strong><span>Qué journey antecede la llamada o WhatsApp.</span></div><div class="kpi-item"><strong>Satisfacción y recompra</strong><span>CSAT, resolución, recomendación y recurrencia.</span></div></div>
-</article>
 </div>
 </section><section class="section section-white" id="discovery">
 <div class="container">
@@ -2339,40 +2093,7 @@
 <article class="surface discovery-gap"><div class="gap-mark">!</div><div><strong>Información que solo Plastiglas puede aportar</strong><p>Objetivos, ownership, arquitectura, volúmenes, SLA, conversión, costos y experiencia de los equipos requieren una sesión conjunta. El documento organiza la conversación, pero no sustituye esa evidencia.</p></div></article>
 <div class="discovery-grid">
 <article class="surface questions"><div class="question"><div class="question-num">1</div><p>Cuando alguien inicia una cotización en web y después cambia a WhatsApp, ¿el asesor puede ver la página, producto, aplicación y datos que ya capturó?</p></div><div class="question"><div class="question-num">2</div><p>¿El número de WhatsApp se atiende centralmente, por región o por varios usuarios? ¿Qué ocurre cuando una conversación queda sin propietario?</p></div><div class="question"><div class="question-num">3</div><p>¿Las llamadas de Ocoyoacac, CDMX, Monterrey, Guadalajara y otros centros se miden y enrutan en una misma plataforma?</p></div><div class="question"><div class="question-num">4</div><p>¿Cómo se asignan hoy las solicitudes por producto, segmento, región, distribuidor, volumen y urgencia?</p></div><div class="question"><div class="question-num">5</div><p>¿Cuáles son los principales motivos de contacto y qué porcentaje podría resolverse con conocimiento o intake guiado?</p></div><div class="question"><div class="question-num">6</div><p>¿Cuántos visitantes llegan a páginas de producto, inician el formulario, lo abandonan, lo envían y terminan en una oportunidad o venta?</p></div><div class="question"><div class="question-num">7</div><p>Cuando un cliente contacta dos veces por canales distintos, ¿el segundo asesor puede ver la interacción anterior, su estado y su propietario?</p></div><div class="question"><div class="question-num">8</div><p>¿Qué confirmación, folio, SLA y seguimiento recibe hoy quien envía una solicitud, y cómo se evitan duplicados cuando no hay acuse visible?</p></div><div class="question"><div class="question-num">9</div><p>Cuando una cotización se pierde frente a Plaskolite, Garen, Newton u otro proveedor, ¿qué pesa más: precio, disponibilidad, especificación, tiempo de respuesta, seguimiento o cobertura?</p></div><div class="question"><div class="question-num">10</div><p>¿Qué sistemas sostienen telefonía, WhatsApp, correo, formularios, CRM, ERP, inventario y analítica, y qué integraciones ya existen?</p></div></article>
-<aside class="side-stack">
-<article class="surface play-card"><div class="eyebrow">Temas prioritarios para el workshop</div><h3 style="margin-top:16px">Alinear problemas, evidencia y resultados antes de seleccionar capacidades.</h3><ol class="priority-list"><li><span>1</span><div><strong>Confirmación y ownership de la solicitud</strong><small>Validar si acuse, responsable y seguimiento son un problema medible.</small></div></li><li><span>2</span><div><strong>Continuidad entre canales y sedes</strong><small>Confirmar qué contexto se conserva y dónde aparece recaptura.</small></div></li><li><span>3</span><div><strong>Intake técnico y conocimiento</strong><small>Identificar dudas y datos que más consumen tiempo.</small></div></li><li><span>4</span><div><strong>Analítica y proactividad</strong><small>Evaluar después de establecer un baseline de journey y abandono.</small></div></li><li><span>5</span><div><strong>Capacidades habilitadoras</strong><small>Mapear tecnología únicamente cuando exista caso de uso, volumen y valor.</small></div></li></ol></article>
-<article class="surface persona-card">
-<div class="eyebrow">Participantes sugeridos</div>
-<h3 style="margin-top:16px">Áreas que completan la visión end-to-end</h3>
-<div class="persona-row"><strong>Comercial</strong><span>Conversión, velocidad, asignación y seguimiento.</span></div>
-<div class="persona-row"><strong>Servicio al cliente</strong><span>Motivos, handoffs, resolución y continuidad.</span></div>
-<div class="persona-row"><strong>Marketing / Digital</strong><span>Journey web, formularios, campañas y analítica.</span></div>
-<div class="persona-row"><strong>IT / Arquitectura</strong><span>Canales, integraciones, seguridad y escalabilidad.</span></div>
-</article>
-</aside>
 </div>
-<article class="next-step">
-<div>
-<div class="eyebrow">Siguiente paso propuesto</div>
-<h3>Un workshop conjunto con Plastiglas para cerrar las diez preguntas.</h3>
-<p>La evidencia externa ya dio lo que podía dar. Lo que falta —registro, propietario, volúmenes, SLA y prioridades— solo puede aportarlo el equipo de Plastiglas.</p>
-<div class="ns-specs">
-<div><strong>Formato</strong><span>Presencial en Ocoyoacac o remoto, según convenga al equipo.</span></div>
-<div><strong>Salida</strong><span>Journey prioritario definido, problema cuantificado y métricas de éxito a 60–90 días.</span></div>
-<div><strong>Sin compromiso</strong><span>No requiere decisión de compra ni evaluación de plataforma.</span></div>
-</div>
-</div>
-<div>
-<div class="eyebrow">Qué aportaría cada área</div>
-<h3 style="font-size:20px">Con esto la sesión rinde desde el primer minuto.</h3>
-<ul class="clean-list ns-bring" style="margin-top:18px">
-<li><strong>Comercial:</strong> cómo se asignan hoy las solicitudes y qué pasa con una cotización que no avanza.</li>
-<li><strong>Servicio al cliente:</strong> principales motivos de contacto y qué se hace cuando una conversación queda sin propietario.</li>
-<li><strong>Marketing / Digital:</strong> analítica del sitio, formularios iniciados y enviados, y origen del tráfico.</li>
-<li><strong>IT / Arquitectura:</strong> qué sistemas sostienen telefonía, WhatsApp, correo, formularios y CRM, y qué integraciones existen.</li>
-</ul>
-</div>
-</article>
 </div>
 </section><section class="section compact" id="fuentes">
 <div class="container">
@@ -2383,6 +2104,7 @@
 <article class="surface source-card"><h3>Fuentes externas: benchmark público</h3><ul class="source-list"><li><a href="https://newton.com.mx/solicitud-de-cotizacion/" rel="noopener noreferrer" target="_blank">Acrílicos Newton: cotización</a></li><li><a href="https://newton.com.mx/nosotros/" rel="noopener noreferrer" target="_blank">Acrílicos Newton: contactos regionales</a></li><li><a href="https://acrilico.garen.com.mx/" rel="noopener noreferrer" target="_blank">Garen: acrílico, WhatsApp y cotización</a></li><li><a href="https://plaskolite.com/contact-us/request-quote" rel="noopener noreferrer" target="_blank">Plaskolite: solicitud de cotización</a></li><li><a href="https://plaskolite.com/contact-us/request-sample" rel="noopener noreferrer" target="_blank">Plaskolite: solicitud de muestra</a></li><li><a href="https://es.plaskolite.com/products-services/solutions/run-to-size" rel="noopener noreferrer" target="_blank">Plaskolite: fabricación a medida</a></li></ul></article>
 <article class="surface source-card"><h3>Fuentes externas: mercado y Genesys</h3><ul class="source-list"><li><a href="https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/five-fundamental-truths-how-b2b-winners-keep-growing" rel="noopener noreferrer" target="_blank">McKinsey B2B Pulse 2024</a></li><li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-09-gartner-sales-survey-finds-67-percent-of-b2b-buyers-prefer-a-rep-free-experience" rel="noopener noreferrer" target="_blank">Gartner B2B Buyer Survey 2026</a></li><li><a href="https://www.gartner.com/en/newsroom/press-releases/2026-05-20-gartner-survey-finds-sixty-nine-percent-of-b-two-b-buyers-turn-to-sales-reps-to-validate-ai-generated-insights" rel="noopener noreferrer" target="_blank">Gartner: validación humana de insights de IA</a></li><li><a href="https://www.genesys.com/customer-stories/ferguson" rel="noopener noreferrer" target="_blank">Ferguson + Genesys Cloud</a></li><li><a href="https://www.genesys.com/customer-stories/legrand" rel="noopener noreferrer" target="_blank">Legrand + Genesys Cloud</a></li><li><a href="https://www.genesys.com/es-mx/capabilities/whatsapp" rel="noopener noreferrer" target="_blank">Genesys Cloud: WhatsApp</a></li></ul></article>
 <article class="surface source-card"><h3>Evidencia primaria de campo</h3><ul class="source-list"><li>Registro de campo abierto del 27 de agosto al 3 de septiembre de 2026.</li><li>1 envío de formulario y 1 conversación de WhatsApp.</li><li>Observación de entrada telefónica en Ocoyoacac y Monterrey.</li><li>Capturas con datos personales conservadas fuera de esta página.</li><li>Al 3 de septiembre: sin respuesta posterior en WhatsApp y sin acuse por correo.</li>
+<li>Revisión de huella pública de reseñas: Google Maps (planta Ocoyoacac, 5 reseñas), Indeed (evaluaciones de empleados), Foursquare, Cybo y directorios industriales. No se identificó una muestra de clientes B2B suficiente para calificar el servicio.</li>
 <li>Este registro no es una fuente externa ni una muestra estadística.</li></ul></article>
 </div>
 <div class="method-note"><p><strong>Nota metodológica:</strong> solo Plastiglas tuvo un recorrido exploratorio de canales; los competidores se revisaron mediante interfaces públicas y sus promesas no se trataron como resultados. El contacto de WhatsApp comenzó a las 21:08 h, por lo que el saludo automático no se utiliza para juzgar SLA o disponibilidad humana. La ausencia de respuesta al 3 de septiembre se reporta como resultado visible para el cliente durante la ventana observada; no como incumplimiento de un SLA que no conocemos, ni como prueba de que el registro interno no exista. “No observado” se limita al journey, fecha y muestra documentados. La sección de voz del cliente es un plan de escucha —no una inferencia reputacional— y la arquitectura mostrada es conceptual. No se infieren arquitectura actual, conversión, abandono, satisfacción, costos ni causa raíz sin datos del cliente.</p></div>
@@ -2431,7 +2153,7 @@
       sheet.setAttribute('style', 'position:fixed;inset:62px 12px 12px 12px;z-index:120;background:#11192c;border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:12px;box-shadow:0 25px 70px rgba(0,0,0,.35);display:grid;gap:4px;overflow:auto;align-content:start');
       const links = [
         ['Resumen','#contexto'],['Comprador B2B','#mercado'],['Canales','#canales'],['Evidencia de campo','#campo'],
-        ['Journey','#journey'],['Voz del cliente','#vozcliente'],['Benchmark','#competencia'],['Referencias','#referencia'],
+        ['Momentos clave','#journey'],['Voz del cliente','#vozcliente'],['Benchmark','#competencia'],['Referencias','#referencia'],
         ['Visión y arquitectura','#norte'],['Capacidades','#capacidades'],['Hallazgos','#senales'],['Roadmap','#roadmap'],
         ['Workshop','#discovery'],['Fuentes','#fuentes']
       ];
